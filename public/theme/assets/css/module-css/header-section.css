@@ -87,7 +87,7 @@
 .header-top{
     position: relative;
     display: block;
-    background: #2f3a51;
+    background: #f8b134;
 }
 .header-top .outer-box{
     position: relative;
@@ -105,7 +105,7 @@
     left: 0;
     width: 55px;
     height: 60px;
-    background-color: var(--thm-primary);
+    background-color: #096635;
     display: flex;
     align-items: center;
     justify-content: center;
