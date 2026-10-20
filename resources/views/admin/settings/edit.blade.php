@@ -11,7 +11,7 @@
             'contact' => ['Coordonnées', 'Affichées dans le pied de page et sur la page Contact.'],
             'social' => ['Réseaux sociaux', 'Laissez vide pour masquer l\'icône correspondante.'],
             'content' => ['Contenus éditoriaux', 'Textes de présentation de l\'association.'],
-            'donation' => ['Dons', 'Montants proposés, coordonnées bancaires et mention fiscale.'],
+            'donation' => ['Dons', 'Montants proposés, Mobile Money, coordonnées bancaires et reçu de don.'],
         ];
     @endphp
 

@@ -12,10 +12,10 @@ class PartnerSeeder extends Seeder
         $partners = [
             ['Fondation Clairval', 'brand-logo-1.png'],
             ['Groupe Lumen SAS', 'brand-logo-2.png'],
-            ['Ville de Nantes', 'brand-logo-3.png'],
+            ['Réseau des Communes', 'brand-logo-3.png'],
             ['Coopérative Terres Vives', 'brand-logo-4.png'],
             ['Mutuelle Horizon', 'brand-logo-v2-1.png'],
-            ['Banque Solidaire Européenne', 'brand-logo-v2-2.png'],
+            ['Banque Solidaire Ouest-Africaine', 'brand-logo-v2-2.png'],
         ];
 
         foreach ($partners as $index => [$name, $logo]) {

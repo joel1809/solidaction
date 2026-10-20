@@ -53,6 +53,6 @@ if (! function_exists('theme_asset')) {
 if (! function_exists('money')) {
     function money($amount, bool $withCents = false): string
     {
-        return number_format((float) $amount, $withCents ? 2 : 0, ',', ' ').' '.setting('currency_symbol', '€');
+        return number_format((float) $amount, $withCents ? 2 : 0, ',', ' ').' '.setting('currency_symbol', 'FCFA');
     }
 }

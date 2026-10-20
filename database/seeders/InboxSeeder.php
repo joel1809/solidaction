@@ -12,11 +12,11 @@ class InboxSeeder extends Seeder
     public function run(): void
     {
         $messages = [
-            ['Brigitte Lenoir', 'brigitte.lenoir@example.fr', 'Legs et donation', 'Bonjour, je souhaiterais inclure votre association dans mon testament. Qui peut m\'accompagner dans cette démarche ?', 'new'],
-            ['Service RSE — Lumen SAS', 'rse@lumen-sas.example', 'Mécénat d\'entreprise 2026', 'Nous souhaitons renouveler notre partenariat et l\'étendre à un second projet. Pouvons-nous convenir d\'un rendez-vous en novembre ?', 'read'],
-            ['Antoine Bocquet', 'antoine.bocquet@example.fr', 'Reçu fiscal manquant', 'Je n\'ai pas reçu le reçu fiscal pour mes dons de l\'an dernier. Mon numéro de donateur est 48221.', 'replied'],
-            ['Lycée Jean-Jaurès', 'cdi@lycee-jaures.example', 'Intervention en classe', 'Nos élèves de terminale préparent un dossier sur l\'aide au développement. Un bénévole pourrait-il venir témoigner ?', 'new'],
-            ['Nadia Belkacem', 'nadia.belkacem@example.fr', 'Félicitations', 'Votre rapport annuel est le plus lisible que j\'ai jamais lu dans le secteur. Merci pour cet effort de clarté.', 'read'],
+            ['Bernadette Kouakou', 'bernadette.kouakou@example.com', 'Legs et donation', 'Bonjour, je souhaiterais inclure votre ONG dans mon testament. Qui peut m\'accompagner dans cette démarche ?', 'new'],
+            ['Service RSE — Groupe Lumen', 'rse@lumen.example', 'Mécénat d\'entreprise 2026', 'Nous souhaitons renouveler notre partenariat et l\'étendre à un second projet. Pouvons-nous convenir d\'un rendez-vous en novembre ?', 'read'],
+            ['Antoine Gbéhi', 'antoine.gbehi@example.com', 'Reçu de don manquant', 'Je n\'ai pas reçu le reçu pour mes dons de l\'an dernier. Mon numéro de donateur est 48221.', 'replied'],
+            ['Collège Les Palmiers', 'direction@college-palmiers.example', 'Intervention en classe', 'Nos élèves de troisième préparent un dossier sur l\'aide au développement. Un bénévole pourrait-il venir témoigner ?', 'new'],
+            ['Nadia Touré', 'nadia.toure@example.com', 'Félicitations', 'Votre rapport annuel est le plus lisible que j\'ai jamais lu dans le secteur. Merci pour cet effort de clarté.', 'read'],
         ];
 
         foreach ($messages as $index => [$name, $email, $subject, $message, $status]) {
@@ -26,7 +26,7 @@ class InboxSeeder extends Seeder
                     'name' => $name,
                     'message' => $message,
                     'status' => $status,
-                    'reply' => $status === 'replied' ? 'Bonjour, votre reçu fiscal vous a été renvoyé par e-mail ce matin. Merci de votre fidélité.' : null,
+                    'reply' => $status === 'replied' ? 'Bonjour, votre reçu vous a été renvoyé par e-mail ce matin. Merci de votre fidélité.' : null,
                     'read_at' => $status === 'new' ? null : now()->subDays($index),
                     'created_at' => now()->subDays($index * 2 + 1),
                 ]
@@ -34,12 +34,12 @@ class InboxSeeder extends Seeder
         }
 
         $volunteers = [
-            ['Léa Fournier', 'lea.fournier@example.fr', 'communication', 'Deux soirs par semaine', 'approved', 'Graphiste freelance, je peux prendre en charge vos supports de collecte.'],
-            ['Mehdi Chaoui', 'mehdi.chaoui@example.fr', 'logistique', 'Week-ends', 'pending', 'Ancien chef d\'entrepôt, disponible pour organiser les distributions.'],
-            ['Sylvie Barreau', 'sylvie.barreau@example.fr', 'education', 'Mercredis après-midi', 'approved', 'Professeure des écoles retraitée, je propose du soutien scolaire.'],
-            ['Romain Teyssier', 'romain.teyssier@example.fr', 'sante', 'Variable', 'pending', 'Infirmier en poste, je peux assurer des permanences et des formations aux premiers secours.'],
-            ['Chloé Pasquier', 'chloe.pasquier@example.fr', 'administration', 'Lundis et jeudis', 'rejected', 'Étudiante en droit, intéressée par le suivi des dossiers de subvention.'],
-            ['Bakary Konaté', 'bakary.konate@example.fr', 'terrain', 'Trois mois consécutifs', 'pending', 'Logisticien humanitaire avec deux missions au Sahel.'],
+            ['Grâce Lago', 'grace.lago@example.com', 'communication', 'Deux soirs par semaine', 'approved', 'Graphiste freelance, je peux prendre en charge vos supports de collecte.'],
+            ['Moussa Konaté', 'moussa.konate@example.com', 'logistique', 'Week-ends', 'pending', 'Ancien chef d\'entrepôt, disponible pour organiser les distributions.'],
+            ['Sylvie Zadi', 'sylvie.zadi@example.com', 'education', 'Mercredis après-midi', 'approved', 'Institutrice retraitée, je propose du soutien scolaire.'],
+            ['Roland Assouan', 'roland.assouan@example.com', 'sante', 'Variable', 'pending', 'Infirmier en poste, je peux assurer des permanences et des formations aux premiers secours.'],
+            ['Chantal Yéo', 'chantal.yeo@example.com', 'administration', 'Lundis et jeudis', 'rejected', 'Étudiante en droit, intéressée par le suivi des dossiers de subvention.'],
+            ['Bakary Fofana', 'bakary.fofana@example.com', 'terrain', 'Trois mois consécutifs', 'pending', 'Logisticien humanitaire avec deux missions dans le Nord du pays.'],
         ];
 
         foreach ($volunteers as $index => [$name, $email, $interest, $availability, $status, $message]) {
@@ -47,8 +47,8 @@ class InboxSeeder extends Seeder
                 ['email' => $email],
                 [
                     'name' => $name,
-                    'phone' => '+33 6 '.random_int(10, 99).' '.random_int(10, 99).' '.random_int(10, 99).' '.random_int(10, 99),
-                    'address' => 'France',
+                    'phone' => '+225 05 '.random_int(10, 99).' '.random_int(10, 99).' '.random_int(10, 99).' '.random_int(10, 99),
+                    'address' => 'Abidjan',
                     'interest' => $interest,
                     'availability' => $availability,
                     'message' => $message,
@@ -59,10 +59,10 @@ class InboxSeeder extends Seeder
         }
 
         $emails = [
-            'claire.fontaine@example.fr', 'hugo.bertrand@example.fr', 'nadia.belkacem@example.fr',
-            'thomas.riviere@example.fr', 'awa.traore@example.fr', 'pierre.vasseur@example.fr',
-            'lucie.marchand@example.fr', 'karim.haddad@example.fr', 'sophie.delaunay@example.fr',
-            'julien.perrot@example.fr', 'fatou.ndiaye@example.fr', 'elodie.garnier@example.fr',
+            'claudine.ahoua@example.com', 'jeanmarc.kacou@example.com', 'nadia.toure@example.com',
+            'thierry.ehui@example.com', 'awa.traore@example.com', 'pierre.djedje@example.com',
+            'lucie.amon@example.com', 'karim.diabate@example.com', 'sophie.gbane@example.com',
+            'julien.kra@example.com', 'fatou.cisse@example.com', 'aya.kouassi@example.com',
         ];
 
         foreach ($emails as $index => $email) {

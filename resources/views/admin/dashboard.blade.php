@@ -38,7 +38,7 @@
 
     {{-- ================== Indicateurs ================== --}}
     <div class="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
-        <x-admin.stat label="Total collecté" :value="money($kpis['collected'])" icon="euro"
+        <x-admin.stat label="Total collecté" :value="money($kpis['collected'])" icon="banknotes"
             :trend="$kpis['collected_trend']" :hint="money($kpis['last30']).' sur 30 jours'"
             :href="route('admin.donations.index')" />
 
@@ -55,13 +55,13 @@
     {{-- ================== Graphiques ================== --}}
     <div class="mt-6 grid gap-6 xl:grid-cols-3">
         <x-admin.card class="xl:col-span-2" title="Dons encaissés par mois"
-            subtitle="Montants validés sur les douze derniers mois, en {{ setting('currency_symbol', '€') }}">
-            <x-admin.bar-chart :series="$monthly" :unit="setting('currency_symbol', '€')" table-label="Montant encaissé" />
+            subtitle="Montants validés sur les douze derniers mois, en {{ setting('currency_symbol', 'FCFA') }}">
+            <x-admin.bar-chart :series="$monthly" :unit="setting('currency_symbol', 'FCFA')" table-label="Montant encaissé" />
         </x-admin.card>
 
         <x-admin.card title="Causes les mieux financées" subtitle="Montant collecté par projet">
             @if (collect($topCauses)->sum('value') > 0)
-                <x-admin.ranked-bars :items="$topCauses" :unit="setting('currency_symbol', '€')" />
+                <x-admin.ranked-bars :items="$topCauses" :unit="setting('currency_symbol', 'FCFA')" />
             @else
                 <x-admin.empty title="Aucun don enregistré" message="Les montants apparaîtront dès le premier don validé." />
             @endif

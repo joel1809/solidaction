@@ -33,11 +33,11 @@ class PostSeeder extends Seeder
                 'days_ago' => 11,
             ],
             [
-                'title' => 'Dons et impôts : ce qui change cette année',
+                'title' => 'Donner par Mobile Money : mode d\'emploi',
                 'category' => 'conseils-aux-donateurs',
                 'image' => 'theme/assets/images/blog/blog-v1-3.jpg',
-                'excerpt' => 'Réduction de 66 %, plafonds, reçus fiscaux dématérialisés : le point complet pour votre déclaration.',
-                'tags' => ['fiscalité', 'donation'],
+                'excerpt' => 'Orange Money, MTN MoMo, Moov Money ou Wave : comment faire un don en quelques secondes et recevoir votre reçu.',
+                'tags' => ['mobile money', 'donation'],
                 'days_ago' => 18,
             ],
             [
@@ -49,11 +49,11 @@ class PostSeeder extends Seeder
                 'days_ago' => 26,
             ],
             [
-                'title' => 'Mozambique : trois semaines après les inondations',
+                'title' => 'Abobo : trois semaines après les inondations',
                 'category' => 'reportages',
                 'image' => 'theme/assets/images/blog/blog-v1-5.jpg',
-                'excerpt' => '420 familles relogées, 2 100 kits distribués : bilan d\'étape de notre réponse d\'urgence.',
-                'tags' => ['urgence', 'mozambique'],
+                'excerpt' => '420 familles relogées, 2 100 kits distribués : bilan d\'étape de notre réponse d\'urgence à Abidjan.',
+                'tags' => ['urgence', 'abidjan'],
                 'days_ago' => 33,
             ],
             [
@@ -65,18 +65,18 @@ class PostSeeder extends Seeder
                 'days_ago' => 47,
             ],
             [
-                'title' => 'Sages-femmes de Zinder : six mois de formation',
+                'title' => 'Sages-femmes de Bouna : six mois de formation',
                 'category' => 'reportages',
                 'image' => 'theme/assets/images/blog/blog-v1-7.jpg',
                 'excerpt' => 'Elles accompagnent désormais plus de 90 accouchements par mois dans des conditions enfin sécurisées.',
-                'tags' => ['santé', 'niger'],
+                'tags' => ['santé', 'bouna'],
                 'days_ago' => 58,
             ],
             [
                 'title' => 'Le don mensuel, discret mais décisif',
                 'category' => 'conseils-aux-donateurs',
                 'image' => 'theme/assets/images/blog/blog-v1-8.jpg',
-                'excerpt' => '15 € par mois valent mieux qu\'un don ponctuel de 180 € : nos équipes peuvent enfin planifier.',
+                'excerpt' => '5 000 FCFA par mois valent mieux qu\'un don ponctuel de 60 000 FCFA : nos équipes peuvent enfin planifier.',
                 'tags' => ['donation', 'conseils'],
                 'days_ago' => 72,
             ],
@@ -114,7 +114,7 @@ class PostSeeder extends Seeder
         <p>{$excerpt}</p>
         <p>Sur place, le travail commence toujours de la même manière : une série de réunions avec les représentants des habitants, les enseignants et les agents de santé. Ce sont eux qui décident de l'emplacement, du calendrier et des règles d'usage. Notre rôle se limite au financement, à l'ingénierie et au contrôle de la qualité des travaux.</p>
         <h3>Des résultats mesurés, pas estimés</h3>
-        <p>Chaque projet est assorti d'indicateurs définis avant le premier euro dépensé : nombre de bénéficiaires, taux de fréquentation, distance moyenne parcourue, taux de panne à douze mois. Les relevés sont effectués par un prestataire indépendant, et publiés même lorsqu'ils sont décevants.</p>
+        <p>Chaque projet est assorti d'indicateurs définis avant le premier franc dépensé : nombre de bénéficiaires, taux de fréquentation, distance moyenne parcourue, taux de panne à douze mois. Les relevés sont effectués par un prestataire indépendant, et publiés même lorsqu'ils sont décevants.</p>
         <blockquote>« Ce qui compte n'est pas ce que nous construisons, mais ce qui fonctionne encore cinq ans plus tard. »</blockquote>
         <h3>Et ensuite ?</h3>
         <ul>
@@ -130,11 +130,11 @@ class PostSeeder extends Seeder
     private function seedComments(): void
     {
         $comments = [
-            ['Martine Aubert', 'martine.aubert@example.fr', 'Merci pour ce récit très concret, on comprend enfin où va l\'argent.', 'approved'],
-            ['Olivier Ruiz', 'olivier.ruiz@example.fr', 'Serait-il possible de visiter un chantier en tant que donateur ?', 'approved'],
-            ['Leïla Benhamou', 'leila.benhamou@example.fr', 'Je viens de mettre en place un don mensuel après avoir lu cet article.', 'approved'],
+            ['Rose Assi', 'rose.assi@example.com', 'Merci pour ce récit très concret, on comprend enfin où va l\'argent.', 'approved'],
+            ['Arsène Gnahoré', 'arsene.gnahore@example.com', 'Serait-il possible de visiter un chantier en tant que donateur ?', 'approved'],
+            ['Salimata Diomandé', 'salimata.diomande@example.com', 'Je viens de mettre en place un don mensuel par Wave après avoir lu cet article.', 'approved'],
             ['Anonyme', 'spam@example.com', 'Super site, visitez le mien pour gagner de l\'argent facilement.', 'spam'],
-            ['Grégoire Masson', 'gregoire.masson@example.fr', 'Avez-vous des chiffres sur le taux de panne des forages à cinq ans ?', 'pending'],
+            ['Hervé Tanoh', 'herve.tanoh@example.com', 'Avez-vous des chiffres sur le taux de panne des forages à cinq ans ?', 'pending'],
         ];
 
         foreach (Post::take(4)->get() as $post) {

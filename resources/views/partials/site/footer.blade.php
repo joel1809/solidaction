@@ -20,7 +20,7 @@
                                     <span class="flaticon-phone-call"></span>
                                 </div>
                                 <div class="support-box">
-                                    <h5>Appelez-nous : <a href="tel:{{ preg_replace('/\s+/', '', setting('contact_phone', '+33184801234')) }}">{{ setting('contact_phone', '+33 1 84 80 12 34') }}</a></h5>
+                                    <h5>Appelez-nous : <a href="tel:{{ preg_replace('/\s+/', '', setting('contact_phone', '+2252722411830')) }}">{{ setting('contact_phone', '+225 27 22 41 18 30') }}</a></h5>
                                     <div class="email">
                                         <p><a href="mailto:{{ setting('contact_email', 'contact@solidaction.org') }}">E-mail : {{ setting('contact_email', 'contact@solidaction.org') }}</a></p>
                                     </div>
@@ -116,6 +116,8 @@
             <div class="footer-bottom_content_box text-center">
                 <div class="copyright-text">
                     <p>&copy; {{ date('Y') }} <a href="{{ route('home') }}">{{ setting('site_name', 'SolidAction') }}</a>. Tous droits réservés.
+                        <a href="{{ route('pages.show', 'mentions-legales') }}">Mentions légales</a>
+                        <a href="{{ route('pages.show', 'credits-photos') }}">Crédits photos</a>
                         @auth
                             <a href="{{ route('admin.dashboard') }}">Administration</a>
                         @else

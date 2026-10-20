@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('title', 'Questions fréquentes')
-@section('meta_description', 'Dons, fiscalité, bénévolat, transparence financière : toutes les réponses aux questions les plus posées.')
+@section('meta_description', 'Dons, Mobile Money, bénévolat, transparence financière : toutes les réponses aux questions les plus posées.')
 
 @section('content')
 

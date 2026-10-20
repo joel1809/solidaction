@@ -15,7 +15,7 @@
         ],
         'Collecte' => [
             ['label' => 'Causes', 'route' => 'admin.causes.index', 'icon' => 'heart'],
-            ['label' => 'Dons', 'route' => 'admin.donations.index', 'icon' => 'euro', 'badge' => $pendingDonations],
+            ['label' => 'Dons', 'route' => 'admin.donations.index', 'icon' => 'banknotes', 'badge' => $pendingDonations],
         ],
         'Contenus' => [
             ['label' => 'Actualités', 'route' => 'admin.posts.index', 'icon' => 'news'],

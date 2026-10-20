@@ -13,10 +13,10 @@ class UserSeeder extends Seeder
         User::updateOrCreate(
             ['email' => 'admin@solidaction.org'],
             [
-                'name' => 'Amina Diallo',
+                'name' => 'Aminata Koné',
                 'password' => Hash::make('password'),
                 'role' => 'admin',
-                'phone' => '+33 1 84 80 12 34',
+                'phone' => '+225 27 22 41 18 30',
                 'is_active' => true,
                 'email_verified_at' => now(),
             ]
@@ -25,10 +25,10 @@ class UserSeeder extends Seeder
         User::updateOrCreate(
             ['email' => 'redaction@solidaction.org'],
             [
-                'name' => 'Marc Lefèvre',
+                'name' => 'Yao Kouadio',
                 'password' => Hash::make('password'),
                 'role' => 'editor',
-                'phone' => '+33 1 84 80 12 35',
+                'phone' => '+225 07 08 12 34 56',
                 'is_active' => true,
                 'email_verified_at' => now(),
             ]

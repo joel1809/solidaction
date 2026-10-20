@@ -26,11 +26,9 @@
                                 </li>
                                 <li class="select-box">
                                     <select class="selectpicker" name="montant">
-                                        <option value="25">25 {{ setting('currency_symbol', '€') }}</option>
-                                        <option value="50">50 {{ setting('currency_symbol', '€') }}</option>
-                                        <option value="100">100 {{ setting('currency_symbol', '€') }}</option>
-                                        <option value="250">250 {{ setting('currency_symbol', '€') }}</option>
-                                        <option value="500">500 {{ setting('currency_symbol', '€') }}</option>
+                                        @foreach (explode(',', setting('donation_amounts', '2000,5000,10000,25000,50000')) as $preset)
+                                            <option value="{{ trim($preset) }}">{{ money(trim($preset)) }}</option>
+                                        @endforeach
                                     </select>
                                 </li>
                                 <li class="select-box right">

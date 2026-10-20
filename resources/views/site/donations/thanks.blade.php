@@ -57,6 +57,12 @@
                                 <strong>{{ setting('donation_iban') }}</strong> (BIC {{ setting('donation_bic') }}) en indiquant
                                 la référence <strong>{{ $donation->reference }}</strong> en libellé.
                             </p>
+                        @elseif ($donation->payment_method === 'mobile_money')
+                            <p style="text-align: left;">
+                                Pour finaliser votre don, envoyez le montant au <strong>{{ setting('donation_mobile_money') }}</strong>
+                                en indiquant la référence <strong>{{ $donation->reference }}</strong> en motif.
+                                Notre équipe le valide sous 48 heures ouvrées.
+                            </p>
                         @else
                             <p style="text-align: left;">
                                 Notre équipe valide votre don sous 48 heures ouvrées et vous adresse une confirmation

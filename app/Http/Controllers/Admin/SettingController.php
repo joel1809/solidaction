@@ -50,10 +50,11 @@ class SettingController extends Controller
             'intro_video' => ['label' => 'Vidéo de présentation', 'type' => 'text', 'help' => 'Lien YouTube ou Vimeo.'],
         ],
         'donation' => [
-            'donation_amounts' => ['label' => 'Montants proposés', 'type' => 'text', 'help' => 'Séparés par des virgules, ex. : 25,50,100,250,500'],
+            'donation_amounts' => ['label' => 'Montants proposés', 'type' => 'text', 'help' => 'Séparés par des virgules, ex. : 2000,5000,10000,25000,50000'],
+            'donation_mobile_money' => ['label' => 'Mobile Money', 'type' => 'text', 'help' => 'Numéro et opérateurs acceptés, affichés sur la page de don.'],
             'donation_iban' => ['label' => 'IBAN', 'type' => 'text'],
             'donation_bic' => ['label' => 'BIC', 'type' => 'text'],
-            'donation_tax_notice' => ['label' => 'Mention fiscale', 'type' => 'textarea'],
+            'donation_tax_notice' => ['label' => 'Mention « Reçu de don »', 'type' => 'textarea'],
         ],
     ];
 

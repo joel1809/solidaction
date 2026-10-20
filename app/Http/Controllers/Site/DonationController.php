@@ -27,7 +27,7 @@ class DonationController extends Controller
             'donor_email' => ['required', 'email', 'max:160'],
             'donor_phone' => ['nullable', 'string', 'max:40'],
             'donor_address' => ['nullable', 'string', 'max:255'],
-            'amount' => ['required', 'numeric', 'min:1', 'max:1000000'],
+            'amount' => ['required', 'numeric', 'min:100', 'max:100000000'],
             'frequency' => ['required', Rule::in(array_keys(Donation::FREQUENCIES))],
             'payment_method' => ['required', Rule::in(array_keys(Donation::METHODS))],
             'fund_type' => ['nullable', 'string', 'max:120'],

@@ -312,6 +312,25 @@
     color: #2d2d2d;
 }
 
+/* Tableau à en-têtes de colonnes (page « Crédits photos ») */
+.table-scroll {
+    overflow-x: auto;
+    margin-bottom: 30px;
+}
+
+.table-scroll .info-table {
+    min-width: 560px;
+    margin-bottom: 0;
+}
+
+.table-scroll .info-table th {
+    width: auto;
+}
+
+.copyright-text p a + a {
+    margin-left: 14px;
+}
+
 .donor-list {
     margin: 0;
     padding: 0;

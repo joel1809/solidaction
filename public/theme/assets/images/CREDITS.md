@@ -17,7 +17,7 @@ Elles sont recadrées pour le site. Licences : voir chaque fichier source.
 | `causes/cause-details-image-1.jpg` | [Le recueil d'eau au marigot.jpg](https://commons.wikimedia.org/wiki/File:Le_recueil_d%27eau_au_marigot.jpg) | Dossomebra | Public domain |
 | `blog/blog-v1-1.jpg` | [Transport d'eau inter-quartier.jpg](https://commons.wikimedia.org/wiki/File:Transport_d%27eau_inter-quartier.jpg) | SYLLA Cheick 225 | CC BY-SA 4.0 |
 | `blog/blog-v1-2.jpg` | [Danse avec les enfants 3.jpg](https://commons.wikimedia.org/wiki/File:Danse_avec_les_enfants_3.jpg) | Michaelill16 | CC BY-SA 4.0 |
-| `blog/blog-v1-3.jpg` | [MAP Medicines Delivered in Cote d'Ivoire.jpg](https://commons.wikimedia.org/wiki/File:MAP_Medicines_Delivered_in_Cote_d%27Ivoire.jpg) | Mapintl | CC BY-SA 4.0 |
+| `blog/blog-v1-3.jpg` | [Fishes market in Abidjan (7).JPG](https://commons.wikimedia.org/wiki/File:Fishes_market_in_Abidjan_(7).JPG) | Hanay | CC BY-SA 4.0 |
 | `blog/blog-v1-4.jpg` | [Arbre agnanseu.jpg](https://commons.wikimedia.org/wiki/File:Arbre_agnanseu.jpg) | AigleroyaleCommons | CC BY-SA 4.0 |
 | `blog/blog-v1-5.jpg` | [WL-CI-Abidjan-Il pleut des cordes 2.jpg](https://commons.wikimedia.org/wiki/File:WL-CI-Abidjan-Il_pleut_des_cordes_2.jpg) | WILLAV-FR | CC BY-SA 4.0 |
 | `blog/blog-v1-6.jpg` | [Transplantation 2.jpg](https://commons.wikimedia.org/wiki/File:Transplantation_2.jpg) | Cca Raheem | CC BY-SA 4.0 |

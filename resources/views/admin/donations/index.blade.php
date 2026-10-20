@@ -12,7 +12,7 @@
     </x-admin.page-header>
 
     <div class="mb-6 grid gap-4 sm:grid-cols-3">
-        <x-admin.stat label="Total encaissé" :value="money($totals['completed'])" icon="euro" />
+        <x-admin.stat label="Total encaissé" :value="money($totals['completed'])" icon="banknotes" />
         <x-admin.stat label="En attente de validation" :value="money($totals['pending'])" icon="trend" />
         <x-admin.stat label="Sélection filtrée" :value="money($totals['filtered'])" icon="check"
             :hint="$donations->total().' don(s)'" />

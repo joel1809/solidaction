@@ -39,7 +39,7 @@
         <div class="space-y-6">
             <x-admin.card title="Don">
                 <div class="space-y-5">
-                    <x-admin.field name="amount" label="Montant ({{ setting('currency_symbol', '€') }})"
+                    <x-admin.field name="amount" label="Montant ({{ setting('currency_symbol', 'FCFA') }})"
                         type="number" step="0.01" min="0.01" :model="$donation" required />
 
                     <x-admin.field name="cause_id" label="Cause soutenue" type="select" :model="$donation"

@@ -16,23 +16,23 @@ class DonationSeeder extends Seeder
         }
 
         $donors = [
-            ['Claire Fontaine', 'claire.fontaine@example.fr'],
-            ['Hugo Bertrand', 'hugo.bertrand@example.fr'],
-            ['Nadia Belkacem', 'nadia.belkacem@example.fr'],
-            ['Thomas Rivière', 'thomas.riviere@example.fr'],
-            ['Awa Traoré', 'awa.traore@example.fr'],
-            ['Pierre Vasseur', 'pierre.vasseur@example.fr'],
-            ['Lucie Marchand', 'lucie.marchand@example.fr'],
-            ['Karim Haddad', 'karim.haddad@example.fr'],
-            ['Sophie Delaunay', 'sophie.delaunay@example.fr'],
-            ['Entreprise Lumen SAS', 'mecenat@lumen-sas.example'],
-            ['Fatou Ndiaye', 'fatou.ndiaye@example.fr'],
-            ['Julien Perrot', 'julien.perrot@example.fr'],
+            ['Claudine Ahoua', 'claudine.ahoua@example.com'],
+            ['Jean-Marc Kacou', 'jeanmarc.kacou@example.com'],
+            ['Nadia Touré', 'nadia.toure@example.com'],
+            ['Thierry Ehui', 'thierry.ehui@example.com'],
+            ['Awa Traoré', 'awa.traore@example.com'],
+            ['Pierre Djédjé', 'pierre.djedje@example.com'],
+            ['Lucie Amon', 'lucie.amon@example.com'],
+            ['Karim Diabaté', 'karim.diabate@example.com'],
+            ['Sophie Gbané', 'sophie.gbane@example.com'],
+            ['Groupe Lumen', 'mecenat@lumen.example'],
+            ['Fatou Cissé', 'fatou.cisse@example.com'],
+            ['Julien Kra', 'julien.kra@example.com'],
         ];
 
-        $amounts = [20, 25, 30, 50, 75, 100, 120, 150, 200, 250, 300, 500, 750, 1000, 2500];
+        $amounts = [1000, 2000, 2500, 5000, 5000, 10000, 10000, 15000, 25000, 50000, 75000, 100000, 250000, 500000, 1500000];
         $frequencies = ['one_time', 'one_time', 'one_time', 'monthly', 'monthly', 'yearly'];
-        $methods = ['card', 'card', 'transfer', 'mobile_money', 'paypal', 'cash'];
+        $methods = ['mobile_money', 'mobile_money', 'mobile_money', 'card', 'transfer', 'cash'];
         $messages = [
             'Courage à toute l\'équipe sur place !',
             null,
@@ -68,7 +68,7 @@ class DonationSeeder extends Seeder
                     'cause_id' => $causes ? $causes[array_rand($causes)] : null,
                     'donor_name' => $name,
                     'donor_email' => $email,
-                    'donor_phone' => '+33 6 '.random_int(10, 99).' '.random_int(10, 99).' '.random_int(10, 99).' '.random_int(10, 99),
+                    'donor_phone' => '+225 07 '.random_int(10, 99).' '.random_int(10, 99).' '.random_int(10, 99).' '.random_int(10, 99),
                     'amount' => $amounts[array_rand($amounts)],
                     'frequency' => $frequencies[array_rand($frequencies)],
                     'payment_method' => $methods[array_rand($methods)],

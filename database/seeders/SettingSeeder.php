@@ -13,8 +13,8 @@ class SettingSeeder extends Seeder
             // Identité
             ['site_name', 'SolidAction', 'general'],
             ['site_tagline', 'Agir ensemble, changer des vies', 'general'],
-            ['site_description', 'SolidAction est une ONG française qui finance des projets d\'accès à l\'eau, d\'éducation et de santé auprès des populations vulnérables.', 'general', 'textarea'],
-            ['currency_symbol', '€', 'general'],
+            ['site_description', 'SolidAction est une ONG ivoirienne qui mène des projets d\'accès à l\'eau, d\'éducation et de santé auprès des populations vulnérables de Côte d\'Ivoire.', 'general', 'textarea'],
+            ['currency_symbol', 'FCFA', 'general'],
             ['site_logo', null, 'general', 'image'],
             ['site_logo_sticky', null, 'general', 'image'],
             ['site_logo_mobile', null, 'general', 'image'],
@@ -23,11 +23,11 @@ class SettingSeeder extends Seeder
             // Contact
             ['contact_email', 'contact@solidaction.org', 'contact'],
             ['contact_email_secondary', 'dons@solidaction.org', 'contact'],
-            ['contact_phone', '+33 1 84 80 12 34', 'contact'],
-            ['contact_phone_secondary', '+33 1 84 80 12 35', 'contact'],
-            ['contact_address', '27 rue de la Solidarité, 75011 Paris, France', 'contact', 'textarea'],
-            ['contact_hours', 'Du lundi au vendredi, 9h00 — 18h00', 'contact'],
-            ['contact_map', 'https://www.openstreetmap.org/export/embed.html?bbox=2.3750%2C48.8530%2C2.3950%2C48.8650&layer=mapnik', 'contact'],
+            ['contact_phone', '+225 27 22 41 18 30', 'contact'],
+            ['contact_phone_secondary', '+225 07 08 12 34 56', 'contact'],
+            ['contact_address', 'Cocody Riviera 2, 08 BP 1234 Abidjan 08, Côte d\'Ivoire', 'contact', 'textarea'],
+            ['contact_hours', 'Du lundi au vendredi, 8h00 — 17h00', 'contact'],
+            ['contact_map', 'https://www.openstreetmap.org/export/embed.html?bbox=-3.9800%2C5.3500%2C-3.9500%2C5.3700&layer=mapnik', 'contact'],
 
             // Réseaux sociaux
             ['social_facebook', 'https://facebook.com/solidaction', 'social'],
@@ -37,20 +37,21 @@ class SettingSeeder extends Seeder
             ['social_youtube', 'https://youtube.com/@solidaction', 'social'],
 
             // Contenus éditoriaux
-            ['about_short', 'SolidAction agit depuis 2004 auprès des familles vulnérables : accès à l\'eau potable, éducation, santé et réponse aux urgences humanitaires.', 'content', 'textarea'],
+            ['about_short', 'SolidAction agit depuis 2004 auprès des familles vulnérables de Côte d\'Ivoire : accès à l\'eau potable, éducation, santé et réponse aux urgences humanitaires.', 'content', 'textarea'],
             ['about_title', 'Vingt ans d\'engagement aux côtés des plus fragiles', 'content'],
-            ['about_text', 'Née de l\'initiative de cinq bénévoles, SolidAction est aujourd\'hui présente dans 14 pays. Nous travaillons exclusivement avec des associations locales : ce sont elles qui connaissent les besoins, nous apportons le financement, la méthode et le suivi. Chaque projet est audité et ses résultats publiés dans notre rapport annuel.', 'content', 'textarea'],
+            ['about_text', 'Née à Abidjan de l\'initiative de cinq bénévoles, SolidAction est aujourd\'hui présente dans 14 régions de Côte d\'Ivoire. Nous travaillons exclusivement avec des associations communautaires : ce sont elles qui connaissent les besoins, nous apportons le financement, la méthode et le suivi. Chaque projet est audité et ses résultats publiés dans notre rapport annuel.', 'content', 'textarea'],
             ['mission_title', 'Un petit don aujourd\'hui, un grand changement demain.', 'content'],
-            ['mission_text', 'Nous construisons des projets avec les communautés locales : points d\'eau, écoles, centres de santé et réponse rapide aux situations d\'urgence. Chaque euro est tracé et audité par un cabinet indépendant.', 'content', 'textarea'],
-            ['footer_text', 'Depuis 2004, SolidAction mobilise donateurs et bénévoles autour de projets durables : eau potable, écoles, santé et réponse aux urgences.', 'content', 'textarea'],
+            ['mission_text', 'Nous construisons des projets avec les communautés locales : points d\'eau, écoles, centres de santé et réponse rapide aux situations d\'urgence. Chaque franc est tracé et audité par un cabinet indépendant.', 'content', 'textarea'],
+            ['footer_text', 'Depuis 2004, SolidAction mobilise donateurs et bénévoles autour de projets durables en Côte d\'Ivoire : eau potable, écoles, santé et réponse aux urgences.', 'content', 'textarea'],
             ['intro_video', 'https://www.youtube.com/watch?v=MLpWrANjFbI', 'content'],
             ['stat_beneficiaries', '13700', 'content'],
 
             // Dons
-            ['donation_amounts', '25,50,100,250,500', 'donation'],
-            ['donation_iban', 'FR76 3000 4000 5000 0612 3456 789', 'donation'],
-            ['donation_bic', 'BNPAFRPPXXX', 'donation'],
-            ['donation_tax_notice', 'Votre don est déductible de l\'impôt sur le revenu à hauteur de 66 % dans la limite de 20 % du revenu imposable. Un reçu fiscal vous sera adressé.', 'donation', 'textarea'],
+            ['donation_amounts', '2000,5000,10000,25000,50000', 'donation'],
+            ['donation_mobile_money', '+225 07 08 12 34 56 — Orange Money, MTN MoMo, Moov Money et Wave', 'donation'],
+            ['donation_iban', 'CI93 CI00 8010 0101 2345 6789 0123', 'donation'],
+            ['donation_bic', 'SOLDCIAB', 'donation'],
+            ['donation_tax_notice', 'Chaque don donne lieu à un reçu nominatif envoyé par e-mail. Les entreprises mécènes reçoivent en plus une attestation annuelle récapitulant leurs versements.', 'donation', 'textarea'],
         ];
 
         foreach ($settings as $setting) {

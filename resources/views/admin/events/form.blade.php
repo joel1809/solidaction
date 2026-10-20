@@ -63,7 +63,7 @@
                 <div class="space-y-5">
                     <x-admin.field name="capacity" label="Nombre de places" type="number" min="1" :model="$event"
                         help="Laissez vide pour un accès illimité." />
-                    <x-admin.field name="ticket_price" label="Tarif ({{ setting('currency_symbol', '€') }})"
+                    <x-admin.field name="ticket_price" label="Tarif ({{ setting('currency_symbol', 'FCFA') }})"
                         type="number" step="0.01" min="0" :model="$event" help="0 pour un événement gratuit." />
 
                     @if ($event->exists && $event->capacity)

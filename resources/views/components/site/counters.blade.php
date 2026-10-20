@@ -1,12 +1,16 @@
 @props(['stats'])
 
 @php
+    // En FCFA, les montants collectés se comptent en millions plutôt qu'en milliers.
+    $donations = $stats['donations'] ?? 0;
+    $inMillions = $donations >= 1000000;
+
     $items = [
         [
             'icon' => 'fact-counter-1',
-            'value' => round(($stats['donations'] ?? 0) / 1000, 1),
-            'suffix' => 'K',
-            'prefix' => setting('currency_symbol', '€'),
+            'value' => round($donations / ($inMillions ? 1000000 : 1000), 1),
+            'suffix' => $inMillions ? 'M' : 'K',
+            'prefix' => setting('currency_symbol', 'FCFA'),
             'label' => 'Collectés grâce à<br> nos donateurs',
             'style' => '',
         ],

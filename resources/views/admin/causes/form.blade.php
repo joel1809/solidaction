@@ -64,7 +64,7 @@
 
             <x-admin.card title="Collecte">
                 <div class="space-y-5">
-                    <x-admin.field name="goal_amount" label="Objectif ({{ setting('currency_symbol', '€') }})"
+                    <x-admin.field name="goal_amount" label="Objectif ({{ setting('currency_symbol', 'FCFA') }})"
                         type="number" step="0.01" min="0" :model="$cause" required />
 
                     @if ($cause->exists)

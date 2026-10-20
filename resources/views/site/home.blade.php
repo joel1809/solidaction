@@ -250,7 +250,7 @@
                                 </div>
                             </div>
                             <div class="text">
-                                <p>{{ setting('mission_text', 'Nous construisons des projets avec les communautés locales : points d\'eau, écoles, centres de santé et réponse rapide aux situations d\'urgence. Chaque euro est tracé et audité.') }}</p>
+                                <p>{{ setting('mission_text', 'Nous construisons des projets avec les communautés locales : points d\'eau, écoles, centres de santé et réponse rapide aux situations d\'urgence. Chaque franc est tracé et audité.') }}</p>
                             </div>
                             <ul class="clearfix">
                                 <li>

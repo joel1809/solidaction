@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('title', 'Faire un don')
-@section('meta_description', 'Soutenez les programmes de SolidAction par un don unique ou mensuel. Don déductible à 66 % de vos impôts.')
+@section('meta_description', 'Soutenez les programmes de SolidAction par un don unique ou mensuel, par Mobile Money, carte ou virement.')
 
 @section('content')
 
@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-xl-8">
                     <x-site.sec-title subtitle="Votre générosité en action" title="Choisissez votre contribution" :center="false">
-                        Un don unique ou mensuel, affecté au projet de votre choix. Vous recevez un reçu fiscal et le bilan
+                        Un don unique ou mensuel, affecté au projet de votre choix. Vous recevez un reçu de don et le bilan
                         du projet que vous avez soutenu.
                     </x-site.sec-title>
 
@@ -25,11 +25,11 @@
                         <div class="form-row">
                             <label for="amount">Montant du don <span class="required">*</span></label>
                             <div class="amount-presets">
-                                @foreach (explode(',', setting('donation_amounts', '25,50,100,250,500')) as $preset)
-                                    <button type="button" data-amount="{{ trim($preset) }}">{{ trim($preset) }} {{ setting('currency_symbol', '€') }}</button>
+                                @foreach (explode(',', setting('donation_amounts', '2000,5000,10000,25000,50000')) as $preset)
+                                    <button type="button" data-amount="{{ trim($preset) }}">{{ money(trim($preset)) }}</button>
                                 @endforeach
                             </div>
-                            <input type="number" name="amount" id="amount" min="1" step="0.01"
+                            <input type="number" name="amount" id="amount" min="100" step="1"
                                 value="{{ old('amount', $presetAmount ?? request('montant')) }}" placeholder="Autre montant" required>
                             @error('amount') <span class="field-error">{{ $message }}</span> @enderror
                         </div>
@@ -77,7 +77,7 @@
                                 <div class="form-row">
                                     <label for="donor_email">Adresse e-mail <span class="required">*</span></label>
                                     <input type="email" name="donor_email" id="donor_email" value="{{ old('donor_email') }}" required>
-                                    <span class="field-help">Votre reçu fiscal sera envoyé à cette adresse.</span>
+                                    <span class="field-help">Votre reçu de don sera envoyé à cette adresse.</span>
                                     @error('donor_email') <span class="field-error">{{ $message }}</span> @enderror
                                 </div>
                             </div>
@@ -148,9 +148,18 @@
                         <div class="single-sidebar-box">
                             <div class="sidebar-categories">
                                 <div class="title">
-                                    <h3>Avantage fiscal</h3>
+                                    <h3>Mobile Money</h3>
                                 </div>
-                                <p style="padding: 6px 0 0;">{{ setting('donation_tax_notice', 'Votre don est déductible de l\'impôt sur le revenu à hauteur de 66 %.') }}</p>
+                                <p style="padding: 6px 0 0;">{{ setting('donation_mobile_money', '+225 07 08 12 34 56 — Orange Money, MTN MoMo, Moov Money et Wave') }}</p>
+                            </div>
+                        </div>
+
+                        <div class="single-sidebar-box">
+                            <div class="sidebar-categories">
+                                <div class="title">
+                                    <h3>Reçu de don</h3>
+                                </div>
+                                <p style="padding: 6px 0 0;">{{ setting('donation_tax_notice', 'Chaque don donne lieu à un reçu nominatif envoyé par e-mail.') }}</p>
                             </div>
                         </div>
 
@@ -163,11 +172,11 @@
                                     <tbody>
                                         <tr>
                                             <th>IBAN</th>
-                                            <td>{{ setting('donation_iban', 'FR76 3000 4000 5000 0612 3456 789') }}</td>
+                                            <td>{{ setting('donation_iban', 'CI93 CI00 8010 0101 2345 6789 0123') }}</td>
                                         </tr>
                                         <tr>
                                             <th>BIC</th>
-                                            <td>{{ setting('donation_bic', 'BNPAFRPPXXX') }}</td>
+                                            <td>{{ setting('donation_bic', 'SOLDCIAB') }}</td>
                                         </tr>
                                     </tbody>
                                 </table>

@@ -23,7 +23,7 @@ class SliderSeeder extends Seeder
             [
                 'subtitle' => 'De l\'eau potable pour tous',
                 'title' => "Un forage,\ncinq villages",
-                'text' => 'Avec 8 000 € nous équipons un village entier en eau potable.',
+                'text' => 'Avec 5 millions de FCFA, nous équipons un village entier en eau potable.',
                 'image' => 'theme/assets/images/slides/slide-v1-2.jpg',
                 'button_text' => 'Voir le projet',
                 'button_url' => '/causes',
@@ -33,7 +33,7 @@ class SliderSeeder extends Seeder
             [
                 'subtitle' => 'L\'école change tout',
                 'title' => "Offrir une année\nd'école complète",
-                'text' => '180 € financent la scolarité, les fournitures et les repas d\'un enfant.',
+                'text' => '120 000 FCFA financent la scolarité, les fournitures et les repas d\'un enfant.',
                 'image' => 'theme/assets/images/slides/slide-v1-3.jpg',
                 'button_text' => 'Parrainer',
                 'button_url' => '/faire-un-don',

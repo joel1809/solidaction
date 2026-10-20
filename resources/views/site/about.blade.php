@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('title', 'Qui sommes-nous')
-@section('meta_description', 'SolidAction, association loi 1901 : notre histoire, notre mission, notre gouvernance et nos engagements de transparence.')
+@section('meta_description', 'SolidAction, ONG de droit ivoirien : notre histoire, notre mission, notre gouvernance et nos engagements de transparence.')
 
 @section('content')
 
@@ -33,11 +33,11 @@
                             <tbody>
                                 <tr>
                                     <th>Statut</th>
-                                    <td>Association loi 1901, reconnue d'intérêt général</td>
+                                    <td>ONG de droit ivoirien (loi n° 60-315 du 21 septembre 1960)</td>
                                 </tr>
                                 <tr>
-                                    <th>Pays d'intervention</th>
-                                    <td>14 pays, toujours via un partenaire local enregistré</td>
+                                    <th>Zones d'intervention</th>
+                                    <td>14 régions de Côte d'Ivoire, toujours avec une association communautaire</td>
                                 </tr>
                                 <tr>
                                     <th>Contrôle des comptes</th>

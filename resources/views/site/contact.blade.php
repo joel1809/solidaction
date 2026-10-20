@@ -13,7 +13,7 @@
                 <div class="col-xl-8">
                     <div class="contact-style1_form">
                         <x-site.sec-title subtitle="Nous sommes à votre écoute" title="Écrivez-nous" :center="false">
-                            Don, reçu fiscal, legs, mécénat d'entreprise ou demande presse : décrivez votre demande,
+                            Don, reçu de don, legs, mécénat d'entreprise ou demande presse : décrivez votre demande,
                             nous répondons sous 48 heures ouvrées.
                         </x-site.sec-title>
 
@@ -85,7 +85,7 @@
                                             <h3>Siège social</h3>
                                         </div>
                                     </div>
-                                    <p>{!! nl2br(e(setting('contact_address', '27 rue de la Solidarité, 75011 Paris'))) !!}</p>
+                                    <p>{!! nl2br(e(setting('contact_address', 'Cocody Riviera 2, 08 BP 1234 Abidjan 08'))) !!}</p>
                                 </li>
 
                                 <li>
