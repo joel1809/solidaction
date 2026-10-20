@@ -14,7 +14,7 @@
                     <x-site.alert />
 
                     <div class="empty-state" style="padding: 70px 40px;">
-                        <div style="font-size: 54px; color: var(--thm-base, #f0564a); margin-bottom: 20px;">
+                        <div style="font-size: 54px; color: var(--thm-primary); margin-bottom: 20px;">
                             <span class="fa fa-check-circle"></span>
                         </div>
                         <h3 style="font-size: 32px;">Merci {{ Str::before($donation->donor_name, ' ') }} !</h3>

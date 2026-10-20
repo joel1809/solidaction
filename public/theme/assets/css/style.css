@@ -2316,7 +2316,7 @@ select:focus {
     height: 60px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background: #d53f34;
+    background: var(--thm-primary);
 	cursor: pointer;
 	color: #ffffff;
 	font-size: 18px;

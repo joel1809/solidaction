@@ -42,7 +42,7 @@
                                         </div>
                                         <div class="text-holder" style="flex: 1 1 320px;">
                                             @if ($post->category)
-                                                <p style="color: var(--thm-base, #f0564a); font-weight: 700; margin-bottom: 8px;">
+                                                <p style="color: var(--thm-primary); font-weight: 700; margin-bottom: 8px;">
                                                     {{ $post->category->name }}
                                                 </p>
                                             @endif

@@ -90,7 +90,7 @@
 .app-form textarea:focus {
     outline: none;
     background: #fff;
-    border-color: var(--thm-base, #f0564a);
+    border-color: var(--thm-primary);
 }
 
 .app-form .field-error {
@@ -146,8 +146,8 @@
 
 .amount-presets button:hover,
 .amount-presets button.is-active {
-    background: var(--thm-base, #f0564a);
-    border-color: var(--thm-base, #f0564a);
+    background: var(--thm-primary);
+    border-color: var(--thm-primary);
     color: #fff;
 }
 
@@ -156,7 +156,7 @@
     position: absolute;
     top: 20px;
     left: 20px;
-    background: var(--thm-base, #f0564a);
+    background: var(--thm-primary);
     padding: 6px 16px;
     border-radius: 3px;
     z-index: 2;
@@ -226,7 +226,7 @@
 
 .filter-bar .filter-links a:hover,
 .filter-bar .filter-links a.is-active {
-    background: var(--thm-base, #f0564a);
+    background: var(--thm-primary);
     color: #fff;
 }
 
@@ -250,7 +250,7 @@
     padding: 0 22px;
     border: none;
     border-radius: 3px;
-    background: var(--thm-base, #f0564a);
+    background: var(--thm-primary);
     color: #fff;
     font-weight: 600;
     cursor: pointer;
@@ -288,7 +288,7 @@
     margin: 28px 0;
     padding: 24px 28px;
     background: #faf8f6;
-    border-left: 4px solid var(--thm-base, #f0564a);
+    border-left: 4px solid var(--thm-primary);
     font-style: italic;
 }
 
@@ -329,7 +329,7 @@
 
 .donor-list li span {
     font-weight: 700;
-    color: var(--thm-base, #f0564a);
+    color: var(--thm-primary);
 }
 
 .footer-form-error {
@@ -387,7 +387,7 @@
     display: block;
     margin-bottom: 18px;
     font-size: 28px;
-    color: var(--thm-base, #f0564a);
+    color: var(--thm-primary);
 }
 
 .testimonial-grid-item h3 {
@@ -437,4 +437,88 @@
     border-radius: 3px;
     font-size: 13px;
     color: #c8f3da;
+}
+
+/* --- Couleurs de la charte (logo Solid Action) --- */
+:root {
+    --thm-primary: #096635;
+    --thm-primary-rgb: 9, 102, 53;
+    --thm-color-2: #f8b134;
+    --thm-color-2-rgb: 248, 177, 52;
+    --thm-color-3: #0e8a48;
+    --thm-color-3-rgb: 14, 138, 72;
+    --thm-color-4: #e09a1a;
+    --thm-color-4-rgb: 224, 154, 26;
+    --thm-color-5: #064a26;
+    --thm-color-5-rgb: 6, 74, 38;
+}
+
+.footer-area {
+    background-color: #063d20;
+}
+
+/* --- En-tête : logo et menu sur une seule ligne --- */
+.header .outer-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.header .outer-box::after {
+    display: none;
+}
+
+.header .header-left,
+.header .header-right {
+    float: none;
+}
+
+.header-left .logo {
+    padding: 12px 0;
+}
+
+.header-left .logo img {
+    display: block;
+    height: 100px;
+    width: auto;
+}
+
+.header-right .main-menu .navigation > li > a {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.sticky-header .logo {
+    padding: 10px 0;
+}
+
+.sticky-header .logo img {
+    display: block;
+    height: 72px;
+    width: auto;
+}
+
+.mobile-menu .nav-logo img {
+    max-height: 110px;
+    width: auto;
+}
+
+.footer-logo img {
+    max-height: 150px;
+    max-width: 100%;
+    width: auto;
+}
+
+@media (max-width: 767px) {
+    .header-left .logo img {
+        height: 70px;
+    }
+}
+
+/* Menu : libellés en casse titre (gérée dans la vue), sans transformation CSS */
+.main-menu .navigation > li > a,
+.main-menu .navigation > li > ul > li > a,
+.mobile-menu .navigation li > a {
+    text-transform: none;
 }

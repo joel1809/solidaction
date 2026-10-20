@@ -1,6 +1,5 @@
 @php
     $menu = [
-        ['label' => 'Accueil', 'route' => 'home'],
         ['label' => 'Association', 'route' => 'about', 'children' => [
             ['label' => 'Qui sommes-nous', 'route' => 'about'],
             ['label' => 'Notre équipe', 'route' => 'team'],
@@ -70,7 +69,7 @@
                 <div class="header-left clearfix pull-left">
                     <div class="logo">
                         <a href="{{ route('home') }}">
-                            <img src="{{ media(setting('site_logo'), 'theme/assets/images/resources/logo.png') }}"
+                            <img src="{{ media(setting('site_logo'), 'theme/assets/images/logo/logo-header.png') }}"
                                 alt="{{ setting('site_name', 'SolidAction') }}">
                         </a>
                     </div>
@@ -91,11 +90,11 @@
                                 <ul class="navigation clearfix">
                                     @foreach ($menu as $item)
                                         <li class="{{ isset($item['children']) ? 'dropdown' : '' }} {{ $isCurrent($item) ? 'current' : '' }}">
-                                            <a href="{{ route($item['route']) }}">{{ $item['label'] }}</a>
+                                            <a href="{{ route($item['route']) }}">{{ mb_convert_case($item['label'], MB_CASE_TITLE, 'UTF-8') }}</a>
                                             @isset($item['children'])
                                                 <ul>
                                                     @foreach ($item['children'] as $child)
-                                                        <li><a href="{{ route($child['route']) }}">{{ $child['label'] }}</a></li>
+                                                        <li><a href="{{ route($child['route']) }}">{{ mb_convert_case($child['label'], MB_CASE_TITLE, 'UTF-8') }}</a></li>
                                                     @endforeach
                                                 </ul>
                                             @endisset
@@ -131,7 +130,7 @@
             <div class="clearfix">
                 <div class="logo float-left">
                     <a href="{{ route('home') }}" class="img-responsive">
-                        <img src="{{ media(setting('site_logo_sticky'), 'theme/assets/images/resources/sticky-logo.png') }}" alt="{{ setting('site_name', 'SolidAction') }}">
+                        <img src="{{ media(setting('site_logo_sticky'), 'theme/assets/images/logo/logo-header.png') }}" alt="{{ setting('site_name', 'SolidAction') }}">
                     </a>
                 </div>
                 <div class="right-col float-right">
@@ -150,7 +149,7 @@
         <nav class="menu-box">
             <div class="nav-logo">
                 <a href="{{ route('home') }}">
-                    <img src="{{ media(setting('site_logo_mobile'), 'theme/assets/images/resources/mobilemenu-logo.png') }}" alt="{{ setting('site_name', 'SolidAction') }}">
+                    <img src="{{ media(setting('site_logo_mobile'), 'theme/assets/images/logo/logo-footer.png') }}" alt="{{ setting('site_name', 'SolidAction') }}">
                 </a>
             </div>
             <div class="menu-outer">
