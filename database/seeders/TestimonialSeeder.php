@@ -46,7 +46,7 @@ class TestimonialSeeder extends Seeder
             Testimonial::updateOrCreate(
                 ['name' => $testimonial['name']],
                 array_merge($testimonial, [
-                    'photo' => 'theme/assets/images/testimonial/testimonial-v1-1.png',
+                    'photo' => 'theme/assets/images/testimonial/testimonial-'.($index + 1).'.png',
                     'rating' => 5,
                     'sort_order' => $index,
                     'is_active' => true,

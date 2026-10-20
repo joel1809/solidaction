@@ -19,7 +19,7 @@ class EventSeeder extends Seeder
                 'capacity' => 400,
                 'ticket_price' => 15,
                 'excerpt' => '10 km au bord de l\'eau : chaque dossard finance une semaine de cantine scolaire.',
-                'image' => 'theme/assets/images/events/event-details-1.jpg',
+                'image' => 'theme/assets/images/events/event-1.jpg',
                 'is_featured' => true,
             ],
             [
@@ -30,7 +30,7 @@ class EventSeeder extends Seeder
                 'capacity' => 180,
                 'ticket_price' => 85,
                 'excerpt' => 'Une soirée de gala avec vente aux enchères au profit de la maternité de Zinder.',
-                'image' => 'theme/assets/images/events/event-details-1.jpg',
+                'image' => 'theme/assets/images/events/event-2.jpg',
             ],
             [
                 'title' => 'Webinaire : comprendre le reçu fiscal',
@@ -40,7 +40,7 @@ class EventSeeder extends Seeder
                 'capacity' => 500,
                 'ticket_price' => 0,
                 'excerpt' => '45 minutes pour tout savoir sur la déduction fiscale de vos dons, questions comprises.',
-                'image' => 'theme/assets/images/events/event-details-1.jpg',
+                'image' => 'theme/assets/images/events/event-3.jpg',
             ],
             [
                 'title' => 'Formation des nouveaux bénévoles',
@@ -50,7 +50,7 @@ class EventSeeder extends Seeder
                 'capacity' => 40,
                 'ticket_price' => 0,
                 'excerpt' => 'Une journée pour découvrir nos programmes, nos méthodes et choisir votre mission.',
-                'image' => 'theme/assets/images/events/event-details-1.jpg',
+                'image' => 'theme/assets/images/events/event-4.jpg',
             ],
             [
                 'title' => 'Marché de Noël solidaire',
@@ -60,7 +60,7 @@ class EventSeeder extends Seeder
                 'capacity' => null,
                 'ticket_price' => 0,
                 'excerpt' => 'Artisanat des coopératives partenaires : 100 % des bénéfices reversés aux projets.',
-                'image' => 'theme/assets/images/events/event-details-1.jpg',
+                'image' => 'theme/assets/images/events/event-5.jpg',
             ],
             [
                 'title' => 'Assemblée générale 2025',
@@ -70,7 +70,7 @@ class EventSeeder extends Seeder
                 'capacity' => 120,
                 'ticket_price' => 0,
                 'excerpt' => 'Présentation des comptes certifiés et vote des orientations pour l\'année à venir.',
-                'image' => 'theme/assets/images/events/event-details-1.jpg',
+                'image' => 'theme/assets/images/events/event-6.jpg',
             ],
             [
                 'title' => 'Concert caritatif « Voix pour l\'eau »',
@@ -80,7 +80,7 @@ class EventSeeder extends Seeder
                 'capacity' => 600,
                 'ticket_price' => 22,
                 'excerpt' => 'Retour sur une soirée qui a permis de financer deux forages complets.',
-                'image' => 'theme/assets/images/events/event-details-1.jpg',
+                'image' => 'theme/assets/images/events/event-7.jpg',
             ],
         ];
 
