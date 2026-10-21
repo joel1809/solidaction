@@ -2,9 +2,12 @@
 
 namespace App\Models;
 
+use App\Mail\DonationConfirmed;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
+use Throwable;
 
 class Donation extends Model
 {
@@ -51,8 +54,31 @@ class Donation extends Model
             }
         });
 
+        // Envoie le mail de confirmation au donateur dès que le don passe à « Validé ».
+        static::created(function (Donation $donation) {
+            if ($donation->status === 'completed') {
+                $donation->sendConfirmation();
+            }
+        });
+
+        static::updated(function (Donation $donation) {
+            if ($donation->wasChanged('status') && $donation->status === 'completed') {
+                $donation->sendConfirmation();
+            }
+        });
+
         static::saved(fn (Donation $donation) => $donation->cause?->recalculateRaised());
         static::deleted(fn (Donation $donation) => $donation->cause?->recalculateRaised());
+    }
+
+    public function sendConfirmation(): void
+    {
+        try {
+            Mail::to($this->donor_email, $this->donor_name)->send(new DonationConfirmed($this));
+        } catch (Throwable $e) {
+            // Un échec SMTP ne doit pas empêcher la validation du don.
+            report($e);
+        }
     }
 
     public function cause()
