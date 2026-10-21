@@ -22,7 +22,7 @@ class PageSeeder extends Seeder
                 <p>Le site est hébergé au sein de datacenters certifiés ISO 27001. Les données personnelles sont traitées conformément à la réglementation ivoirienne sur la protection des données.</p>
                 <h3>Propriété intellectuelle</h3>
                 <p>Les textes et logotypes sont la propriété de SolidAction ou de ses partenaires. Toute reproduction sans autorisation écrite est interdite, à l'exception des citations courtes accompagnées de la mention de la source.</p>
-                <p>Les photographies proviennent de Wikimedia Commons et sont publiées sous licences libres : leurs auteurs et licences sont indiqués sur la page <a href="/page/credits-photos">Crédits photos</a>.</p>
+                <p>Les photographies proviennent de Pexels et sont utilisées sous la licence Pexels : leurs auteurs sont indiqués sur la page <a href="/page/credits-photos">Crédits photos</a>.</p>
                 HTML,
             ],
             [
@@ -94,7 +94,7 @@ class PageSeeder extends Seeder
             ->implode("\n");
 
         return <<<HTML
-        <p>Toutes les photographies de ce site ont été prises en Côte d'Ivoire. Elles proviennent de <a href="https://commons.wikimedia.org" target="_blank" rel="noopener">Wikimedia Commons</a> et sont réutilisées conformément à leur licence. Elles ont été recadrées pour s'adapter à la mise en page ; les images originales sont consultables en suivant chaque lien.</p>
+        <p>Les photographies de ce site proviennent de <a href="https://www.pexels.com" target="_blank" rel="noopener">Pexels</a> et sont réutilisées conformément à la licence Pexels. Les vues d'Abidjan, de Yamoussoukro et de Korhogo ainsi qu'une partie des portraits ont été prises en Côte d'Ivoire ; les autres scènes illustrent des situations comparables ailleurs en Afrique. Elles ont été recadrées pour s'adapter à la mise en page ; les images originales sont consultables en suivant chaque lien.</p>
         <p>Les personnes photographiées ne sont pas liées à SolidAction : les portraits illustrent les pages de l'équipe et des témoignages sans représenter les personnes citées.</p>
         <div class="table-scroll">
             <table class="info-table">

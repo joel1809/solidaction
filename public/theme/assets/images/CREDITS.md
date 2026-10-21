@@ -1,69 +1,71 @@
 # Crédits photos
 
-Toutes les photos proviennent de Wikimedia Commons et ont été prises en Côte d'Ivoire.
-Elles sont recadrées pour le site. Licences : voir chaque fichier source.
+Toutes les photos proviennent de [Pexels](https://www.pexels.com) et sont utilisées
+sous la [licence Pexels](https://www.pexels.com/fr-fr/license/) (usage libre, attribution non obligatoire).
+Elles sont recadrées pour le site.
 
-| Fichier du site | Photo source | Auteur | Licence |
-|---|---|---|---|
-| `causes/causes-v1-1.jpg` | [PANGO DIMBOKRO.JPG](https://commons.wikimedia.org/wiki/File:PANGO_DIMBOKRO.JPG) | Kongraoul | CC BY-SA 3.0 |
-| `causes/causes-v1-2.jpg` | [Collégiens en classe5.jpg](https://commons.wikimedia.org/wiki/File:Coll%C3%A9giens_en_classe5.jpg) | Zenman | CC BY-SA 3.0 |
-| `causes/causes-v1-3.jpg` | [Infirmier en campagne de vaccination.jpg](https://commons.wikimedia.org/wiki/File:Infirmier_en_campagne_de_vaccination.jpg) | IBRAHOUA | CC BY-SA 4.0 |
-| `causes/causes-v1-4.jpg` | [Yopougon pluie - panoramio.jpg](https://commons.wikimedia.org/wiki/File:Yopougon_pluie_-_panoramio.jpg) | arno B | CC BY 3.0 |
-| `causes/causes-v1-5.jpg` | [1ère étape 06.jpg](https://commons.wikimedia.org/wiki/File:1%C3%A8re_%C3%A9tape_06.jpg) | AigleroyaleCommons | CC BY-SA 4.0 |
-| `causes/causes-v1-6.jpg` | [Femmes puisant de l'eau en zone rurale 11.jpg](https://commons.wikimedia.org/wiki/File:Femmes_puisant_de_l%27eau_en_zone_rurale_11.jpg) | African Hope | CC BY-SA 4.0 |
-| `causes/causes-v1-7.jpg` | [Cieleves.jpg](https://commons.wikimedia.org/wiki/File:Cieleves.jpg) | Zenman | CC BY-SA 3.0 |
-| `causes/causes-v1-8.jpg` | [Assistante dentiste 05.jpg](https://commons.wikimedia.org/wiki/File:Assistante_dentiste_05.jpg) | Aristidek5maya | CC BY-SA 4.0 |
-| `causes/causes-v1-9.jpg` | [La recolte de salade 4.jpg](https://commons.wikimedia.org/wiki/File:La_recolte_de_salade_4.jpg) | BorisAhonon | CC BY-SA 4.0 |
-| `causes/cause-details-image-1.jpg` | [Le recueil d'eau au marigot.jpg](https://commons.wikimedia.org/wiki/File:Le_recueil_d%27eau_au_marigot.jpg) | Dossomebra | Public domain |
-| `blog/blog-v1-1.jpg` | [Transport d'eau inter-quartier.jpg](https://commons.wikimedia.org/wiki/File:Transport_d%27eau_inter-quartier.jpg) | SYLLA Cheick 225 | CC BY-SA 4.0 |
-| `blog/blog-v1-2.jpg` | [Danse avec les enfants 3.jpg](https://commons.wikimedia.org/wiki/File:Danse_avec_les_enfants_3.jpg) | Michaelill16 | CC BY-SA 4.0 |
-| `blog/blog-v1-3.jpg` | [Fishes market in Abidjan (7).JPG](https://commons.wikimedia.org/wiki/File:Fishes_market_in_Abidjan_(7).JPG) | Hanay | CC BY-SA 4.0 |
-| `blog/blog-v1-4.jpg` | [Arbre agnanseu.jpg](https://commons.wikimedia.org/wiki/File:Arbre_agnanseu.jpg) | AigleroyaleCommons | CC BY-SA 4.0 |
-| `blog/blog-v1-5.jpg` | [WL-CI-Abidjan-Il pleut des cordes 2.jpg](https://commons.wikimedia.org/wiki/File:WL-CI-Abidjan-Il_pleut_des_cordes_2.jpg) | WILLAV-FR | CC BY-SA 4.0 |
-| `blog/blog-v1-6.jpg` | [Transplantation 2.jpg](https://commons.wikimedia.org/wiki/File:Transplantation_2.jpg) | Cca Raheem | CC BY-SA 4.0 |
-| `blog/blog-v1-7.jpg` | [Infirmières au centre socio-médico-chirurgical à Bouaké.jpg](https://commons.wikimedia.org/wiki/File:Infirmi%C3%A8res_au_centre_socio-m%C3%A9dico-chirurgical_%C3%A0_Bouak%C3%A9.jpg) | Linhuh | CC BY-SA 4.0 |
-| `blog/blog-v1-8.jpg` | [Le marché de Koumassi.JPG](https://commons.wikimedia.org/wiki/File:Le_march%C3%A9_de_Koumassi.JPG) | Jessica Sagou | CC BY-SA 4.0 |
-| `blog/blog-details-1.jpg` | [Institutrice ivoirienne 03.jpg](https://commons.wikimedia.org/wiki/File:Institutrice_ivoirienne_03.jpg) | Aristidek5maya | CC BY-SA 4.0 |
-| `events/event-1.jpg` | [Sport scolaire.jpg](https://commons.wikimedia.org/wiki/File:Sport_scolaire.jpg) | Zenman | CC BY-SA 3.0 |
-| `events/event-2.jpg` | [ECHARPE TRADI 2.JPG](https://commons.wikimedia.org/wiki/File:ECHARPE_TRADI_2.JPG) | Kamara kolo rachelle | CC BY-SA 4.0 |
-| `events/event-3.jpg` | [Jeune étudiante ivoirienne.jpg](https://commons.wikimedia.org/wiki/File:Jeune_%C3%A9tudiante_ivoirienne.jpg) | Kctzch | CC BY-SA 4.0 |
-| `events/event-4.jpg` | [Social Volunteering Education.jpg](https://commons.wikimedia.org/wiki/File:Social_Volunteering_Education.jpg) | Totibill2017 | CC BY-SA 4.0 |
-| `events/event-5.jpg` | [Marché de légumes.jpg](https://commons.wikimedia.org/wiki/File:March%C3%A9_de_l%C3%A9gumes.jpg) | AZIMIE | CC BY-SA 4.0 |
-| `events/event-6.jpg` | [Une séance de présentation.jpg](https://commons.wikimedia.org/wiki/File:Une_s%C3%A9ance_de_pr%C3%A9sentation.jpg) | Linhuh | CC BY-SA 4.0 |
-| `events/event-7.jpg` | [Prestation des Clowns et les enfants au Femua Kids 17e Éditions.jpg](https://commons.wikimedia.org/wiki/File:Prestation_des_Clowns_et_les_enfants_au_Femua_Kids_17e_%C3%89ditions.jpg) | Jean Yves ESSIGAN | CC0 |
-| `events/event-details-1.jpg` | [Un prince Brong jouant au tambour.jpg](https://commons.wikimedia.org/wiki/File:Un_prince_Brong_jouant_au_tambour.jpg) | Durand ndri | CC BY-SA 4.0 |
-| `slides/slide-v1-1.jpg` | [Enseignant ivoirien en zone rurale 01.jpg](https://commons.wikimedia.org/wiki/File:Enseignant_ivoirien_en_zone_rurale_01.jpg) | African Hope | CC BY-SA 4.0 |
-| `slides/slide-v1-2.jpg` | [Woman at works in a plantations.jpg](https://commons.wikimedia.org/wiki/File:Woman_at_works_in_a_plantations.jpg) | Melchisedek ABAKA | CC BY-SA 4.0 |
-| `slides/slide-v1-3.jpg` | [Abidjan des Lagune.jpg](https://commons.wikimedia.org/wiki/File:Abidjan_des_Lagune.jpg) | Aman ADO | CC BY-SA 4.0 |
-| `breadcrumb/breadcrumb-1.jpg` | [Le Plateau depuis le Pont ADO – Abidjan.jpg](https://commons.wikimedia.org/wiki/File:Le_Plateau_depuis_le_Pont_ADO_%E2%80%93_Abidjan.jpg) | Edison McCullen | CC BY 4.0 |
-| `breadcrumb/breadcrumb-2.jpg` | [Le Plateau depuis Treichville – Abidjan.jpg](https://commons.wikimedia.org/wiki/File:Le_Plateau_depuis_Treichville_%E2%80%93_Abidjan.jpg) | Edison McCullen | CC BY 4.0 |
-| `breadcrumb/breadcrumb-3.jpg` | [Abidjan (14605474275).jpg](https://commons.wikimedia.org/wiki/File:Abidjan_(14605474275).jpg) | Maarten van der Bent | CC BY-SA 2.0 |
-| `breadcrumb/breadcrumb-4.jpg` | [Woman with watering can, Dent de Man.jpg](https://commons.wikimedia.org/wiki/File:Woman_with_watering_can,_Dent_de_Man.jpg) | FBilula | CC BY-SA 4.0 |
-| `breadcrumb/breadcrumb-5.jpg` | [Centre d'Affaire d'Abdijan (29899993300).jpg](https://commons.wikimedia.org/wiki/File:Centre_d%27Affaire_d%27Abdijan_(29899993300).jpg) | Citizen59 from Tunis, Tunisie | CC BY-SA 2.0 |
-| `breadcrumb/breadcrumb-6.jpg` | [PlateauSudAbidjanMai2016 1.JPG](https://commons.wikimedia.org/wiki/File:PlateauSudAbidjanMai2016_1.JPG) | Citizen59 | CC BY 3.0 |
-| `breadcrumb/breadcrumb-7.jpg` | [Des vendeuse de légumes.jpg](https://commons.wikimedia.org/wiki/File:Des_vendeuse_de_l%C3%A9gumes.jpg) | SYLLA Cheick 225 | CC BY-SA 4.0 |
-| `about/about-style1-image-1.jpg` | [Enseignant ivoirien en zone rurale 11.jpg](https://commons.wikimedia.org/wiki/File:Enseignant_ivoirien_en_zone_rurale_11.jpg) | African Hope | CC BY-SA 4.0 |
-| `resources/mission-goals.jpg` | [La recolte de salade 1.jpg](https://commons.wikimedia.org/wiki/File:La_recolte_de_salade_1.jpg) | BorisAhonon | CC BY-SA 4.0 |
-| `resources/event-style1-image.jpg` | [Danse avec les enfants 3.jpg](https://commons.wikimedia.org/wiki/File:Danse_avec_les_enfants_3.jpg) | Michaelill16 | CC BY-SA 4.0 |
-| `resources/causes-style1_image-1.jpg` | [Gosses heureux.JPG](https://commons.wikimedia.org/wiki/File:Gosses_heureux.JPG) | Saindou KANGOUTE | CC BY-SA 4.0 |
-| `resources/causes-style1_image-2.jpg` | [Mes jumelles.jpg](https://commons.wikimedia.org/wiki/File:Mes_jumelles.jpg) | Raulandkpr | CC BY-SA 4.0 |
-| `resources/causes-style1_image-3.jpg` | [Des enfants qui jouent sur un vieux bateau.jpg](https://commons.wikimedia.org/wiki/File:Des_enfants_qui_jouent_sur_un_vieux_bateau.jpg) | SYLLA Cheick 225 | CC BY-SA 4.0 |
-| `resources/causes-style1_image-4.jpg` | [Femme de l'ethnie n'zima de cote d'ivoire.jpg](https://commons.wikimedia.org/wiki/File:Femme_de_l%27ethnie_n%27zima_de_cote_d%27ivoire.jpg) | Touremyriam01 | CC BY-SA 4.0 |
-| `parallax-background/fact-counter-area_bg.jpg` | [Le Plateau depuis l'extrémité Ouest du Pont ADO – Abidjan.jpg](https://commons.wikimedia.org/wiki/File:Le_Plateau_depuis_l%27extr%C3%A9mit%C3%A9_Ouest_du_Pont_ADO_%E2%80%93_Abidjan.jpg) | Edison McCullen | CC BY 4.0 |
-| `sidebar/sidebar-slogan-img.jpg` | [La recolte de salade 2.jpg](https://commons.wikimedia.org/wiki/File:La_recolte_de_salade_2.jpg) | BorisAhonon | CC BY-SA 4.0 |
-| `sidebar/campaigns-1.jpg` | [Collégiens en classe5.jpg](https://commons.wikimedia.org/wiki/File:Coll%C3%A9giens_en_classe5.jpg) | Zenman | CC BY-SA 3.0 |
-| `sidebar/campaigns-2.jpg` | [PANGO DIMBOKRO.JPG](https://commons.wikimedia.org/wiki/File:PANGO_DIMBOKRO.JPG) | Kongraoul | CC BY-SA 3.0 |
-| `sidebar/campaigns-3.jpg` | [A woman works hard in a platation in Ivory coast.jpg](https://commons.wikimedia.org/wiki/File:A_woman_works_hard_in_a_platation_in_Ivory_coast.jpg) | Melchisedek ABAKA | CC BY-SA 4.0 |
-| `team/team-v1-1.jpg` | [Couturière 3.jpg](https://commons.wikimedia.org/wiki/File:Couturi%C3%A8re_3.jpg) | Metchyves | CC BY-SA 4.0 |
-| `team/team-v1-2.jpg` | [RAN 2024 - J3 - membre de troupe du club de Korhogo.jpg](https://commons.wikimedia.org/wiki/File:RAN_2024_-_J3_-_membre_de_troupe_du_club_de_Korhogo.jpg) | Abiba Pauline | CC BY 4.0 |
-| `team/team-v1-3.jpg` | [Tenues et parures traditionnelles Andôh.jpg](https://commons.wikimedia.org/wiki/File:Tenues_et_parures_traditionnelles_And%C3%B4h.jpg) | Dissian | CC BY-SA 4.0 |
-| `team/team-v1-4.jpg` | [Un sénoufo en habit traditionel.JPG](https://commons.wikimedia.org/wiki/File:Un_s%C3%A9noufo_en_habit_traditionel.JPG) | Mr2KM | CC BY-SA 4.0 |
-| `team/team-v2-1.jpg` | [Tenue ivoirienne.jpg](https://commons.wikimedia.org/wiki/File:Tenue_ivoirienne.jpg) | Eltia Aimée | CC BY-SA 4.0 |
-| `team/team-v2-2.jpg` | [RAN 2024 - J3.jpg](https://commons.wikimedia.org/wiki/File:RAN_2024_-_J3.jpg) | Abiba Pauline | CC BY 4.0 |
-| `team/team-v2-3.jpg` | [Attaché de foulard.jpg](https://commons.wikimedia.org/wiki/File:Attach%C3%A9_de_foulard.jpg) | Leunajones | CC BY-SA 4.0 |
-| `team/team-v3-1.jpg` | [A ivorian gentleman dressing a yellow loincloth shirt.JPG](https://commons.wikimedia.org/wiki/File:A_ivorian_gentleman_dressing_a_yellow_loincloth_shirt.JPG) | Mr2KM | CC BY-SA 4.0 |
-| `testimonial/testimonial-1.png` | [A smiling girl wearing tradional made earring.JPG](https://commons.wikimedia.org/wiki/File:A_smiling_girl_wearing_tradional_made_earring.JPG) | Mr2KM | CC BY-SA 4.0 |
-| `testimonial/testimonial-2.png` | [Habit en Tapia (2).jpg](https://commons.wikimedia.org/wiki/File:Habit_en_Tapia_(2).jpg) | Mr2KM | CC BY-SA 4.0 |
-| `testimonial/testimonial-3.png` | [A girl with earrings.JPG](https://commons.wikimedia.org/wiki/File:A_girl_with_earrings.JPG) | Mr2KM | CC BY-SA 4.0 |
-| `testimonial/testimonial-4.png` | [Collier de perles.jpg](https://commons.wikimedia.org/wiki/File:Collier_de_perles.jpg) | Leunajones | CC BY-SA 4.0 |
-| `testimonial/testimonial-v1-1.png` | [A young student doing exercises on a whiteboard.jpg](https://commons.wikimedia.org/wiki/File:A_young_student_doing_exercises_on_a_whiteboard.jpg) | Melchisedek ABAKA | CC BY-SA 4.0 |
+| Fichier du site | Photo source | Auteur |
+|---|---|---|
+| `slides/slide-v1-1.jpg` | [Two young African boys smiling and sitting on a porch outdoors](https://www.pexels.com/photo/children-in-front-of-a-house-20653714/) | Louisette BEHOU |
+| `slides/slide-v1-2.jpg` | [Group of children gathering water from a well in Kitgum, Uganda](https://www.pexels.com/photo/photo-of-children-drinking-water-28101466/) | illustrate Digital Ug |
+| `slides/slide-v1-3.jpg` | [A group of African schoolchildren engaged in learning at an outdoor class setting](https://www.pexels.com/photo/photo-of-children-sitting-behind-their-desks-25457343/) | Justin muhinda |
+| `breadcrumb/breadcrumb-1.jpg` | [Contemporary cityscape of Abidjan featuring high-rise buildings by the waterfront under overcast skies](https://www.pexels.com/photo/residential-buildings-by-water-in-city-18435332/) | Jean Marc Bonnel |
+| `breadcrumb/breadcrumb-2.jpg` | [Stunning aerial shot of a bridge crossing the lagoon in Abidjan, Côte d'Ivoire, under vibrant skies](https://www.pexels.com/photo/aerial-view-of-a-bridge-7381787/) | Silvere Meya |
+| `breadcrumb/breadcrumb-3.jpg` | [A stunning aerial view of a bustling expressway in Abidjan, Côte d'Ivoire, showcasing urban architecture and transportation](https://www.pexels.com/photo/aerial-view-of-flyover-roads-and-highways-on-a-metropolitan-area-7381785/) | Silvere Meya |
+| `breadcrumb/breadcrumb-4.jpg` | [African women engaged in community work in a rural village setting in Korhogo, Côte d'Ivoire](https://www.pexels.com/photo/women-working-in-village-17072424/) | Alfred Desiré Nebout |
+| `breadcrumb/breadcrumb-5.jpg` | [Aerial shot capturing the coastline and urban sprawl of Abidjan, Côte d'Ivoire](https://www.pexels.com/photo/aerial-view-of-city-buildings-7381958/) | Silvere Meya |
+| `breadcrumb/breadcrumb-6.jpg` | [Aerial view of a busy bridge over a lake in Abidjan with motor vehicles in motion](https://www.pexels.com/photo/aerial-view-of-gray-concrete-bridge-7381788/) | Silvere Meya |
+| `breadcrumb/breadcrumb-7.jpg` | [Three women in traditional African clothing at a lively cultural event in Abidjan](https://www.pexels.com/photo/photo-of-women-in-colorful-traditional-wear-12634787/) | Adera Abdoulaye Dolo |
+| `parallax-background/fact-counter-area_bg.jpg` | [Dynamic aerial shot of Abidjan's expressway showcasing modern urban infrastructure and vibrant cityscape](https://www.pexels.com/photo/aerial-view-of-flyover-roads-and-highways-on-a-metropolitan-area-7381781/) | Silvere Meya |
+| `causes/causes-v1-1.jpg` | [A rural family collects water from a well surrounded by greenery](https://www.pexels.com/photo/woman-and-children-near-wall-10988585/) | Safari Consoler |
+| `sidebar/campaigns-2.jpg` | [A rural family collects water from a well surrounded by greenery](https://www.pexels.com/photo/woman-and-children-near-wall-10988585/) | Safari Consoler |
+| `causes/causes-v1-2.jpg` | [High school students collaborating during a lesson in a classroom environment](https://www.pexels.com/photo/engaged-students-in-a-classroom-setting-34526416/) | mickael ange konan |
+| `sidebar/campaigns-1.jpg` | [High school students collaborating during a lesson in a classroom environment](https://www.pexels.com/photo/engaged-students-in-a-classroom-setting-34526416/) | mickael ange konan |
+| `causes/causes-v1-3.jpg` | [A woman in traditional attire holds her newborn, showcasing culture and motherhood](https://www.pexels.com/photo/woman-holding-baby-15773144/) | Adera Abdoulaye Dolo |
+| `causes/causes-v1-4.jpg` | [Two children wade through a flooded street, with one giving the other a piggyback ride](https://www.pexels.com/photo/man-in-blue-skirt-and-blue-shorts-carrying-a-boy-in-blue-jacket-while-walking-on-water-13633959/) | DIALO Photography |
+| `causes/causes-v1-5.jpg` | [Children enjoying their meal outside, highlighting school life and nourishment](https://www.pexels.com/photo/young-students-eating-lunch-outdoors-at-school-35305053/) | Speak Media Uganda |
+| `causes/causes-v1-6.jpg` | [A girl bends to drink clean water from a well in Kitgum, Northern Uganda](https://www.pexels.com/photo/girl-drinking-water-from-the-pipe-28101461/) | illustrate Digital Ug |
+| `causes/causes-v1-7.jpg` | [African students in a classroom collaborate on a learning assignment](https://www.pexels.com/photo/african-school-students-engaged-in-classroom-activity-34211750/) | Tosin Olowoleni |
+| `causes/causes-v1-8.jpg` | [A medical professional consults with a patient during a blood pressure checkup in Lagos, Nigeria](https://www.pexels.com/photo/doctor-consultation-with-blood-pressure-checkup-30677591/) | Ninthgrid |
+| `causes/causes-v1-9.jpg` | [A woman in traditional attire waters plants in a lush garden in Tanzania](https://www.pexels.com/photo/woman-watering-plants-in-tanzanian-garden-29124242/) | Peter Chilumba |
+| `sidebar/campaigns-3.jpg` | [A woman in traditional attire waters plants in a lush garden in Tanzania](https://www.pexels.com/photo/woman-watering-plants-in-tanzanian-garden-29124242/) | Peter Chilumba |
+| `causes/cause-details-image-1.jpg` | [A group of children gather and play around a water pump in a rural village setting](https://www.pexels.com/photo/boys-and-girl-standing-together-18658955/) | Aleekhan_photography |
+| `blog/blog-v1-1.jpg` | [Young child using a manual water pump in an African village to draw water into a bucket](https://www.pexels.com/photo/african-child-operating-water-pump-in-village-32154739/) | Matazu multimedia |
+| `blog/blog-v1-2.jpg` | [Four young volunteers in Katsina, Nigeria, wearing safety vests, smiling outdoors surrounded by trees](https://www.pexels.com/photo/young-volunteers-in-katsina-nigeria-smiling-outdoors-39942530/) | QS.Pexel 📸 |
+| `blog/blog-v1-3.jpg` | [Two women express surprise while viewing a smartphone together outdoors during the day](https://www.pexels.com/photo/women-looking-at-the-screen-of-a-cellphone-10220311/) | Steward Masweneng |
+| `blog/blog-v1-4.jpg` | [A vibrant classroom scene with smiling girls in school uniforms engaging in learning](https://www.pexels.com/photo/diverse-classroom-of-smiling-students-in-uniform-28593051/) | Şeyhmus Kino |
+| `blog/blog-v1-5.jpg` | [People navigating a flooded street, showcasing resilience amidst natural disaster in Africa](https://www.pexels.com/photo/rescue-during-urban-flooding-in-africa-36829317/) | Guylain Kipoke |
+| `blog/blog-v1-6.jpg` | [African man smiling while working at a desk with a computer in a well-lit office space](https://www.pexels.com/photo/a-man-smiling-looking-the-monitor-6132652/) | Adera Abdoulaye Dolo |
+| `blog/blog-v1-7.jpg` | [Two female nurses in green scrubs smiling confidently in a hospital room](https://www.pexels.com/photo/two-female-nurses-smiling-in-hospital-setting-29941468/) | Joseph Oti Nyametease |
+| `blog/blog-v1-8.jpg` | [Portrait of a confident African American woman using her smartphone indoors](https://www.pexels.com/photo/a-woman-holding-a-smartphone-7433325/) | August de Richelieu |
+| `blog/blog-details-1.jpg` | [A diverse group of students attentively participating in an indoor school assembly](https://www.pexels.com/photo/group-of-students-attending-indoor-assembly-34162719/) | Tosin Olowoleni |
+| `events/event-1.jpg` | [A diverse group of adult runners competing in an outdoor marathon on a sunny day](https://www.pexels.com/photo/group-of-people-running-8556686/) | Edmond Dantès |
+| `events/event-2.jpg` | [A beautifully arranged dining table set for an elegant banquet or event inside a restaurant](https://www.pexels.com/photo/elegant-banquet-hall-with-formal-table-setting-29410669/) | Jonathan Valdes |
+| `events/event-3.jpg` | [Group of women engaged in a collaborative meeting at an office table with laptops](https://www.pexels.com/photo/group-of-people-talking-to-each-other-in-front-of-brown-wooden-table-1181360/) | Christina Morillo |
+| `events/event-4.jpg` | [A diverse group of adults engaging with technology at a community event in Rwanda](https://www.pexels.com/photo/community-gathering-with-technology-in-rwanda-29521026/) | finix photographer |
+| `events/event-5.jpg` | [Two women in traditional attire exchange greens at a lively outdoor market](https://www.pexels.com/photo/two-women-at-vibrant-outdoor-market-exchanging-produce-33489786/) | Kold Shots |
+| `events/event-6.jpg` | [A participant in a suit asks a question during a professional conference, holding a microphone](https://www.pexels.com/photo/a-man-from-the-audience-speaking-to-the-microphone-16856088/) | Domingos Henriques |
+| `events/event-7.jpg` | [An adult man plays a drum at a lively outdoor festival with a vibrant background](https://www.pexels.com/photo/man-drumming-at-outdoor-festival-celebration-33110215/) | El gringo photo |
+| `events/event-details-1.jpg` | [Vibrant outdoor scene of musicians in traditional dress playing drums, capturing festive cultural atmosphere](https://www.pexels.com/photo/traditional-music-performance-with-drums-outdoors-31703752/) | alameen .ng |
+| `about/about-style1-image-1.jpg` | [Happy boy wearing a school uniform with EPP Katiola logo, smiling outdoors](https://www.pexels.com/photo/smiling-boy-in-school-uniform-outdoors-37039434/) | Louisette BEHOU |
+| `resources/mission-goals.jpg` | [Two African women kneeling and planting in a rural setting, foster agriculture and growth](https://www.pexels.com/photo/african-man-and-woman-taking-care-of-plant-11211022/) | Safari Consoler |
+| `resources/event-style1-image.jpg` | [A diverse group gathered under a tree in an African village, showcasing vibrant cultural attire](https://www.pexels.com/photo/photo-of-a-group-of-people-sitting-together-on-the-ground-in-a-village-20853361/) | illustrate Digital Ug |
+| `resources/causes-style1_image-1.jpg` | [A spirited group of smiling children enjoying playtime outdoors on a sunny day](https://www.pexels.com/photo/a-group-of-little-boys-outdoors-15538206/) | Adera Abdoulaye Dolo |
+| `resources/causes-style1_image-2.jpg` | [Close-up portrait of a young child with braided hair in Yakasse, Côte d'Ivoire](https://www.pexels.com/photo/shadow-on-boy-face-14854490/) | Ali Drabo |
+| `resources/causes-style1_image-3.jpg` | [Young girl in checkered dress with bead-adorned hair, looking at camera](https://www.pexels.com/photo/girl-in-white-and-blue-checkered-sleeveless-dress-looking-at-the-camera-6162229/) | Adera Abdoulaye Dolo |
+| `resources/causes-style1_image-4.jpg` | [A joyful baby held by grandmother, both in vibrant traditional attire](https://www.pexels.com/photo/woman-holding-a-baby-boy-6471567/) | Adera Abdoulaye Dolo |
+| `sidebar/sidebar-slogan-img.jpg` | [African woman balancing a basket on her head while shopping for clothes in Abidjan market, vibrant and bustling scene](https://www.pexels.com/photo/woman-with-bag-on-head-looking-at-clothes-14536879/) | Adera Abdoulaye Dolo |
+| `team/team-v1-1.jpg` | [Portrait of a confident businesswoman in formal attire with a warm smile indoors](https://www.pexels.com/photo/confident-businesswoman-smiling-indoors-37079379/) | Speak Media Uganda |
+| `team/team-v1-2.jpg` | [Studio portrait of a man in a formal black suit against a neutral background](https://www.pexels.com/photo/professional-portrait-of-a-man-in-suit-35129367/) | Moh DIKKO Photography |
+| `team/team-v1-3.jpg` | [Portrait of a smiling businesswoman outdoors with an ID badge, showcasing elegance and professionalism](https://www.pexels.com/photo/elegantly-dressed-woman-wearing-an-identification-badge-smiling-12898977/) | Mizuno K |
+| `team/team-v1-4.jpg` | [Portrait of a mature, stylish man smiling confidently with arms crossed in a studio](https://www.pexels.com/photo/cheerful-mature-well-dressed-black-businessman-with-folded-arms-5648100/) | Ono Kosuki |
+| `team/team-v2-1.jpg` | [Confident African woman in black suit and white blouse](https://www.pexels.com/photo/professional-corporate-headshot-of-smiling-woman-29852895/) | Ifeyinka Adeyemo |
+| `team/team-v2-2.jpg` | [Portrait of a happy businessman in a black suit, smiling with confidence in an indoor setting](https://www.pexels.com/photo/man-in-black-suit-jacket-smiling-6077664/) | KATRIN BOLOVTSOVA |
+| `team/team-v2-3.jpg` | [African American woman in a white shirt smiling while working at a desk](https://www.pexels.com/photo/woman-in-white-dress-shirt-wearing-eyeglasses-3727508/) | Anna Shvets |
+| `team/team-v3-1.jpg` | [Serious African adult male in suit against a blue background, Lagos, Nigeria](https://www.pexels.com/photo/professional-portrait-of-businessman-in-lagos-36053652/) | Okiki Onipede |
+| `testimonial/testimonial-1.png` | [Smiling businesswoman in stylish outfit against office whiteboard backdrop](https://www.pexels.com/photo/photography-of-woman-standing-in-front-of-whiteboard-1181521/) | Christina Morillo |
+| `testimonial/testimonial-2.png` | [Close-up portrait of a Nigerian man in traditional attire, captured outdoors in Lagos](https://www.pexels.com/photo/man-in-white-hat-11572516/) | Kayode Balogun |
+| `testimonial/testimonial-3.png` | [Portrait of a smiling woman in traditional clothing sitting with hands on waist, Abidjan](https://www.pexels.com/photo/a-woman-wearing-white-headscarf-smiling-at-the-camera-11444957/) | Adera Abdoulaye Dolo |
+| `testimonial/testimonial-4.png` | [Confident African medical professional smiling in clinic, representing healthcare in Kinshasa](https://www.pexels.com/photo/portrait-of-an-african-woman-in-medical-apron-18788957/) | Carmel Nsenga |
+| `testimonial/testimonial-5.png` | [Portrait of a confident African American businessman with arms crossed against an orange background](https://www.pexels.com/photo/crop-content-black-executive-with-crossed-arms-on-orange-background-5648096/) | Ono Kosuki |
+| `testimonial/testimonial-v1-1.png` | [Portrait of a smiling woman in a headscarf with earrings, outdoors in Abidjan](https://www.pexels.com/photo/grayscale-portrait-of-a-smiling-woman-in-a-headscarf-19008584/) | Kodjo Kandrin |
