@@ -3,8 +3,10 @@
 namespace App\Models;
 
 use App\Mail\DonationConfirmed;
+use App\Mail\DonationReceived;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Mail\Mailable;
 use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Str;
 use Throwable;
@@ -41,10 +43,31 @@ class Donation extends Model
     public const METHODS = [
         'transfer' => 'Virement bancaire',
         'card' => 'Carte bancaire',
+        'orange_money' => 'Orange Money',
+        'mtn_momo' => 'MTN MoMo',
+        'moov_money' => 'Moov Money',
+        'wave' => 'Wave',
         'mobile_money' => 'Mobile Money',
         'paypal' => 'PayPal',
         'cash' => 'Espèces',
     ];
+
+    /**
+     * Opérateurs Mobile Money de Côte d'Ivoire et le réglage qui porte leur numéro de réception.
+     */
+    public const MOBILE_MONEY = [
+        'orange_money' => 'donation_orange_money',
+        'mtn_momo' => 'donation_mtn_momo',
+        'moov_money' => 'donation_moov_money',
+        'wave' => 'donation_wave',
+    ];
+
+    /**
+     * Moyens proposés sur le formulaire public : ceux qu'un donateur peut régler
+     * sans paiement en ligne. Carte, PayPal et « Mobile Money » générique restent
+     * saisissables côté admin.
+     */
+    public const PUBLIC_METHODS = ['orange_money', 'mtn_momo', 'moov_money', 'wave', 'transfer', 'cash'];
 
     protected static function booted(): void
     {
@@ -73,12 +96,44 @@ class Donation extends Model
 
     public function sendConfirmation(): void
     {
+        $this->sendMail(new DonationConfirmed($this));
+    }
+
+    public function sendReceipt(): void
+    {
+        $this->sendMail(new DonationReceived($this));
+    }
+
+    private function sendMail(Mailable $mail): void
+    {
         try {
-            Mail::to($this->donor_email, $this->donor_name)->send(new DonationConfirmed($this));
+            Mail::to($this->donor_email, $this->donor_name)->send($mail);
         } catch (Throwable $e) {
-            // Un échec SMTP ne doit pas empêcher la validation du don.
+            // Un échec SMTP ne doit pas bloquer l'enregistrement ou la validation du don.
             report($e);
         }
+    }
+
+    /**
+     * Comment régler la promesse de don, affiché sur la page Merci.
+     */
+    public function getPaymentInstructionsAttribute(): string
+    {
+        if (isset(self::MOBILE_MONEY[$this->payment_method])) {
+            return 'Envoyez '.money($this->amount).' par '.$this->method_label.' au '
+                .setting(self::MOBILE_MONEY[$this->payment_method])
+                .' en indiquant la référence '.$this->reference.' en motif.';
+        }
+
+        return match ($this->payment_method) {
+            'transfer' => 'Effectuez un virement de '.money($this->amount).' au profit de '.setting('donation_bank_holder')
+                .' ('.setting('donation_bank_name').'), compte n° '.setting('donation_iban')
+                .(filled(setting('donation_bic')) ? ' (BIC '.setting('donation_bic').')' : '')
+                .', en indiquant la référence '.$this->reference.' en libellé.',
+            'cash' => 'Remettez '.money($this->amount).' en espèces à notre bureau ('.setting('contact_address')
+                .', '.lcfirst((string) setting('contact_hours')).') en rappelant la référence '.$this->reference.'.',
+            default => 'Notre équipe vous contactera pour finaliser votre don (référence '.$this->reference.').',
+        };
     }
 
     public function cause()

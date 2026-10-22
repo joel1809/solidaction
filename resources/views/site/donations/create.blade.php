@@ -77,7 +77,7 @@
                                 <div class="form-row">
                                     <label for="donor_email">Adresse e-mail <span class="required">*</span></label>
                                     <input type="email" name="donor_email" id="donor_email" value="{{ old('donor_email') }}" required>
-                                    <span class="field-help">Votre reçu de don sera envoyé à cette adresse.</span>
+                                    <span class="field-help">Vous recevrez à cette adresse un accusé de réception de votre promesse de don, puis une confirmation dès que votre don sera validé par notre équipe.</span>
                                     @error('donor_email') <span class="field-error">{{ $message }}</span> @enderror
                                 </div>
                             </div>
@@ -106,8 +106,8 @@
                                 <div class="form-row">
                                     <label for="payment_method">Moyen de paiement <span class="required">*</span></label>
                                     <select name="payment_method" id="payment_method" required>
-                                        @foreach (\App\Models\Donation::METHODS as $value => $label)
-                                            <option value="{{ $value }}" @selected(old('payment_method', 'card') === $value)>{{ $label }}</option>
+                                        @foreach (\App\Models\Donation::PUBLIC_METHODS as $value)
+                                            <option value="{{ $value }}" @selected(old('payment_method', 'orange_money') === $value)>{{ \App\Models\Donation::METHODS[$value] }}</option>
                                         @endforeach
                                     </select>
                                     @error('payment_method') <span class="field-error">{{ $message }}</span> @enderror
@@ -136,7 +136,7 @@
 
                         <div class="button-box" style="margin-top: 30px;">
                             <button class="btn-one" type="submit">
-                                <span class="txt"><i class="arrow1 fa fa-check-circle"></i>Valider mon don</span>
+                                <span class="txt"><i class="arrow1 fa fa-check-circle"></i>Confirmer ma promesse de don</span>
                             </button>
                         </div>
                     </form>
@@ -150,7 +150,18 @@
                                 <div class="title">
                                     <h3>Mobile Money</h3>
                                 </div>
-                                <p style="padding: 6px 0 0;">{{ setting('donation_mobile_money', '+225 07 08 12 34 56 — Orange Money, MTN MoMo, Moov Money et Wave') }}</p>
+                                <table class="info-table" style="margin: 10px 0 0;">
+                                    <tbody>
+                                        @foreach (\App\Models\Donation::MOBILE_MONEY as $method => $settingKey)
+                                            @if (filled(setting($settingKey)))
+                                                <tr>
+                                                    <th>{{ \App\Models\Donation::METHODS[$method] }}</th>
+                                                    <td>{{ setting($settingKey) }}</td>
+                                                </tr>
+                                            @endif
+                                        @endforeach
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
 
@@ -170,14 +181,14 @@
                                 </div>
                                 <table class="info-table" style="margin: 10px 0 0;">
                                     <tbody>
-                                        <tr>
-                                            <th>IBAN</th>
-                                            <td>{{ setting('donation_iban', 'CI93 CI00 8010 0101 2345 6789 0123') }}</td>
-                                        </tr>
-                                        <tr>
-                                            <th>BIC</th>
-                                            <td>{{ setting('donation_bic', 'SOLDCIAB') }}</td>
-                                        </tr>
+                                        @foreach (['donation_bank_holder' => 'Titulaire', 'donation_bank_name' => 'Banque', 'donation_iban' => 'N° de compte', 'donation_bic' => 'BIC'] as $settingKey => $label)
+                                            @if (filled(setting($settingKey)))
+                                                <tr>
+                                                    <th>{{ $label }}</th>
+                                                    <td>{{ setting($settingKey) }}</td>
+                                                </tr>
+                                            @endif
+                                        @endforeach
                                     </tbody>
                                 </table>
                             </div>

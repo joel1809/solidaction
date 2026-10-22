@@ -48,9 +48,14 @@ class SettingSeeder extends Seeder
 
             // Dons
             ['donation_amounts', '2000,5000,10000,25000,50000', 'donation'],
-            ['donation_mobile_money', '+225 07 08 12 34 56 — Orange Money, MTN MoMo, Moov Money et Wave', 'donation'],
-            ['donation_iban', 'CI93 CI00 8010 0101 2345 6789 0123', 'donation'],
-            ['donation_bic', 'SOLDCIAB', 'donation'],
+            ['donation_orange_money', '+225 07 07 72 28 76', 'donation'],
+            ['donation_mtn_momo', '+225 05 05 97 76 63', 'donation'],
+            ['donation_moov_money', '+225 01 71 61 21 70', 'donation'],
+            ['donation_wave', '+225 07 09 09 22 69', 'donation'],
+            ['donation_bank_holder', 'SOLID\'ACTION', 'donation'],
+            ['donation_bank_name', 'BNI', 'donation'],
+            ['donation_iban', 'CI 092 01 005 00239887 0000 03', 'donation'],
+            ['donation_bic', null, 'donation'],
             ['donation_tax_notice', 'Chaque don donne lieu à un reçu nominatif envoyé par e-mail. Les entreprises mécènes reçoivent en plus une attestation annuelle récapitulant leurs versements.', 'donation', 'textarea'],
         ];
 

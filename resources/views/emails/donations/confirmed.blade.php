@@ -1,7 +1,7 @@
 <x-mail::message>
 # Merci {{ Str::before($donation->donor_name, ' ') }} !
 
-Nous avons bien reçu votre {{ Str::lower($donation->frequency_label) }} de **{{ money($donation->amount, true) }}**@if ($donation->cause) en faveur de « {{ $donation->cause->title }} »@endif. Votre générosité nous aide concrètement à poursuivre nos actions.
+Nous avons bien reçu votre don de **{{ money($donation->amount, true) }}**@if ($donation->cause) en faveur de « {{ $donation->cause->title }} »@endif. Votre générosité nous aide concrètement à poursuivre nos actions.
 
 <x-mail::table>
 | | |

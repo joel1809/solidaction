@@ -32,7 +32,7 @@ class DonationSeeder extends Seeder
 
         $amounts = [1000, 2000, 2500, 5000, 5000, 10000, 10000, 15000, 25000, 50000, 75000, 100000, 250000, 500000, 1500000];
         $frequencies = ['one_time', 'one_time', 'one_time', 'monthly', 'monthly', 'yearly'];
-        $methods = ['mobile_money', 'mobile_money', 'mobile_money', 'card', 'transfer', 'cash'];
+        $methods = ['orange_money', 'mtn_momo', 'wave', 'moov_money', 'card', 'transfer', 'cash'];
         $messages = [
             'Courage à toute l\'équipe sur place !',
             null,

@@ -51,9 +51,14 @@ class SettingController extends Controller
         ],
         'donation' => [
             'donation_amounts' => ['label' => 'Montants proposés', 'type' => 'text', 'help' => 'Séparés par des virgules, ex. : 2000,5000,10000,25000,50000'],
-            'donation_mobile_money' => ['label' => 'Mobile Money', 'type' => 'text', 'help' => 'Numéro et opérateurs acceptés, affichés sur la page de don.'],
-            'donation_iban' => ['label' => 'IBAN', 'type' => 'text'],
-            'donation_bic' => ['label' => 'BIC', 'type' => 'text'],
+            'donation_orange_money' => ['label' => 'Numéro Orange Money', 'type' => 'text', 'help' => 'Affiché sur la page de don et dans les instructions de paiement.'],
+            'donation_mtn_momo' => ['label' => 'Numéro MTN MoMo', 'type' => 'text'],
+            'donation_moov_money' => ['label' => 'Numéro Moov Money', 'type' => 'text'],
+            'donation_wave' => ['label' => 'Numéro Wave', 'type' => 'text'],
+            'donation_bank_holder' => ['label' => 'Titulaire du compte', 'type' => 'text'],
+            'donation_bank_name' => ['label' => 'Banque', 'type' => 'text'],
+            'donation_iban' => ['label' => 'Numéro de compte (RIB / IBAN)', 'type' => 'text'],
+            'donation_bic' => ['label' => 'BIC', 'type' => 'text', 'help' => 'Facultatif : laissé vide, il n\'est pas affiché.'],
             'donation_tax_notice' => ['label' => 'Mention « Reçu de don »', 'type' => 'textarea'],
         ],
     ];
