@@ -542,8 +542,64 @@
     text-transform: none;
 }
 
+.sidebar-categories {
+    position: relative;
+    display: block;
+    background: #f8b1340d;
+    padding: 45px 30px 35px;
+}
+
 /* Encadrés de la colonne latérale (dons, bénévolat) : le thème met les paragraphes
    en blanc, illisibles sur le fond blanc des encadrés. */
 .sidebar-categories p {
     color: var(--thm-gray);
+}
+
+/* Colonne latérale sobre (page Don) : pas de grand fond gris débordant,
+   de simples encadrés blancs bordés. */
+.sidebar-content-box--plain::before,
+.sidebar-content-box--plain .single-sidebar-box::before,
+.sidebar-content-box--plain .single-sidebar-box::after {
+    display: none;
+}
+
+.sidebar-content-box--plain {
+    margin-top: 0;
+}
+
+.sidebar-content-box--plain .single-sidebar-box {
+    margin-bottom: 20px;
+}
+
+.sidebar-content-box--plain .sidebar-categories {
+    padding: 24px 24px 20px;
+    border: 1px solid #f8b134;
+    border-radius: 8px;
+}
+
+.sidebar-content-box--plain .single-sidebar-box .title {
+    margin-top: 0;
+    padding-bottom: 12px;
+}
+
+.sidebar-content-box--plain .single-sidebar-box .title h3 {
+    font-size: 18px;
+    line-height: 26px;
+}
+
+.sidebar-content-box--plain .info-table {
+    margin-bottom: 0;
+}
+
+.sidebar-content-box--plain .info-table th,
+.sidebar-content-box--plain .info-table td {
+    padding: 10px 12px;
+    font-size: 14px;
+}
+
+@media (max-width: 1199px) {
+    .sidebar-content-box--plain {
+        max-width: none;
+        margin-top: 40px;
+    }
 }

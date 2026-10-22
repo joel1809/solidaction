@@ -34,32 +34,22 @@
                             @error('amount') <span class="field-error">{{ $message }}</span> @enderror
                         </div>
 
-                        <div class="row">
-                            <div class="col-xl-6">
-                                <div class="form-row">
-                                    <label for="frequency">Fréquence <span class="required">*</span></label>
-                                    <select name="frequency" id="frequency" required>
-                                        @foreach (\App\Models\Donation::FREQUENCIES as $value => $label)
-                                            <option value="{{ $value }}" @selected(old('frequency', request('frequence', 'one_time')) === $value)>{{ $label }}</option>
-                                        @endforeach
-                                    </select>
-                                    @error('frequency') <span class="field-error">{{ $message }}</span> @enderror
-                                </div>
-                            </div>
-                            <div class="col-xl-6">
-                                <div class="form-row">
-                                    <label for="cause_id">Affecter mon don à</label>
-                                    <select name="cause_id" id="cause_id">
-                                        <option value="">Toutes nos actions (fonds libre)</option>
-                                        @foreach ($causes as $cause)
-                                            <option value="{{ $cause->id }}" @selected((int) old('cause_id', $selectedCause ?? request('cause')) === $cause->id)>
-                                                {{ $cause->title }}
-                                            </option>
-                                        @endforeach
-                                    </select>
-                                    @error('cause_id') <span class="field-error">{{ $message }}</span> @enderror
-                                </div>
-                            </div>
+                        {{-- Fréquence : non proposée sur le formulaire, reprise du bandeau d'appel au don le cas échéant --}}
+                        @php($frequency = old('frequency', request('frequence', 'one_time')))
+                        <input type="hidden" name="frequency"
+                            value="{{ array_key_exists($frequency, \App\Models\Donation::FREQUENCIES) ? $frequency : 'one_time' }}">
+
+                        <div class="form-row">
+                            <label for="cause_id">Affecter mon don à</label>
+                            <select name="cause_id" id="cause_id">
+                                <option value="">Toutes nos actions (fonds libre)</option>
+                                @foreach ($causes as $cause)
+                                    <option value="{{ $cause->id }}" @selected((int) old('cause_id', $selectedCause ?? request('cause')) === $cause->id)>
+                                        {{ $cause->title }}
+                                    </option>
+                                @endforeach
+                            </select>
+                            @error('cause_id') <span class="field-error">{{ $message }}</span> @enderror
                         </div>
 
                         {{-- Coordonnées --}}
@@ -144,7 +134,7 @@
 
                 {{-- Colonne d'information --}}
                 <div class="col-xl-4">
-                    <div class="sidebar-content-box">
+                    <div class="sidebar-content-box sidebar-content-box--plain">
                         <div class="single-sidebar-box">
                             <div class="sidebar-categories">
                                 <div class="title">
