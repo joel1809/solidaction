@@ -130,6 +130,16 @@ it('exporte les dons filtrés en CSV', function () {
         ->and($csv)->not->toContain('Hugo Bertrand');
 });
 
+it('retrouve un don à partir du numéro lu sur le SMS Mobile Money', function () {
+    Donation::factory()->create(['donor_name' => 'Awa Koné', 'donor_phone' => '07 12 34 56 78']);
+    Donation::factory()->create(['donor_name' => 'Hugo Bertrand', 'donor_phone' => '05 99 88 77 66']);
+
+    $csv = $this->get(route('admin.donations.export', ['q' => '+225 0712345678']))->streamedContent();
+
+    expect($csv)->toContain('Awa Koné')
+        ->and($csv)->not->toContain('Hugo Bertrand');
+});
+
 it('crée un article avec ses mots-clés', function () {
     $this->post(route('admin.posts.store'), [
         'title' => 'Nouvelles du terrain',

@@ -25,7 +25,11 @@ class DonationController extends Controller
             'cause_id' => ['nullable', Rule::exists('causes', 'id')],
             'donor_name' => ['required', 'string', 'max:120'],
             'donor_email' => ['required', 'email', 'max:160'],
-            'donor_phone' => ['nullable', 'string', 'max:40'],
+            // Le numéro Mobile Money sert à rapprocher le paiement reçu de la promesse de don.
+            'donor_phone' => [
+                Rule::requiredIf(array_key_exists((string) $request->input('payment_method'), Donation::MOBILE_MONEY)),
+                'nullable', 'string', 'max:40',
+            ],
             'donor_address' => ['nullable', 'string', 'max:255'],
             'amount' => ['required', 'numeric', 'min:100', 'max:100000000'],
             'frequency' => ['required', Rule::in(array_keys(Donation::FREQUENCIES))],
@@ -36,6 +40,7 @@ class DonationController extends Controller
         ], [], [
             'donor_name' => 'nom',
             'donor_email' => 'adresse e-mail',
+            'donor_phone' => 'numéro Mobile Money',
             'amount' => 'montant',
         ]);
 

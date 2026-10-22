@@ -18,7 +18,7 @@
             :hint="$donations->total().' don(s)'" />
     </div>
 
-    <x-admin.filters :action="route('admin.donations.index')" placeholder="Nom, e-mail ou référence…" dates
+    <x-admin.filters :action="route('admin.donations.index')" placeholder="Nom, e-mail, téléphone ou référence…" dates
         :selects="[
             'status' => ['label' => 'Statut', 'options' => \App\Models\Donation::STATUSES],
             'frequency' => ['label' => 'Fréquence', 'options' => \App\Models\Donation::FREQUENCIES],

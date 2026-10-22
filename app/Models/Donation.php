@@ -121,8 +121,7 @@ class Donation extends Model
     {
         if (isset(self::MOBILE_MONEY[$this->payment_method])) {
             return 'Envoyez '.money($this->amount).' par '.$this->method_label.' au '
-                .setting(self::MOBILE_MONEY[$this->payment_method])
-                .' en indiquant la référence '.$this->reference.' en motif.';
+                .setting(self::MOBILE_MONEY[$this->payment_method]).'.';
         }
 
         return match ($this->payment_method) {

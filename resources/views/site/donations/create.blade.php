@@ -75,7 +75,11 @@
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="form-row">
-                                    <label for="donor_phone">Téléphone</label>
+                                    {{-- Libellé et caractère obligatoire ajustés en JS selon le moyen de paiement --}}
+                                    <label for="donor_phone">
+                                        <span data-phone-label>Téléphone</span>
+                                        <span class="required" data-phone-required hidden>*</span>
+                                    </label>
                                     <input type="tel" name="donor_phone" id="donor_phone" value="{{ old('donor_phone') }}">
                                     @error('donor_phone') <span class="field-error">{{ $message }}</span> @enderror
                                 </div>
@@ -232,6 +236,25 @@
             }));
 
             input.addEventListener('input', sync);
+            sync();
+        })();
+
+        // Avec Mobile Money, le numéro du payeur devient obligatoire pour rapprocher le paiement.
+        (function () {
+            const mobileMoney = @json(array_keys(\App\Models\Donation::MOBILE_MONEY));
+            const method = document.getElementById('payment_method');
+            const phone = document.getElementById('donor_phone');
+            const label = document.querySelector('[data-phone-label]');
+            const star = document.querySelector('[data-phone-required]');
+
+            const sync = () => {
+                const isMobileMoney = mobileMoney.includes(method.value);
+                label.textContent = isMobileMoney ? 'Numéro Mobile Money qui effectuera le paiement' : 'Téléphone';
+                star.hidden = !isMobileMoney;
+                phone.required = isMobileMoney;
+            };
+
+            method.addEventListener('change', sync);
             sync();
         })();
     </script>

@@ -151,9 +151,20 @@ class DonationController extends Controller
         return Donation::query()
             ->when($request->filled('q'), function ($query) use ($request) {
                 $term = '%'.$request->string('q').'%';
+
+                // Numéro lu sur un SMS Mobile Money : comparé sans espaces, points, tirets ni indicatif 225.
+                $digits = preg_replace('/\D/', '', (string) $request->string('q'));
+                if (strlen($digits) > 10 && str_starts_with($digits, '225')) {
+                    $digits = substr($digits, 3);
+                }
+
                 $query->where(fn ($q) => $q->where('donor_name', 'like', $term)
                     ->orWhere('donor_email', 'like', $term)
-                    ->orWhere('reference', 'like', $term));
+                    ->orWhere('reference', 'like', $term)
+                    ->when(strlen($digits) >= 8, fn ($q) => $q->orWhereRaw(
+                        "REPLACE(REPLACE(REPLACE(donor_phone, ' ', ''), '.', ''), '-', '') like ?",
+                        ['%'.$digits.'%']
+                    )));
             })
             ->when($request->filled('status'), fn ($query) => $query->where('status', $request->string('status')))
             ->when($request->filled('frequency'), fn ($query) => $query->where('frequency', $request->string('frequency')))

@@ -16,8 +16,9 @@ it('enregistre un don et redirige vers la page de remerciement', function () {
         'donor_name' => 'Claire Fontaine',
         'donor_email' => 'claire@example.fr',
         'amount' => 120,
+        'donor_phone' => '07 12 34 56 78',
         'frequency' => 'monthly',
-        'payment_method' => 'card',
+        'payment_method' => 'orange_money',
         'message' => 'Courage à toute l\'équipe !',
     ]);
 
@@ -42,6 +43,18 @@ it('refuse un don sans montant valide', function () {
         'frequency' => 'one_time',
         'payment_method' => 'card',
     ])->assertSessionHasErrors('amount');
+
+    expect(Donation::count())->toBe(0);
+});
+
+it('exige le numéro du payeur pour un don par Mobile Money', function () {
+    $this->post('/faire-un-don', [
+        'donor_name' => 'Awa Koné',
+        'donor_email' => 'awa@example.ci',
+        'amount' => 5000,
+        'frequency' => 'one_time',
+        'payment_method' => 'orange_money',
+    ])->assertSessionHasErrors('donor_phone');
 
     expect(Donation::count())->toBe(0);
 });
