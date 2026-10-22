@@ -541,3 +541,9 @@
 .mobile-menu .navigation li > a {
     text-transform: none;
 }
+
+/* Encadrés de la colonne latérale (dons, bénévolat) : le thème met les paragraphes
+   en blanc, illisibles sur le fond blanc des encadrés. */
+.sidebar-categories p {
+    color: var(--thm-gray);
+}
