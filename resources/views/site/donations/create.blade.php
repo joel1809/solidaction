@@ -67,7 +67,6 @@
                                 <div class="form-row">
                                     <label for="donor_email">Adresse e-mail <span class="required">*</span></label>
                                     <input type="email" name="donor_email" id="donor_email" value="{{ old('donor_email') }}" required>
-                                    <span class="field-help">Vous recevrez à cette adresse un accusé de réception de votre promesse de don, puis une confirmation dès que votre don sera validé par notre équipe.</span>
                                     @error('donor_email') <span class="field-error">{{ $message }}</span> @enderror
                                 </div>
                             </div>
