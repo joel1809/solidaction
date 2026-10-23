@@ -97,18 +97,26 @@
 .header-top_left{
     position: relative;
     display: block;
-    padding-left: 55px;
+    padding-left: 40px;
 }
 .header-top_left .icon{
     position: absolute;
-    top: 0;
+    top: 50%;
     left: 0;
-    width: 55px;
-    height: 60px;
-    background-color: #096635;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.10);
     display: flex;
     align-items: center;
     justify-content: center;
+    -webkit-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    transition: all 0.4s linear;
+}
+.header-top_left .icon:hover{
+    background: var(--thm-color-2);
 }
 
 .header-top_left-content {
