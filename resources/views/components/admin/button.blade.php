@@ -2,7 +2,7 @@
 
 @php
     $styles = [
-        'primary' => 'bg-rose-500 text-white hover:bg-rose-600 focus-visible:outline-rose-500',
+        'primary' => 'bg-brand-yellow text-zinc-900 hover:bg-brand-yellow-dark focus-visible:outline-brand-yellow',
         'secondary' => 'border border-zinc-200 bg-white text-zinc-700 hover:bg-zinc-50',
         'dark' => 'bg-zinc-900 text-white hover:bg-zinc-800',
         'danger' => 'border border-rose-200 bg-white text-rose-600 hover:bg-rose-50',

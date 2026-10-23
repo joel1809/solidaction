@@ -51,7 +51,7 @@
 
 <nav class="px-3 py-5">
     @foreach ($groups as $group => $items)
-        <p class="px-3 pb-2 pt-4 text-[11px] font-semibold uppercase tracking-wider text-zinc-500">{{ $group }}</p>
+        <p class="px-3 pb-2 pt-4 text-[11px] font-semibold uppercase tracking-wider text-white/55">{{ $group }}</p>
         <ul class="space-y-1">
             @foreach ($items as $item)
                 @php
@@ -60,11 +60,11 @@
                 @endphp
                 <li>
                     <a href="{{ route($item['route']) }}"
-                        class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition {{ $active ? 'bg-rose-500 text-white' : 'text-zinc-300 hover:bg-white/5 hover:text-white' }}">
+                        class="flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition {{ $active ? 'bg-brand-yellow text-zinc-900' : 'text-white/80 hover:bg-white/10 hover:text-white' }}">
                         <x-admin.icon :name="$item['icon']" class="size-[18px] shrink-0" />
                         <span class="flex-1 truncate">{{ $item['label'] }}</span>
                         @if (! empty($item['badge']))
-                            <span class="rounded-full {{ $active ? 'bg-white/25 text-white' : 'bg-rose-500/90 text-white' }} px-2 py-0.5 text-[11px] font-semibold">
+                            <span class="rounded-full {{ $active ? 'bg-brand-green text-white' : 'bg-brand-yellow text-zinc-900' }} px-2 py-0.5 text-[11px] font-semibold">
                                 {{ $item['badge'] }}
                             </span>
                         @endif

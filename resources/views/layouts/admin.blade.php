@@ -16,16 +16,16 @@
 
         {{-- ================== Barre latérale ================== --}}
         <aside id="admin-sidebar"
-            class="fixed inset-y-0 left-0 z-40 w-64 shrink-0 -translate-x-full overflow-y-auto bg-zinc-900 text-zinc-300 transition-transform duration-200 lg:static lg:translate-x-0">
+            class="fixed inset-y-0 left-0 z-40 w-64 shrink-0 -translate-x-full overflow-y-auto bg-brand-green text-white/80 transition-transform duration-200 lg:static lg:translate-x-0">
 
             <div class="flex h-16 items-center gap-3 border-b border-white/10 px-5">
-                <span class="grid size-9 place-items-center rounded-lg bg-rose-500 text-base font-bold text-white">S</span>
+                <span class="grid size-9 place-items-center rounded-lg bg-brand-yellow text-base font-bold text-brand-green">S</span>
                 <div class="min-w-0 leading-tight">
                     <p class="truncate text-sm font-semibold text-white">{{ setting('site_name', 'SolidAction') }}</p>
-                    <p class="text-[11px] uppercase tracking-wide text-zinc-500">Administration</p>
+                    <p class="text-[11px] uppercase tracking-wide text-white/60">Administration</p>
                 </div>
                 <button type="button" data-sidebar-close
-                    class="ml-auto grid size-8 place-items-center rounded-lg text-zinc-400 hover:bg-white/10 lg:hidden">
+                    class="ml-auto grid size-8 place-items-center rounded-lg text-white/70 hover:bg-white/10 lg:hidden">
                     <svg class="size-4" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
                     </svg>

@@ -44,7 +44,7 @@
     @endif
 
     <div class="flex items-center gap-2">
-        <x-admin.button type="submit" variant="dark">Filtrer</x-admin.button>
+        <x-admin.button type="submit">Filtrer</x-admin.button>
         @if (collect(request()->except('page'))->filter()->isNotEmpty())
             <x-admin.button variant="ghost" :href="$action">Réinitialiser</x-admin.button>
         @endif
