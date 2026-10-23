@@ -154,7 +154,7 @@
                         <div class="single-sidebar-box">
                             <div class="sidebar-slogan-box" style="background-image: url({{ theme_asset('assets/images/sidebar/sidebar-slogan-img.jpg') }});">
                                 <div class="icon">
-                                    <img src="{{ theme_asset('assets/images/icon/thm-logo1.png') }}" alt="" />
+                                    <img src="{{ media(setting('site_logo_footer'), 'theme/assets/images/logo/logo-footer.png') }}" alt="{{ setting('site_name', 'SolidAction') }}" />
                                 </div>
                                 <p>Un petit don, un grand impact</p>
                                 <h2>Soutenez<br>ce projet</h2>

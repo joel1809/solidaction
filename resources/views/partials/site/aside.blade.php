@@ -10,7 +10,7 @@
                 <div class="sidebar-info-contents">
                     <div class="content-inner">
                         <div class="logo">
-                            <a href="{{ route('home') }}"><img src="{{ theme_asset('assets/images/resources/logo-3.png') }}" alt="{{ setting('site_name', 'SolidAction') }}" /></a>
+                            <a href="{{ route('home') }}"><img src="{{ media(setting('site_logo_footer'), 'theme/assets/images/logo/logo-footer.png') }}" alt="{{ setting('site_name', 'SolidAction') }}" /></a>
                         </div>
                         <div class="content-box">
                             <h4>Qui sommes-nous ?</h4>

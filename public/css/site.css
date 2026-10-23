@@ -964,3 +964,9 @@
     background: #000;
 }
 
+
+/* --- Logo de l'appel au don --- */
+.sidebar-slogan-box .icon img {
+    width: 120px;
+    height: auto;
+}
