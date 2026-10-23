@@ -3,7 +3,7 @@
         <div class="auto-container">
             <div class="row">
                 {{-- Présentation --}}
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.1s">
+                <div class="col-xl-4 col-lg-4 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.1s">
                     <div class="single-footer-widget">
                         <div class="our-company-info">
                             <div class="footer-logo">
@@ -28,7 +28,7 @@
                 </div>
 
                 {{-- Liens association --}}
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.3s">
+                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.3s">
                     <div class="single-footer-widget martop">
                         <div class="title">
                             <h3>L'association</h3>
@@ -61,7 +61,7 @@
 
                 {{-- Newsletter --}}
                 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.7s">
-                    <div class="single-footer-widget fixwidth martop pdtop40">
+                    <div class="single-footer-widget martop pdtop40">
                         <div class="title">
                             <h3>Newsletter</h3>
                         </div>
