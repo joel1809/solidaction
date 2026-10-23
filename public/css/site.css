@@ -532,6 +532,11 @@
     background-color: #063d20;
 }
 
+/* --- Fil d'Ariane : page active en jaune --- */
+.breadcrumb-menu ul li.active {
+    color: var(--thm-color-2);
+}
+
 /* --- En-tête : logo et menu sur une seule ligne --- */
 .header .outer-box {
     display: flex;
@@ -819,6 +824,58 @@
 .post-tags ul li:hover a {
     background: var(--thm-color-2);
     color: #096635;
+}
+
+/* Navigation entre articles */
+.post-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.post-nav-link {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 20px 24px;
+    background: #faf8f6;
+    border-radius: 6px;
+    transition: background 300ms ease;
+}
+
+.post-nav-link.is-next {
+    grid-column: 2;
+    text-align: right;
+}
+
+.post-nav-link:hover {
+    background: #f1ede8;
+}
+
+.post-nav-label {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: var(--thm-primary);
+}
+
+.post-nav-title {
+    font-size: 17px;
+    font-weight: 600;
+    line-height: 1.4;
+    color: #222;
+}
+
+@media (max-width: 767px) {
+    .post-nav {
+        grid-template-columns: 1fr;
+    }
+
+    .post-nav-link.is-next {
+        grid-column: auto;
+    }
 }
 
 /* Galerie photos et vidéos des articles */

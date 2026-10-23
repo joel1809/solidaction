@@ -54,7 +54,6 @@ class PostController extends Controller
         $data = $request->validate([
             'name' => ['required', 'string', 'max:120'],
             'email' => ['required', 'email', 'max:160'],
-            'website' => ['nullable', 'url', 'max:160'],
             'body' => ['required', 'string', 'min:5', 'max:3000'],
         ], [], [
             'name' => 'nom',

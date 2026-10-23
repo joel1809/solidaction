@@ -90,22 +90,22 @@
                     @endif
 
                     {{-- Navigation entre articles --}}
-                    <div class="filter-bar" style="margin: 40px 0;">
-                        <div>
+                    @if ($previous || $next)
+                        <nav class="post-nav" aria-label="Navigation entre articles">
                             @if ($previous)
-                                <a href="{{ route('posts.show', $previous) }}" style="font-weight: 600;">
-                                    <i class="fa fa-angle-left"></i> {{ Str::limit($previous->title, 34) }}
+                                <a href="{{ route('posts.show', $previous) }}" class="post-nav-link is-prev">
+                                    <span class="post-nav-label"><i class="fa fa-angle-left"></i> Article précédent</span>
+                                    <span class="post-nav-title">{{ $previous->title }}</span>
                                 </a>
                             @endif
-                        </div>
-                        <div style="text-align: right;">
                             @if ($next)
-                                <a href="{{ route('posts.show', $next) }}" style="font-weight: 600;">
-                                    {{ Str::limit($next->title, 34) }} <i class="fa fa-angle-right"></i>
+                                <a href="{{ route('posts.show', $next) }}" class="post-nav-link is-next">
+                                    <span class="post-nav-label">Article suivant <i class="fa fa-angle-right"></i></span>
+                                    <span class="post-nav-title">{{ $next->title }}</span>
                                 </a>
                             @endif
-                        </div>
-                    </div>
+                        </nav>
+                    @endif
 
                     {{-- Commentaires --}}
                     <div class="comments-area">
@@ -118,13 +118,7 @@
                                 @foreach ($post->approvedComments as $comment)
                                     <li>
                                         <div class="comment-head">
-                                            <h4>
-                                                @if ($comment->website)
-                                                    <a href="{{ $comment->website }}" target="_blank" rel="noopener nofollow">{{ $comment->name }}</a>
-                                                @else
-                                                    {{ $comment->name }}
-                                                @endif
-                                            </h4>
+                                            <h4>{{ $comment->name }}</h4>
                                             <span>{{ $comment->created_at->translatedFormat('d F Y à H\hi') }}</span>
                                         </div>
                                         <p>{{ $comment->body }}</p>
@@ -153,11 +147,6 @@
                                             @error('email') <span class="field-error">{{ $message }}</span> @enderror
                                         </div>
                                     </div>
-                                </div>
-                                <div class="form-row">
-                                    <label for="website">Site web</label>
-                                    <input type="url" name="website" id="website" value="{{ old('website') }}" placeholder="https://">
-                                    @error('website') <span class="field-error">{{ $message }}</span> @enderror
                                 </div>
                                 <div class="form-row">
                                     <label for="body">Commentaire <span class="required">*</span></label>
