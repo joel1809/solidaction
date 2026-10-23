@@ -44,7 +44,7 @@
                 </div>
 
                 {{-- Programmes --}}
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.5s">
+                <div class="col-xl-2 col-lg-4 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.5s">
                     <div class="single-footer-widget martop pdtop40">
                         <div class="title">
                             <h3>Programmes</h3>
@@ -60,7 +60,7 @@
                 </div>
 
                 {{-- Newsletter --}}
-                <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.7s">
+                <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.7s">
                     <div class="single-footer-widget martop pdtop40">
                         <div class="title">
                             <h3>Newsletter</h3>
@@ -91,9 +91,7 @@
         <div class="auto-container">
             <div class="footer-bottom_content_box text-center">
                 <div class="copyright-text">
-                    <p>&copy; {{ date('Y') }} <a href="{{ route('home') }}">{{ setting('site_name', 'SolidAction') }}</a>. Tous droits réservés.
-                        <a href="{{ route('pages.show', 'mentions-legales') }}">Mentions légales</a>
-                        <a href="{{ route('pages.show', 'credits-photos') }}">Crédits photos</a>
+                    <p>&copy; {{ date('Y') }} <a href="{{ route('home') }}">{{ setting('site_name', 'SolidAction') }}</a>. Tous droits réservés. Développé par <strong>Hosanna Technologie</strong>.
                         @auth
                             <a href="{{ route('admin.dashboard') }}">Administration</a>
                         @else
