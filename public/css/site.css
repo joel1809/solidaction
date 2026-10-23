@@ -797,12 +797,27 @@
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    color: var(--thm-gray);
+    color: var(--thm-primary);
     font-size: 15px;
+    font-weight: 500;
+}
+
+.post-meta li a {
+    color: var(--thm-primary);
+}
+
+.post-meta li a:hover {
+    color: var(--thm-color-4);
 }
 
 .post-meta li i {
-    color: var(--thm-primary);
+    color: var(--thm-color-2);
+}
+
+/* Mots-clés en bas de l'article */
+.post-tags ul li:hover a {
+    background: var(--thm-color-2);
+    color: var(--thm-color-5);
 }
 
 /* Galerie photos et vidéos des articles */

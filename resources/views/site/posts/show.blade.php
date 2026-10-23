@@ -80,7 +80,7 @@
                     @endif
 
                     @if (filled($post->tags))
-                        <div class="sidebar-tag-box" style="margin: 36px 0;">
+                        <div class="sidebar-tag-box post-tags" style="margin: 36px 0;">
                             <ul>
                                 @foreach ($post->tags as $tag)
                                     <li><a href="{{ route('posts.index', ['tag' => $tag]) }}">{{ $tag }}</a></li>
