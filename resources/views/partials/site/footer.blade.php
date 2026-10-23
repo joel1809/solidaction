@@ -27,24 +27,8 @@
                     </div>
                 </div>
 
-                {{-- Causes récentes --}}
-                <div class="col-xl-2 col-lg-4 col-md-3 col-sm-12 wow animated fadeInUp" data-wow-delay="0.3s">
-                    <div class="single-footer-widget martop pd40-0">
-                        <div class="title">
-                            <h3>Nos appels</h3>
-                        </div>
-                        <ul class="footer-widget-links1">
-                            @forelse ($footerCauses ?? [] as $cause)
-                                <li><a href="{{ route('causes.show', $cause) }}">{{ Str::limit($cause->title, 26) }}</a></li>
-                            @empty
-                                <li><a href="{{ route('causes.index') }}">Toutes nos causes</a></li>
-                            @endforelse
-                        </ul>
-                    </div>
-                </div>
-
                 {{-- Liens association --}}
-                <div class="col-xl-2 col-lg-4 col-md-3 col-sm-12 wow animated fadeInUp" data-wow-delay="0.5s">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.3s">
                     <div class="single-footer-widget martop">
                         <div class="title">
                             <h3>L'association</h3>
@@ -60,7 +44,7 @@
                 </div>
 
                 {{-- Programmes --}}
-                <div class="col-xl-2 col-lg-6 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.5s">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12 wow animated fadeInUp" data-wow-delay="0.5s">
                     <div class="single-footer-widget martop pdtop40">
                         <div class="title">
                             <h3>Programmes</h3>
@@ -97,11 +81,6 @@
                         @if (session('newsletter_success'))
                             <p class="footer-form-success">{{ session('newsletter_success') }}</p>
                         @endif
-                        <div class="footer-donate-link">
-                            <a class="btn-one btn-one-style2" href="{{ route('donations.create') }}">
-                                <span class="txt"><i class="arrow1 fa fa-check-circle"></i>Soutenir maintenant</span>
-                            </a>
-                        </div>
                     </div>
                 </div>
             </div>

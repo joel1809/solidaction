@@ -3,7 +3,6 @@
 namespace App\Http\Middleware;
 
 use App\Models\Category;
-use App\Models\Cause;
 use App\Models\Post;
 use Closure;
 use Illuminate\Http\Request;
@@ -20,7 +19,6 @@ class ShareSiteData
         if (! $request->is('admin', 'admin/*')) {
             View::composer(['layouts.site', 'partials.site.*'], function ($view) {
                 $view->with([
-                    'footerCauses' => Cause::published()->latest()->take(5)->get(['title', 'slug']),
                     'footerPosts' => Post::published()->latest('published_at')->take(3)->get(['title', 'slug', 'image', 'published_at']),
                     'footerCategories' => Category::active()->ofType('cause')->take(5)->get(['name', 'slug']),
                 ]);
