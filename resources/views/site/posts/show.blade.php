@@ -19,7 +19,7 @@
                             alt="{{ $post->title }}" style="width: 100%; border-radius: 6px;">
                     </div>
 
-                    <ul class="meta-info" style="margin-bottom: 18px;">
+                    <ul class="meta-info post-meta">
                         <li><i class="fa fa-calendar"></i> {{ optional($post->published_at)->translatedFormat('d F Y') }}</li>
                         <li><i class="fa fa-user"></i> {{ $post->author->name ?? setting('site_name') }}</li>
                         @if ($post->category)

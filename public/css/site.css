@@ -784,6 +784,27 @@
     margin-bottom: 16px;
 }
 
+/* Méta-informations de l'article sur une seule ligne */
+.post-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 22px;
+    margin-bottom: 18px;
+}
+
+.post-meta li {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    color: var(--thm-gray);
+    font-size: 15px;
+}
+
+.post-meta li i {
+    color: var(--thm-primary);
+}
+
 /* Galerie photos et vidéos des articles */
 .post-gallery {
     margin: 40px 0 10px;
