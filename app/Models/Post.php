@@ -50,6 +50,11 @@ class Post extends Model
         return $this->hasMany(Comment::class);
     }
 
+    public function gallery()
+    {
+        return $this->hasMany(PostMedia::class)->orderBy('sort_order')->orderBy('id');
+    }
+
     public function approvedComments()
     {
         return $this->comments()->where('status', 'approved')->latest();

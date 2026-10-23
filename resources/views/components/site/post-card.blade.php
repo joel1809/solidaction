@@ -1,6 +1,6 @@
 @props(['post', 'delay' => '0ms'])
 
-<div class="single-blog-style1 wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="{{ $delay }}">
+<div class="single-blog-style1 post-card wow fadeInUp" data-wow-duration="1500ms" data-wow-delay="{{ $delay }}">
     <div class="img-holder">
         <div class="inner">
             <img src="{{ media($post->image, 'theme/assets/images/blog/blog-v1-1.jpg') }}" alt="{{ $post->title }}">

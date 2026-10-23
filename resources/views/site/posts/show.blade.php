@@ -37,6 +37,48 @@
                         {!! $post->body !!}
                     </div>
 
+                    @if ($post->gallery->isNotEmpty())
+                        {{-- Galerie photos et vidéos --}}
+                        <div class="post-gallery">
+                            <h3>Galerie</h3>
+                            <div class="post-gallery-grid">
+                                @foreach ($post->gallery as $item)
+                                    @php
+                                        $popup = match (true) {
+                                            ! $item->isVideo() => 'mfp-image',
+                                            $item->isEmbed() => 'mfp-iframe',
+                                            default => 'mfp-inline',
+                                        };
+                                    @endphp
+                                    <figure class="post-gallery-item">
+                                        <a href="{{ $popup === 'mfp-inline' ? '#post-media-'.$item->id : $item->src }}"
+                                            class="{{ $popup }}" title="{{ $item->caption }}">
+                                            @if ($item->thumbnail)
+                                                <img src="{{ $item->thumbnail }}" alt="{{ $item->caption ?: $post->title }}" loading="lazy">
+                                            @elseif (! $item->isEmbed())
+                                                <video src="{{ $item->src }}#t=0.5" preload="metadata" muted playsinline></video>
+                                            @else
+                                                <span class="post-gallery-placeholder"></span>
+                                            @endif
+                                            @if ($item->isVideo())
+                                                <span class="post-gallery-play"><i class="fa fa-play"></i></span>
+                                            @endif
+                                        </a>
+                                        @if ($item->caption)
+                                            <figcaption>{{ $item->caption }}</figcaption>
+                                        @endif
+                                    </figure>
+
+                                    @if ($popup === 'mfp-inline')
+                                        <div id="post-media-{{ $item->id }}" class="post-gallery-video mfp-hide">
+                                            <video src="{{ $item->src }}" controls playsinline preload="none"></video>
+                                        </div>
+                                    @endif
+                                @endforeach
+                            </div>
+                        </div>
+                    @endif
+
                     @if (filled($post->tags))
                         <div class="sidebar-tag-box" style="margin: 36px 0;">
                             <ul>
@@ -142,3 +184,29 @@
     </section>
 
 @endsection
+
+@push('scripts')
+    <script>
+        $('.post-gallery-grid').magnificPopup({
+            delegate: '.post-gallery-item > a',
+            type: 'image',
+            gallery: { enabled: true, tCounter: '%curr% / %total%' },
+            image: { titleSrc: 'title' },
+            tClose: 'Fermer (Échap)',
+            tLoading: 'Chargement…',
+            callbacks: {
+                // Lecture automatique des vidéos envoyées, arrêtées à la fermeture.
+                change: function () {
+                    $('.post-gallery-video video').each(function () { this.pause(); });
+                    if (this.currItem.type === 'inline') {
+                        var video = this.currItem.inlineElement.find('video').get(0);
+                        if (video) { video.play().catch(function () {}); }
+                    }
+                },
+                close: function () {
+                    $('.post-gallery-video video').each(function () { this.pause(); });
+                }
+            }
+        });
+    </script>
+@endpush

@@ -9,6 +9,7 @@ use App\Models\Event;
 use App\Models\EventRegistration;
 use App\Models\Page;
 use App\Models\Post;
+use App\Models\PostMedia;
 use App\Models\Setting;
 use App\Models\TeamMember;
 use App\Models\User;
@@ -154,6 +155,57 @@ it('crée un article avec ses mots-clés', function () {
     expect($post->tags)->toBe(['eau', 'terrain'])
         ->and($post->user_id)->toBe($this->admin->id)
         ->and($post->published_at)->not->toBeNull();
+});
+
+it('ajoute des photos, des vidéos et des liens YouTube à la galerie d\'un article', function () {
+    Storage::fake('public');
+    $post = Post::factory()->create();
+
+    $this->put(route('admin.posts.update', $post), [
+        'title' => $post->title,
+        'status' => 'published',
+        'gallery_files' => [
+            UploadedFile::fake()->image('puits.jpg'),
+            UploadedFile::fake()->create('reportage.mp4', 500, 'video/mp4'),
+        ],
+        'gallery_videos' => "https://youtu.be/dQw4w9WgXcQ\nhttps://vimeo.com/76979871",
+    ])->assertRedirect(route('admin.posts.index'));
+
+    $gallery = $post->gallery()->get();
+
+    expect($gallery)->toHaveCount(4)
+        ->and($gallery->pluck('type')->all())->toBe(['image', 'video', 'video', 'video'])
+        ->and($gallery[2]->url)->toBe('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
+        ->and($gallery[2]->thumbnail)->toBe('https://img.youtube.com/vi/dQw4w9WgXcQ/hqdefault.jpg');
+
+    Storage::disk('public')->assertExists($gallery[0]->path);
+
+    // Légende, puis retrait d'une image avec suppression du fichier.
+    $this->put(route('admin.posts.update', $post), [
+        'title' => $post->title,
+        'status' => 'published',
+        'gallery' => [
+            $gallery[0]->id => ['remove' => 1],
+            $gallery[1]->id => ['caption' => 'Inauguration du puits', 'sort_order' => 9],
+        ],
+    ]);
+
+    Storage::disk('public')->assertMissing($gallery[0]->path);
+    expect($post->gallery()->count())->toBe(3)
+        ->and($gallery[1]->fresh()->caption)->toBe('Inauguration du puits')
+        ->and($post->gallery()->get()->last()->id)->toBe($gallery[1]->id);
+});
+
+it('refuse un lien vidéo qui n\'est ni YouTube ni Vimeo', function () {
+    $post = Post::factory()->create();
+
+    $this->put(route('admin.posts.update', $post), [
+        'title' => $post->title,
+        'status' => 'published',
+        'gallery_videos' => 'https://exemple.com/video',
+    ])->assertSessionHasErrors('gallery_videos');
+
+    expect(PostMedia::count())->toBe(0);
 });
 
 it('modère un commentaire', function () {
@@ -313,4 +365,18 @@ it('crée un compte utilisateur déjà vérifié', function () {
 
     expect($created->role)->toBe('editor')
         ->and($created->email_verified_at)->not->toBeNull();
+});
+
+it('renvoie vers le formulaire avec un message clair quand l\'envoi dépasse post_max_size', function () {
+    $post = Post::factory()->create();
+    $edit = route('admin.posts.edit', $post);
+
+    $this->call('PUT', route('admin.posts.update', $post), [], [], [], [
+        'CONTENT_LENGTH' => 10 * 1024 ** 3,
+        'HTTP_REFERER' => $edit,
+    ])->assertRedirect($edit.'?envoi=trop-volumineux');
+
+    $this->get($edit.'?envoi=trop-volumineux')
+        ->assertOk()
+        ->assertSee('Les fichiers envoyés étaient trop volumineux');
 });

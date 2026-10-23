@@ -75,6 +75,13 @@ it('affiche les actualités en grille et en liste', function () {
     $this->get('/actualites')->assertOk()->assertSee($post->title)->assertDontSee('Brouillon invisible');
     $this->get('/actualites?vue=liste')->assertOk()->assertSee($post->title);
     $this->get('/actualites/'.$post->slug)->assertOk()->assertSee($post->title);
+
+    $post->gallery()->create(['type' => 'image', 'path' => 'uploads/posts/gallery/puits.jpg', 'caption' => 'Le nouveau puits']);
+    $post->gallery()->create(['type' => 'video', 'url' => 'https://www.youtube.com/watch?v=dQw4w9WgXcQ']);
+
+    $this->get('/actualites/'.$post->slug)->assertOk()
+        ->assertSee('Le nouveau puits')
+        ->assertSee('https://www.youtube.com/watch?v=dQw4w9WgXcQ', false);
 });
 
 it('rend les pages institutionnelles', function () {

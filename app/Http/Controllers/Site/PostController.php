@@ -41,7 +41,7 @@ class PostController extends Controller
         $post->increment('views');
 
         return view('site.posts.show', array_merge($this->sidebar(), [
-            'post' => $post->load(['category', 'author', 'approvedComments']),
+            'post' => $post->load(['category', 'author', 'approvedComments', 'gallery']),
             'previous' => Post::published()->where('id', '<', $post->id)->latest('id')->first(),
             'next' => Post::published()->where('id', '>', $post->id)->oldest('id')->first(),
         ]));

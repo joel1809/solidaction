@@ -3,6 +3,20 @@
 @section('title', $post->exists ? 'Modifier un article' : 'Nouvel article')
 @section('subtitle', $post->exists ? $post->title : 'Rédiger une actualité')
 
+@php
+    // post_max_size en octets (ex. « 256M »), pour bloquer un envoi trop lourd avant qu'il ne parte.
+    $maxPostSize = (function (string $value): int {
+        $number = (int) $value;
+
+        return match (strtoupper(substr(trim($value), -1))) {
+            'G' => $number * 1024 ** 3,
+            'M' => $number * 1024 ** 2,
+            'K' => $number * 1024,
+            default => $number,
+        };
+    })((string) ini_get('post_max_size'));
+@endphp
+
 @section('content')
 
     <x-admin.page-header :title="$post->exists ? 'Modifier l\'article' : 'Nouvel article'"
@@ -14,7 +28,8 @@
     </x-admin.page-header>
 
     <form action="{{ $post->exists ? route('admin.posts.update', $post) : route('admin.posts.store') }}"
-        method="POST" enctype="multipart/form-data" class="grid gap-6 lg:grid-cols-3">
+        method="POST" enctype="multipart/form-data" class="grid gap-6 lg:grid-cols-3"
+        data-max-post-size="{{ $maxPostSize }}" data-max-post-label="{{ ini_get('post_max_size') }}o">
         @csrf
         @if ($post->exists)
             @method('PUT')
@@ -36,6 +51,72 @@
             <x-admin.card title="Image à la une">
                 <x-admin.image-field name="image" label="Visuel de l'article" :current="$post->image"
                     help="Format paysage recommandé (1200 × 800 px)." />
+            </x-admin.card>
+
+            <x-admin.card title="Galerie photos et vidéos">
+                <div class="space-y-5">
+                    @if ($gallery->isNotEmpty())
+                        <ul class="divide-y divide-zinc-100 rounded-lg border border-zinc-200">
+                            @foreach ($gallery as $item)
+                                <li class="flex items-center gap-4 p-3">
+                                    <div class="grid size-16 shrink-0 place-items-center overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50">
+                                        @if ($item->thumbnail)
+                                            <img src="{{ $item->thumbnail }}" alt="" class="size-full object-cover">
+                                        @elseif (! $item->isEmbed())
+                                            <video src="{{ $item->src }}#t=0.5" preload="metadata" muted class="size-full object-cover"></video>
+                                        @else
+                                            <span class="text-xs font-medium text-zinc-500">Vidéo</span>
+                                        @endif
+                                    </div>
+
+                                    <div class="min-w-0 flex-1 space-y-1.5">
+                                        <p class="truncate text-xs text-zinc-500">
+                                            {{ $item->isVideo() ? 'Vidéo' : 'Image' }}
+                                            @if ($item->isEmbed())
+                                                · <a href="{{ $item->url }}" target="_blank" rel="noopener" class="hover:underline">{{ $item->url }}</a>
+                                            @endif
+                                        </p>
+                                        <input type="text" name="gallery[{{ $item->id }}][caption]" placeholder="Légende (facultative)"
+                                            value="{{ old('gallery.'.$item->id.'.caption', $item->caption) }}"
+                                            class="w-full rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 shadow-sm transition placeholder:text-zinc-400 focus:border-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-100">
+                                    </div>
+
+                                    <div class="w-20 shrink-0">
+                                        <label class="block text-xs text-zinc-500">Ordre</label>
+                                        <input type="number" min="0" name="gallery[{{ $item->id }}][sort_order]"
+                                            value="{{ old('gallery.'.$item->id.'.sort_order', $item->sort_order) }}"
+                                            class="mt-0.5 w-full rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 shadow-sm transition placeholder:text-zinc-400 focus:border-zinc-400 focus:outline-none focus:ring-2 focus:ring-zinc-100">
+                                    </div>
+
+                                    <label class="inline-flex shrink-0 items-center gap-1.5 text-xs text-zinc-600">
+                                        <input type="checkbox" name="gallery[{{ $item->id }}][remove]" value="1"
+                                            class="size-3.5 rounded border-zinc-300 text-rose-500 focus:ring-rose-200">
+                                        Retirer
+                                    </label>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
+
+                    <div class="space-y-2">
+                        <label for="field-gallery-files" class="block text-sm font-medium text-zinc-700">Ajouter des photos ou des vidéos</label>
+                        <input type="file" name="gallery_files[]" id="field-gallery-files" multiple
+                            accept="image/jpeg,image/png,image/webp,image/gif,video/mp4,video/webm,video/quicktime"
+                            class="block w-full cursor-pointer rounded-lg border border-zinc-200 bg-white text-sm text-zinc-600 shadow-sm file:mr-3 file:cursor-pointer file:border-0 file:bg-zinc-100 file:px-4 file:py-2.5 file:text-sm file:font-medium file:text-zinc-700 hover:file:bg-zinc-200">
+                        <p class="text-xs text-zinc-500">Sélection multiple possible. Images JPG, PNG, WebP ou GIF ; vidéos MP4, WebM ou MOV — 40 Mo maximum par fichier, {{ ini_get('post_max_size') }}o au total par envoi.</p>
+                        <p id="gallery-size-error" class="hidden text-xs font-medium text-rose-600"></p>
+                        @error('gallery_files')
+                            <p class="text-xs font-medium text-rose-600">{{ $message }}</p>
+                        @enderror
+                        @foreach ($errors->get('gallery_files.*') as $messages)
+                            <p class="text-xs font-medium text-rose-600">{{ $messages[0] }}</p>
+                        @endforeach
+                    </div>
+
+                    <x-admin.field name="gallery_videos" label="Vidéos YouTube ou Vimeo" type="textarea" rows="3"
+                        :value="old('gallery_videos')"
+                        help="Un lien par ligne, par exemple https://www.youtube.com/watch?v=… — ajoutés à la suite de la galerie." />
+                </div>
             </x-admin.card>
         </div>
 
@@ -91,3 +172,47 @@
     </form>
 
 @endsection
+
+@push('scripts')
+    <script>
+        (() => {
+            const form = document.querySelector('form[data-max-post-size]');
+            const error = document.getElementById('gallery-size-error');
+            if (!form || !error) return;
+
+            const maxTotal = Number(form.dataset.maxPostSize);
+            const maxFile = 40 * 1024 * 1024;
+            const toMo = (bytes) => (bytes / 1024 / 1024).toFixed(1).replace('.', ',') + ' Mo';
+
+            const check = () => {
+                const files = [...form.querySelectorAll('input[type=file]')].flatMap((input) => [...input.files]);
+                const total = files.reduce((sum, file) => sum + file.size, 0);
+                const tooBig = files.filter((file) => file.size > maxFile);
+                let message = '';
+
+                if (tooBig.length) {
+                    message = 'Fichier(s) de plus de 40 Mo : ' + tooBig.map((file) => file.name + ' (' + toMo(file.size) + ')').join(', ') + '.';
+                } else if (maxTotal && total > maxTotal) {
+                    message = 'La sélection pèse ' + toMo(total) + ', au-delà de la limite de ' + form.dataset.maxPostLabel
+                        + ' par envoi. Ajoutez moins de fichiers à la fois.';
+                }
+
+                error.textContent = message;
+                error.classList.toggle('hidden', message === '');
+
+                return message === '';
+            };
+
+            form.addEventListener('change', (event) => {
+                if (event.target.type === 'file') check();
+            });
+
+            form.addEventListener('submit', (event) => {
+                if (!check()) {
+                    event.preventDefault();
+                    error.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            });
+        })();
+    </script>
+@endpush
