@@ -771,6 +771,7 @@
 
 .post-sidebar .sidebar-tag-box ul li:hover a {
     border-color: var(--thm-primary);
+    color: #096635;
 }
 
 .post-sidebar .post-sidebar-cta h3 {
@@ -817,7 +818,7 @@
 /* Mots-clés en bas de l'article */
 .post-tags ul li:hover a {
     background: var(--thm-color-2);
-    color: var(--thm-color-5);
+    color: #096635;
 }
 
 /* Galerie photos et vidéos des articles */
