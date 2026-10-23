@@ -201,7 +201,13 @@
     transition: all 0.4s linear;        
 }
 .header-social-link-1 ul li a:hover{
-    background: var(--thm-color-2); 
+    background: var(--thm-color-2);
+}
+.header-social-link-1 ul li a.login-link{
+    background: #096635;
+}
+.header-social-link-1 ul li a.login-link:hover{
+    background: var(--thm-color-2);
 }
 
 

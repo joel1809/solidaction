@@ -57,9 +57,9 @@
                                 @endif
                             @endforeach
                             @auth
-                                <li><a href="{{ route('admin.dashboard') }}" title="Administration"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                                <li><a href="{{ route('admin.dashboard') }}" class="login-link" title="Administration"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                             @else
-                                <li><a href="{{ route('login') }}" title="Connexion"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+                                <li><a href="{{ route('login') }}" class="login-link" title="Connexion"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
                             @endauth
                         </ul>
                     </div>
