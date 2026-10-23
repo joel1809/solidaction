@@ -1,4 +1,5 @@
-<div class="sidebar-content-box">
+@php($plain = $plain ?? false)
+<div class="sidebar-content-box{{ $plain ? ' sidebar-content-box--plain post-sidebar' : '' }}">
     {{-- Recherche --}}
     <div class="single-sidebar-box">
         <div class="single-sidebar_search_box">
@@ -64,6 +65,17 @@
     @endif
 
     {{-- Appel au don --}}
+    @if ($plain)
+        <div class="single-sidebar-box">
+            <div class="post-sidebar-cta">
+                <h3>Soutenez nos actions</h3>
+                <p>Un petit don, un grand impact pour l'éducation et la santé de chaque enfant.</p>
+                <a class="btn-one" href="{{ route('donations.create') }}">
+                    <span class="txt">Je donne</span>
+                </a>
+            </div>
+        </div>
+    @else
     <div class="single-sidebar-box">
         <div class="sidebar-slogan-box" style="background-image: url({{ theme_asset('assets/images/sidebar/sidebar-slogan-img.jpg') }});">
             <div class="icon">
@@ -79,6 +91,7 @@
             </div>
         </div>
     </div>
+    @endif
 
     {{-- Mots-clés --}}
     @if ($sidebarTags->isNotEmpty())

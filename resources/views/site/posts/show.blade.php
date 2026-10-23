@@ -177,7 +177,7 @@
                 </div>
 
                 <div class="col-xl-4">
-                    @include('partials.site.news-sidebar')
+                    @include('partials.site.news-sidebar', ['plain' => true])
                 </div>
             </div>
         </div>
