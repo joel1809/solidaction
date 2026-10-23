@@ -8,7 +8,7 @@
                         <div class="our-company-info">
                             <div class="footer-logo">
                                 <a href="{{ route('home') }}">
-                                    <img src="{{ media(setting('site_logo_footer'), 'theme/assets/images/logo/logo-footer.png') }}" alt="{{ setting('site_name', 'SolidAction') }}" />
+                                    <img src="{{ media(setting('site_logo'), 'theme/assets/images/logo/logo-header.png') }}" alt="{{ setting('site_name', 'SolidAction') }}" />
                                 </a>
                             </div>
                             <div class="text-box">

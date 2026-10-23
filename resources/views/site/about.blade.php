@@ -80,7 +80,7 @@
                         <div class="text-holder">
                             <div class="top">
                                 <div class="icon">
-                                    <img src="{{ media(setting('site_logo_footer'), 'theme/assets/images/logo/logo-footer.png') }}" alt="{{ setting('site_name', 'SolidAction') }}">
+                                    <img src="{{ media(setting('site_logo'), 'theme/assets/images/logo/logo-header.png') }}" alt="{{ setting('site_name', 'SolidAction') }}">
                                 </div>
                                 <div class="title">
                                     <h3>{{ setting('mission_title') }}</h3>
