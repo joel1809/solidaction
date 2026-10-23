@@ -98,7 +98,7 @@
                                         </div>
                                     </div>
                                     <p>Accueil <a href="tel:{{ preg_replace('/\s+/', '', setting('contact_phone', '')) }}">{{ setting('contact_phone') }}</a></p>
-                                    @if (setting('contact_phone_secondary'))
+                                    @if (setting('contact_phone_secondary') && setting('contact_phone_secondary') !== setting('contact_phone'))
                                         <p>Dons <a href="tel:{{ preg_replace('/\s+/', '', setting('contact_phone_secondary')) }}">{{ setting('contact_phone_secondary') }}</a></p>
                                     @endif
                                 </li>
@@ -113,7 +113,7 @@
                                         </div>
                                     </div>
                                     <p><a href="mailto:{{ setting('contact_email') }}">{{ setting('contact_email') }}</a></p>
-                                    @if (setting('contact_email_secondary'))
+                                    @if (setting('contact_email_secondary') && setting('contact_email_secondary') !== setting('contact_email'))
                                         <p><a href="mailto:{{ setting('contact_email_secondary') }}">{{ setting('contact_email_secondary') }}</a></p>
                                     @endif
                                 </li>

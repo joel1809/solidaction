@@ -123,6 +123,27 @@
     height: 18px;
 }
 
+/* Le thème ne stylise que text/email/textarea dans .contact-form : on aligne le champ téléphone */
+.contact-form form input[type="tel"] {
+    position: relative;
+    display: block;
+    background: #ffffff;
+    width: 100%;
+    height: 62px;
+    border: 1px solid #e3e9f4;
+    color: #666666;
+    font-size: 16px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 8px;
+    transition: all 500ms ease;
+}
+
+.contact-form form input[type="tel"]:focus {
+    color: #171717;
+    border-color: #171717;
+}
+
 /* Boutons de montants prédéfinis */
 .amount-presets {
     display: flex;
