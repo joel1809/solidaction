@@ -243,7 +243,7 @@
                         <div class="text-holder">
                             <div class="top">
                                 <div class="icon">
-                                    <img src="{{ theme_asset('assets/images/shape/thm-shape-4.png') }}" alt="">
+                                    <img src="{{ media(setting('site_logo_footer'), 'theme/assets/images/logo/logo-footer.png') }}" alt="{{ setting('site_name', 'SolidAction') }}">
                                 </div>
                                 <div class="title">
                                     <h3>{{ setting('mission_title', 'Un petit don aujourd\'hui, un grand changement demain.') }}</h3>

@@ -970,3 +970,14 @@
     width: 120px;
     height: auto;
 }
+
+/* --- Logo du bloc « mission » --- */
+.mission-goals-content .text-holder .top .icon {
+    width: 90px;
+    flex-shrink: 0;
+    margin-right: 20px;
+}
+.mission-goals-content .text-holder .top .icon img {
+    width: 100%;
+    height: auto;
+}
