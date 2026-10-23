@@ -10,7 +10,7 @@
 
     <section class="faq-style1-area" style="padding: 110px 0 90px;">
         <div class="container">
-            <x-site.sec-title subtitle="Nous vous répondons" title="Vos questions, nos réponses" />
+            <x-site.sec-title subtitle="Nous vous répondons" title="Vos questions, nos réponses" :icon="false" />
 
             <div class="row">
                 <div class="col-xl-10 offset-xl-1">
@@ -42,17 +42,19 @@
                 </div>
             </div>
 
-            <div class="row" style="margin-top: 60px;">
-                <div class="col-xl-10 offset-xl-1">
-                    <div class="empty-state">
-                        <h3>Votre question n'est pas dans la liste ?</h3>
-                        <p>Notre équipe vous répond par e-mail sous 48 heures ouvrées.</p>
-                        <a class="btn-one" href="{{ route('contact.create') }}">
-                            <span class="txt"><i class="arrow1 fa fa-check-circle"></i>Nous écrire</span>
-                        </a>
+            @if ($faqs->isNotEmpty())
+                <div class="row" style="margin-top: 60px;">
+                    <div class="col-xl-10 offset-xl-1">
+                        <div class="empty-state">
+                            <h3>Votre question n'est pas dans la liste ?</h3>
+                            <p>Notre équipe vous répond par e-mail sous 48 heures ouvrées.</p>
+                            <a class="btn-one" href="{{ route('contact.create') }}">
+                                <span class="txt"><i class="arrow1 fa fa-check-circle"></i>Nous écrire</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
-            </div>
+            @endif
         </div>
     </section>
 
