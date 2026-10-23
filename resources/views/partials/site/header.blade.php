@@ -56,6 +56,11 @@
                                     <li><a href="{{ $url }}" target="_blank" rel="noopener"><i class="fa fa-{{ $icon }}" aria-hidden="true"></i></a></li>
                                 @endif
                             @endforeach
+                            @auth
+                                <li><a href="{{ route('admin.dashboard') }}" title="Administration"><i class="fa fa-user" aria-hidden="true"></i></a></li>
+                            @else
+                                <li><a href="{{ route('login') }}" title="Connexion"><i class="fa fa-sign-in" aria-hidden="true"></i></a></li>
+                            @endauth
                         </ul>
                     </div>
                 </div>
