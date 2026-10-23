@@ -19,7 +19,7 @@
             class="fixed inset-y-0 left-0 z-40 w-64 shrink-0 -translate-x-full overflow-y-auto bg-brand-green text-white/80 transition-transform duration-200 lg:static lg:translate-x-0">
 
             <div class="flex h-16 items-center gap-3 border-b border-white/10 px-5">
-                <span class="grid size-9 shrink-0 place-items-center overflow-hidden rounded-lg bg-white p-1">
+                <span class="grid size-12 shrink-0 place-items-center overflow-hidden rounded-lg bg-white p-1">
                     <img src="{{ media(setting('site_logo'), 'theme/assets/images/logo/logo-header.png') }}"
                          alt="{{ setting('site_name', 'SolidAction') }}" class="max-h-full max-w-full object-contain">
                 </span>
