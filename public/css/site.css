@@ -981,3 +981,9 @@
     width: 100%;
     height: auto;
 }
+
+/* --- Logo de la carte d'équipe --- */
+.single-team-style1 .img-holder .shape img {
+    width: 44px;
+    height: auto;
+}
