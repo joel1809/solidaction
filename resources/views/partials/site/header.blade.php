@@ -32,9 +32,15 @@
         <div class="container">
             <div class="outer-box clearfix">
                 <div class="header-top_left pull-left">
-                    <div class="icon">
-                        <img src="{{ theme_asset('assets/images/icon/arrow-1.png') }}" alt="">
-                    </div>
+                    @auth
+                        <a href="{{ route('admin.dashboard') }}" class="icon" title="Administration">
+                            <img src="{{ theme_asset('assets/images/icon/arrow-1.png') }}" alt="Administration">
+                        </a>
+                    @else
+                        <a href="{{ route('login') }}" class="icon" title="Connexion">
+                            <img src="{{ theme_asset('assets/images/icon/arrow-1.png') }}" alt="Connexion">
+                        </a>
+                    @endauth
                     <div class="header-top_left-content">
                         <div class="theme_carousel header-top_left-carousel owl-theme owl-carousel"
                             data-options='{"loop": true, "margin": 0, "autoheight":true, "nav": true, "dots": false, "autoplay": true, "autoplayTimeout": 6000, "smartSpeed": 300, "responsive":{ "0" :{ "items": "1" }, "768" :{ "items" : "1" }, "1200":{ "items" : "1" }}}'>
