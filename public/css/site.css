@@ -533,6 +533,11 @@
     color: var(--thm-color-2);
 }
 
+/* --- Titres de section en jaune --- */
+.sec-title h2 {
+    color: var(--thm-color-2);
+}
+
 /* --- En-tête : logo et menu sur une seule ligne --- */
 .header .outer-box {
     display: flex;
