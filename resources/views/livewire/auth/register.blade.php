@@ -81,14 +81,14 @@ new #[Layout('components.layouts.auth')] class extends Component {
         </div>
 
         <div class="flex items-center justify-end">
-            <flux:button type="submit" variant="primary" class="w-full">
+            <flux:button type="submit" variant="primary" class="w-full hover:!bg-brand-green-dark">
                 {{ __('Create account') }}
             </flux:button>
         </div>
     </form>
 
-    <div class="space-x-1 text-center text-sm text-zinc-600 dark:text-zinc-400">
+    <div class="space-x-1 text-center text-sm text-zinc-600">
         Vous avez déjà un compte ?
-        <x-text-link href="{{ route('login') }}">Se connecter</x-text-link>
+        <x-text-link class="!text-brand-green decoration-brand-green/40 hover:decoration-brand-green" href="{{ route('login') }}">Se connecter</x-text-link>
     </div>
 </div>

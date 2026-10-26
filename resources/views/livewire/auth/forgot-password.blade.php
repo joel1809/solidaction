@@ -34,11 +34,11 @@ new #[Layout('components.layouts.auth')] class extends Component {
             <flux:input wire:model="email" label="{{ __('Email Address') }}" type="email" name="email" required autofocus placeholder="prenom.nom@exemple.fr" />
         </div>
 
-        <flux:button variant="primary" type="submit" class="w-full">{{ __('Email password reset link') }}</flux:button>
+        <flux:button variant="primary" type="submit" class="w-full hover:!bg-brand-green-dark">{{ __('Email password reset link') }}</flux:button>
     </form>
 
-    <div class="space-x-1 text-center text-sm text-zinc-400">
+    <div class="space-x-1 text-center text-sm text-zinc-600">
         Ou revenir à la page de
-        <x-text-link href="{{ route('login') }}">log in</x-text-link>
+        <x-text-link class="!text-brand-green decoration-brand-green/40 hover:decoration-brand-green" href="{{ route('login') }}">connexion</x-text-link>
     </div>
 </div>

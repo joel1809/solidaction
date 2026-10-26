@@ -95,7 +95,7 @@ new #[Layout('components.layouts.auth')] class extends Component {
             />
 
             @if (Route::has('password.request'))
-                <x-text-link class="absolute right-0 top-0" href="{{ route('password.request') }}">
+                <x-text-link class="absolute right-0 top-0 !text-brand-green decoration-brand-green/40 hover:decoration-brand-green" href="{{ route('password.request') }}">
                     {{ __('Forgot your password?') }}
                 </x-text-link>
             @endif
@@ -105,12 +105,12 @@ new #[Layout('components.layouts.auth')] class extends Component {
         <flux:checkbox wire:model="remember" label="{{ __('Remember me') }}" />
 
         <div class="flex items-center justify-end">
-            <flux:button variant="primary" type="submit" class="w-full">{{ __('Log in') }}</flux:button>
+            <flux:button variant="primary" type="submit" class="w-full hover:!bg-brand-green-dark">{{ __('Log in') }}</flux:button>
         </div>
     </form>
 
-    <div class="space-x-1 text-center text-sm text-zinc-600 dark:text-zinc-400">
+    <div class="space-x-1 text-center text-sm text-zinc-600">
         Pas encore de compte ?
-        <x-text-link href="{{ route('register') }}">Créer un compte</x-text-link>
+        <x-text-link class="!text-brand-green decoration-brand-green/40 hover:decoration-brand-green" href="{{ route('register') }}">Créer un compte</x-text-link>
     </div>
 </div>
