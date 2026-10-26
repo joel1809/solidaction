@@ -752,6 +752,87 @@
     color: var(--thm-primary);
 }
 
+/* Colonne latérale sobre (page Devenir bénévole) : une seule carte à fin liseré gris,
+   sections séparées par un trait, étapes numérotées sans icônes. */
+.volunteer-sidebar {
+    padding: 4px 24px;
+    background: #ffffff;
+    border: 1px solid #e3e9f4;
+    border-radius: 8px;
+}
+
+.volunteer-sidebar__section {
+    padding: 22px 0;
+}
+
+.volunteer-sidebar__section + .volunteer-sidebar__section {
+    border-top: 1px solid #e3e9f4;
+}
+
+.volunteer-sidebar__section h3 {
+    margin-bottom: 12px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    color: var(--thm-black);
+}
+
+.volunteer-sidebar__steps,
+.volunteer-sidebar__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.volunteer-sidebar__steps {
+    counter-reset: volunteer-step;
+}
+
+.volunteer-sidebar__steps li,
+.volunteer-sidebar__list li {
+    position: relative;
+    padding: 4px 0 4px 26px;
+    font-size: 15px;
+    line-height: 24px;
+    color: var(--thm-gray);
+}
+
+.volunteer-sidebar__steps li::before {
+    counter-increment: volunteer-step;
+    content: counter(volunteer-step) ".";
+    position: absolute;
+    left: 0;
+    font-weight: 600;
+    color: var(--thm-primary);
+}
+
+.volunteer-sidebar__list li::before {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 15px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: #c5cdd9;
+}
+
+.volunteer-sidebar__section p {
+    font-size: 15px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--thm-gray);
+}
+
+.volunteer-sidebar__section p a {
+    color: var(--thm-black);
+    font-weight: 600;
+}
+
+.volunteer-sidebar__section p a:hover {
+    color: var(--thm-primary);
+}
+
 /* Colonne latérale sobre (liste et détail des articles) : encadrés blancs à fin liseré gris,
    éléments compacts et appel au don sans image de fond. */
 .post-sidebar .single-sidebar_search_box,

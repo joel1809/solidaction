@@ -99,40 +99,30 @@
                 </div>
 
                 <div class="col-xl-4">
-                    <div class="sidebar-content-box">
-                        <div class="single-sidebar-box">
-                            <div class="sidebar-categories">
-                                <div class="title">
-                                    <h3>Comment ça se passe ?</h3>
-                                </div>
-                                <ul class="sidebar-categories-box">
-                                    <li><a href="#"><i class="fa fa-check-circle"></i>1. Vous envoyez ce formulaire</a></li>
-                                    <li><a href="#"><i class="fa fa-check-circle"></i>2. Entretien sous une semaine</a></li>
-                                    <li><a href="#"><i class="fa fa-check-circle"></i>3. Journée de formation</a></li>
-                                    <li><a href="#"><i class="fa fa-check-circle"></i>4. Première mission</a></li>
-                                </ul>
+                    <div class="sidebar-content-box sidebar-content-box--plain">
+                        <div class="volunteer-sidebar">
+                            <div class="volunteer-sidebar__section">
+                                <h3>Comment ça se passe ?</h3>
+                                <ol class="volunteer-sidebar__steps">
+                                    <li>Vous envoyez ce formulaire</li>
+                                    <li>Entretien sous une semaine</li>
+                                    <li>Journée de formation</li>
+                                    <li>Première mission</li>
+                                </ol>
                             </div>
-                        </div>
 
-                        <div class="single-sidebar-box">
-                            <div class="sidebar-categories">
-                                <div class="title">
-                                    <h3>Nos besoins actuels</h3>
-                                </div>
-                                <ul class="sidebar-categories-box">
+                            <div class="volunteer-sidebar__section">
+                                <h3>Nos besoins actuels</h3>
+                                <ul class="volunteer-sidebar__list">
                                     @foreach (\App\Models\Volunteer::INTERESTS as $label)
-                                        <li><a href="#"><i class="fa fa-check-circle"></i>{{ $label }}</a></li>
+                                        <li>{{ $label }}</li>
                                     @endforeach
                                 </ul>
                             </div>
-                        </div>
 
-                        <div class="single-sidebar-box">
-                            <div class="sidebar-categories">
-                                <div class="title">
-                                    <h3>Une question ?</h3>
-                                </div>
-                                <p style="padding: 6px 0 0;">
+                            <div class="volunteer-sidebar__section">
+                                <h3>Une question ?</h3>
+                                <p>
                                     Contactez notre coordinatrice au
                                     <a href="tel:{{ preg_replace('/\s+/', '', setting('contact_phone', '')) }}">{{ setting('contact_phone') }}</a>.
                                 </p>
