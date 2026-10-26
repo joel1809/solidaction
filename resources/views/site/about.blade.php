@@ -11,7 +11,7 @@
     <section class="about-style1-area" style="padding: 110px 0 90px;">
         <div class="container">
             <div class="row">
-                <div class="col-xl-6">
+                <div class="col-xl-12 about-intro clearfix">
                     <div class="causes-style1_image-box">
                         <div class="shape wow slideInLeft" data-wow-delay="0ms" data-wow-duration="3500ms">
                             <img class="zoom-fade" src="{{ theme_asset('assets/images/shape/thm-shape-7.png') }}" alt="">
@@ -20,8 +20,7 @@
                             <img src="{{ theme_asset('assets/images/about/about-style1-image-1.jpg') }}" alt="Nos équipes sur le terrain">
                         </div>
                     </div>
-                </div>
-                <div class="col-xl-6">
+
                     <x-site.sec-title subtitle="Notre histoire" :title="e(setting('about_title', 'Depuis 2013 aux côtés des plus fragiles'))" :center="false" />
 
                     <div class="inner-content">
@@ -65,6 +64,25 @@
             </div>
         </div>
     </section>
+
+    @push('styles')
+        <style>
+            /* L'image flotte à gauche : le texte et le tableau l'entourent puis continuent en dessous. */
+            @media (min-width: 1200px) {
+                .about-intro .causes-style1_image-box {
+                    float: left;
+                    width: 480px;
+                    margin: 0 50px 30px 0;
+                    shape-outside: circle(245px at 215px 240px);
+                }
+            }
+            @media (max-width: 1199px) {
+                .about-intro .causes-style1_image-box {
+                    margin: 0 auto 40px;
+                }
+            }
+        </style>
+    @endpush
 
     {{-- ============ Chiffres clés ============ --}}
     <x-site.counters :stats="$stats" />
