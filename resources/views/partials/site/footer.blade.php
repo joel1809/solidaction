@@ -12,7 +12,7 @@
                                 </a>
                             </div>
                             <div class="text-box">
-                                <p>{{ setting('footer_text', 'Depuis 2004, SolidAction mobilise donateurs et bénévoles autour de projets durables : eau potable, écoles, santé et réponse aux urgences.') }}</p>
+                                <p>{{ setting('footer_text', 'Depuis 2013, SolidAction mobilise donateurs et bénévoles autour de projets durables : eau potable, écoles, santé et réponse aux urgences.') }}</p>
                             </div>
 
                             <div class="footer-contact-info">

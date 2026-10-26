@@ -22,11 +22,13 @@
                     </div>
                 </div>
                 <div class="col-xl-6">
-                    <x-site.sec-title subtitle="Notre histoire" :title="e(setting('about_title', 'Vingt ans d\'engagement aux côtés des plus fragiles'))" :center="false" />
+                    <x-site.sec-title subtitle="Notre histoire" :title="e(setting('about_title', 'Depuis 2013 aux côtés des plus fragiles'))" :center="false" />
 
                     <div class="inner-content">
                         <div class="text-box">
-                            <p>{{ setting('about_text') }}</p>
+                            @foreach (preg_split('/\R{2,}/', trim((string) setting('about_text'))) as $paragraph)
+                                <p>{{ $paragraph }}</p>
+                            @endforeach
                         </div>
 
                         <table class="info-table" style="margin-top: 24px;">

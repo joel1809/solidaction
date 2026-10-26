@@ -37,12 +37,19 @@ class SettingSeeder extends Seeder
             ['social_youtube', 'https://youtube.com/@solidaction', 'social'],
 
             // Contenus éditoriaux
-            ['about_short', 'SolidAction agit depuis 2004 auprès des familles vulnérables de Côte d\'Ivoire : accès à l\'eau potable, éducation, santé et réponse aux urgences humanitaires.', 'content', 'textarea'],
-            ['about_title', 'Vingt ans d\'engagement aux côtés des plus fragiles', 'content'],
-            ['about_text', 'Née à Abidjan de l\'initiative de cinq bénévoles, SolidAction est aujourd\'hui présente dans 14 régions de Côte d\'Ivoire. Nous travaillons exclusivement avec des associations communautaires : ce sont elles qui connaissent les besoins, nous apportons le financement, la méthode et le suivi. Chaque projet est audité et ses résultats publiés dans notre rapport annuel.', 'content', 'textarea'],
+            ['about_short', 'SolidAction agit depuis 2013 auprès des familles vulnérables de Côte d\'Ivoire : accès à l\'eau potable, éducation, santé et réponse aux urgences humanitaires.', 'content', 'textarea'],
+            ['about_title', 'Depuis 2013 aux côtés des plus fragiles', 'content'],
+            ['about_text', implode("\n\n", [
+                'Au cœur de Solid’Action bat une flamme qui illumine les vies dans l\'ombre depuis 2013. Nous sommes nés d\'une simple idée, forgée dans l\'esprit de partage et de solidarité, sur les réseaux sociaux.',
+                'Notre essence ?',
+                'Offrir une main secourable aux communautés en difficulté, non pas avec des solutions temporaires, mais avec des réponses durables, des réponses qui transforment des vies.',
+                'Depuis 2020, nous avons franchi un nouveau chapitre dans notre histoire. Nous avons donné à notre engagement une empreinte légale en devenant l\'ONG Solid’Action. Mais notre cœur est resté le même : celui d\'un groupe de personnes unies par une passion commune, animées par le désir ardent de faire une différence dans le monde.',
+                'Nous sommes bien plus qu\'une organisation. Nous sommes une famille, liée par des valeurs intangibles : le don de soi, l\'amour authentique pour nos semblables, la solidarité indéfectible et la compassion inépuisable. Ensemble, nous portons un fardeau de responsabilité envers ceux qui ont besoin d\'aide, envers ceux qui cherchent la lumière dans les ténèbres.',
+                'Dans chaque geste que nous posons, dans chaque sourire que nous suscitons, dans chaque vie que nous touchons, nous répandons l\'espoir et l\'amour. Et c\'est cela qui fait battre le cœur de Solid’Action.',
+            ]), 'content', 'textarea'],
             ['mission_title', 'Un petit don aujourd\'hui, un grand changement demain.', 'content'],
             ['mission_text', 'Nous construisons des projets avec les communautés locales : points d\'eau, écoles, centres de santé et réponse rapide aux situations d\'urgence. Chaque franc est tracé et audité par un cabinet indépendant.', 'content', 'textarea'],
-            ['footer_text', 'Depuis 2004, SolidAction mobilise donateurs et bénévoles autour de projets durables en Côte d\'Ivoire : eau potable, écoles, santé et réponse aux urgences.', 'content', 'textarea'],
+            ['footer_text', 'Depuis 2013, SolidAction mobilise donateurs et bénévoles autour de projets durables en Côte d\'Ivoire : eau potable, écoles, santé et réponse aux urgences.', 'content', 'textarea'],
             ['intro_video', 'https://www.youtube.com/watch?v=MLpWrANjFbI', 'content'],
             ['stat_beneficiaries', '13700', 'content'],
 
