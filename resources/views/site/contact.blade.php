@@ -73,7 +73,7 @@
                 </div>
 
                 <div class="col-xl-4">
-                    <div class="sidebar-content-box">
+                    <div class="sidebar-content-box sidebar-content-box--plain">
                         <div class="contact-info-sidebar">
                             <ul>
                                 <li>

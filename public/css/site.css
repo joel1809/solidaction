@@ -687,6 +687,67 @@
     }
 }
 
+/* Colonne latérale sobre (page Contact) : carte blanche à fin liseré gris,
+   sans barre de soulignement, titres et icônes plus discrets. */
+.sidebar-content-box--plain .contact-info-sidebar {
+    max-width: none;
+    float: none;
+    padding: 26px 24px;
+    border: 1px solid #e3e9f4;
+    border-radius: 8px;
+}
+
+.sidebar-content-box--plain .contact-info-sidebar::before,
+.sidebar-content-box--plain .contact-info-sidebar::after {
+    display: none;
+}
+
+.sidebar-content-box--plain .contact-info-sidebar ul li {
+    margin-top: 18px;
+    padding-bottom: 18px;
+}
+
+.sidebar-content-box--plain .contact-info-sidebar ul li .top {
+    margin-bottom: 8px;
+}
+
+.sidebar-content-box--plain .contact-info-sidebar ul li .top .icon {
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    background: #0966351a;
+}
+
+.sidebar-content-box--plain .contact-info-sidebar ul li .top .icon span {
+    color: var(--thm-primary);
+    font-size: 16px;
+}
+
+.sidebar-content-box--plain .contact-info-sidebar ul li .top .title {
+    padding-left: 12px;
+}
+
+.sidebar-content-box--plain .contact-info-sidebar ul li .top .title h3 {
+    font-size: 17px;
+    line-height: 24px;
+    font-weight: 700;
+}
+
+.sidebar-content-box--plain .contact-info-sidebar ul li p {
+    padding-left: 46px;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--thm-gray);
+}
+
+.sidebar-content-box--plain .contact-info-sidebar ul li p a {
+    color: var(--thm-black);
+}
+
+.sidebar-content-box--plain .contact-info-sidebar ul li p a:hover {
+    color: var(--thm-primary);
+}
+
 /* Colonne latérale sobre (liste et détail des articles) : encadrés blancs à fin liseré gris,
    éléments compacts et appel au don sans image de fond. */
 .post-sidebar .single-sidebar_search_box,
