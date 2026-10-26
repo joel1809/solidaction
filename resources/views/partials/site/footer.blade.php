@@ -8,11 +8,11 @@
                         <div class="our-company-info">
                             <div class="footer-logo">
                                 <a href="{{ route('home') }}">
-                                    <img src="{{ media(setting('site_logo_footer') ?: setting('site_logo'), 'theme/assets/images/logo/logo-header.png') }}" alt="{{ setting('site_name', 'SolidAction') }}" />
+                                    <img src="{{ media(setting('site_logo_footer') ?: setting('site_logo'), 'theme/assets/images/logo/logo-header.png') }}" alt="{{ setting('site_name', 'Solid’Action') }}" />
                                 </a>
                             </div>
                             <div class="text-box">
-                                <p>{{ setting('footer_text', 'Depuis 2013, SolidAction mobilise donateurs et bénévoles autour de projets durables : eau potable, écoles, santé et réponse aux urgences.') }}</p>
+                                <p>{{ setting('footer_text', 'Depuis 2013, Solid’Action mobilise donateurs et bénévoles autour de projets durables : eau potable, écoles, santé et réponse aux urgences.') }}</p>
                             </div>
 
                             <div class="footer-contact-info">
@@ -91,7 +91,7 @@
         <div class="auto-container">
             <div class="footer-bottom_content_box text-center">
                 <div class="copyright-text">
-                    <p>&copy; {{ date('Y') }} <a href="{{ route('home') }}">{{ setting('site_name', 'SolidAction') }}</a>. Tous droits réservés. Développé par <strong>Hosanna Technologie</strong>.
+                    <p>&copy; {{ date('Y') }} <a href="{{ route('home') }}">{{ setting('site_name', 'Solid’Action') }}</a>. Tous droits réservés. Développé par <strong>Hosanna Technologie</strong>.
                         @auth
                             <a href="{{ route('admin.dashboard') }}">Administration</a>
                         @else

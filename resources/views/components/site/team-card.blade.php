@@ -15,7 +15,7 @@
                 @endforelse
             </ul>
         </div>
-        <div class="shape"><img src="{{ media(setting('site_logo'), 'theme/assets/images/logo/logo-header.png') }}" alt="{{ setting('site_name', 'SolidAction') }}"></div>
+        <div class="shape"><img src="{{ media(setting('site_logo'), 'theme/assets/images/logo/logo-header.png') }}" alt="{{ setting('site_name', 'Solid’Action') }}"></div>
     </div>
     <div class="title-holder text-center">
         <h3><a href="{{ route('team') }}">{{ $member->name }}</a></h3>

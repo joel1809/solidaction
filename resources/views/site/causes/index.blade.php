@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('title', 'Nos causes')
-@section('meta_description', 'Découvrez les collectes en cours de SolidAction : eau potable, éducation, santé, urgences et alimentation.')
+@section('meta_description', 'Découvrez les collectes en cours de Solid’Action : eau potable, éducation, santé, urgences et alimentation.')
 
 @section('content')
 

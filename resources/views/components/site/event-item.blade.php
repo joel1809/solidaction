@@ -10,7 +10,7 @@
         </div>
     </div>
     <div class="meta-info">
-        <p>Organisé par : <a href="{{ route('about') }}">{{ $event->organizer ?: setting('site_name', 'SolidAction') }}</a></p>
+        <p>Organisé par : <a href="{{ route('about') }}">{{ $event->organizer ?: setting('site_name', 'Solid’Action') }}</a></p>
     </div>
     <div class="title">
         <h2><a href="{{ route('events.show', $event) }}">{{ $event->title }}</a></h2>

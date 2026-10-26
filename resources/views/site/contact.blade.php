@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('title', 'Contact')
-@section('meta_description', 'Contactez SolidAction : siège social, téléphone, e-mail et formulaire de contact direct.')
+@section('meta_description', 'Contactez Solid’Action : siège social, téléphone, e-mail et formulaire de contact direct.')
 
 @section('content')
 

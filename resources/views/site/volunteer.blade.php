@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('title', 'Devenir bénévole')
-@section('meta_description', 'Rejoignez les 240 bénévoles de SolidAction : logistique, communication, éducation, santé ou administration.')
+@section('meta_description', 'Rejoignez les 240 bénévoles de Solid’Action : logistique, communication, éducation, santé ou administration.')
 
 @section('content')
 

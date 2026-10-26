@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>@yield('title', 'Tableau de bord') &middot; Administration {{ setting('site_name', 'SolidAction') }}</title>
+    <title>@yield('title', 'Tableau de bord') &middot; Administration {{ setting('site_name', 'Solid’Action') }}</title>
     <link rel="icon" type="image/png" href="{{ theme_asset('assets/images/favicon/favicon-32x32.png') }}" sizes="32x32">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
@@ -21,10 +21,10 @@
             <div class="flex h-16 items-center gap-3 border-b border-white/10 px-5">
                 <span class="grid size-12 shrink-0 place-items-center overflow-hidden rounded-lg bg-white p-1">
                     <img src="{{ media(setting('site_logo'), 'theme/assets/images/logo/logo-header.png') }}"
-                         alt="{{ setting('site_name', 'SolidAction') }}" class="max-h-full max-w-full object-contain">
+                         alt="{{ setting('site_name', 'Solid’Action') }}" class="max-h-full max-w-full object-contain">
                 </span>
                 <div class="min-w-0 leading-tight">
-                    <p class="truncate text-sm font-semibold text-white">{{ setting('site_name', 'SolidAction') }}</p>
+                    <p class="truncate text-sm font-semibold text-white">{{ setting('site_name', 'Solid’Action') }}</p>
                     <p class="text-[11px] uppercase tracking-wide text-white/60">Administration</p>
                 </div>
                 <button type="button" data-sidebar-close
@@ -104,7 +104,7 @@
             </main>
 
             <footer class="border-t border-zinc-200 px-6 py-4 text-xs text-zinc-500">
-                {{ setting('site_name', 'SolidAction') }} &copy; {{ date('Y') }} &mdash; interface d'administration
+                {{ setting('site_name', 'Solid’Action') }} &copy; {{ date('Y') }} &mdash; interface d'administration
             </footer>
         </div>
     </div>

@@ -13,15 +13,15 @@ class PageSeeder extends Seeder
             [
                 'title' => 'Mentions légales',
                 'slug' => 'mentions-legales',
-                'meta_description' => 'Éditeur, hébergement et propriété intellectuelle du site SolidAction.',
+                'meta_description' => 'Éditeur, hébergement et propriété intellectuelle du site Solid’Action.',
                 'content' => <<<'HTML'
                 <h3>Éditeur du site</h3>
-                <p>SolidAction, organisation non gouvernementale de droit ivoirien régie par la loi n° 60-315 du 21 septembre 1960 relative aux associations, dont le siège est situé à Cocody Riviera 2, 08 BP 1234 Abidjan 08, Côte d'Ivoire.</p>
+                <p>Solid’Action, organisation non gouvernementale de droit ivoirien régie par la loi n° 60-315 du 21 septembre 1960 relative aux associations, dont le siège est situé à Cocody Riviera 2, 08 BP 1234 Abidjan 08, Côte d'Ivoire.</p>
                 <p>Directrice de la publication : Aminata Koné, directrice générale.</p>
                 <h3>Hébergement</h3>
                 <p>Le site est hébergé au sein de datacenters certifiés ISO 27001. Les données personnelles sont traitées conformément à la réglementation ivoirienne sur la protection des données.</p>
                 <h3>Propriété intellectuelle</h3>
-                <p>Les textes et logotypes sont la propriété de SolidAction ou de ses partenaires. Toute reproduction sans autorisation écrite est interdite, à l'exception des citations courtes accompagnées de la mention de la source.</p>
+                <p>Les textes et logotypes sont la propriété de Solid’Action ou de ses partenaires. Toute reproduction sans autorisation écrite est interdite, à l'exception des citations courtes accompagnées de la mention de la source.</p>
                 <p>Les photographies proviennent de Pexels et sont utilisées sous la licence Pexels : leurs auteurs sont indiqués sur la page <a href="/page/credits-photos">Crédits photos</a>.</p>
                 HTML,
             ],
@@ -47,7 +47,7 @@ class PageSeeder extends Seeder
             [
                 'title' => 'Transparence financière',
                 'slug' => 'transparence-financiere',
-                'meta_description' => 'Répartition des dépenses, contrôle des comptes et engagements de SolidAction.',
+                'meta_description' => 'Répartition des dépenses, contrôle des comptes et engagements de Solid’Action.',
                 'content' => <<<'HTML'
                 <h3>Répartition de chaque franc collecté</h3>
                 <ul>
@@ -64,7 +64,7 @@ class PageSeeder extends Seeder
             [
                 'title' => 'Crédits photos',
                 'slug' => 'credits-photos',
-                'meta_description' => 'Auteurs et licences des photographies utilisées sur le site SolidAction.',
+                'meta_description' => 'Auteurs et licences des photographies utilisées sur le site Solid’Action.',
                 'content' => $this->photoCredits(),
             ],
         ];
@@ -95,7 +95,7 @@ class PageSeeder extends Seeder
 
         return <<<HTML
         <p>Les photographies de ce site proviennent de <a href="https://www.pexels.com" target="_blank" rel="noopener">Pexels</a> et sont réutilisées conformément à la licence Pexels. Les vues d'Abidjan, de Yamoussoukro et de Korhogo ainsi qu'une partie des portraits ont été prises en Côte d'Ivoire ; les autres scènes illustrent des situations comparables ailleurs en Afrique. Elles ont été recadrées pour s'adapter à la mise en page ; les images originales sont consultables en suivant chaque lien.</p>
-        <p>Les personnes photographiées ne sont pas liées à SolidAction : les portraits illustrent les pages de l'équipe et des témoignages sans représenter les personnes citées.</p>
+        <p>Les personnes photographiées ne sont pas liées à Solid’Action : les portraits illustrent les pages de l'équipe et des témoignages sans représenter les personnes citées.</p>
         <div class="table-scroll">
             <table class="info-table">
                 <thead>

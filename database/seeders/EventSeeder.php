@@ -45,7 +45,7 @@ class EventSeeder extends Seeder
             [
                 'title' => 'Formation des nouveaux bénévoles',
                 'starts_at' => '+20 days 09:00',
-                'location' => 'Abidjan, siège SolidAction',
+                'location' => 'Abidjan, siège Solid’Action',
                 'address' => 'Cocody Riviera 2, Abidjan',
                 'capacity' => 40,
                 'ticket_price' => 0,
@@ -98,7 +98,7 @@ class EventSeeder extends Seeder
                     'ends_at' => $startsAt->copy()->addHours(4),
                     'location' => $data['location'],
                     'address' => $data['address'],
-                    'organizer' => 'SolidAction',
+                    'organizer' => 'Solid’Action',
                     'capacity' => $data['capacity'],
                     'ticket_price' => $data['ticket_price'],
                     'status' => 'published',

@@ -1,5 +1,5 @@
 /*
- * SolidAction — compléments au thème LoveIcon
+ * Solid’Action — compléments au thème LoveIcon
  * Uniquement des ajouts : alertes, formulaires applicatifs, états vides.
  */
 
@@ -533,7 +533,7 @@
     color: #c8f3da;
 }
 
-/* --- Couleurs de la charte (logo Solid Action) --- */
+/* --- Couleurs de la charte (logo Solid’Action) --- */
 :root {
     --thm-primary: #096635;
     --thm-primary-rgb: 9, 102, 53;

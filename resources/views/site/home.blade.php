@@ -48,7 +48,7 @@
                                 </div>
                                 <div class="border-box"></div>
                                 <div class="text">
-                                    <p>Rejoignez {{ setting('site_name', 'SolidAction') }} et soutenez nos programmes de terrain</p>
+                                    <p>Rejoignez {{ setting('site_name', 'Solid’Action') }} et soutenez nos programmes de terrain</p>
                                 </div>
                                 <div class="btns-box">
                                     <a class="btn-one btn-one-style2" href="{{ route('about') }}">
@@ -243,7 +243,7 @@
                         <div class="text-holder">
                             <div class="top">
                                 <div class="icon">
-                                    <img src="{{ media(setting('site_logo'), 'theme/assets/images/logo/logo-header.png') }}" alt="{{ setting('site_name', 'SolidAction') }}">
+                                    <img src="{{ media(setting('site_logo'), 'theme/assets/images/logo/logo-header.png') }}" alt="{{ setting('site_name', 'Solid’Action') }}">
                                 </div>
                                 <div class="title">
                                     <h3>{{ setting('mission_title', 'Un petit don aujourd\'hui, un grand changement demain.') }}</h3>

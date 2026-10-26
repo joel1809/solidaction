@@ -76,7 +76,7 @@
                     <div class="logo">
                         <a href="{{ route('home') }}">
                             <img src="{{ media(setting('site_logo'), 'theme/assets/images/logo/logo-header.png') }}"
-                                alt="{{ setting('site_name', 'SolidAction') }}">
+                                alt="{{ setting('site_name', 'Solid’Action') }}">
                         </a>
                     </div>
                 </div>
@@ -136,7 +136,7 @@
             <div class="clearfix">
                 <div class="logo float-left">
                     <a href="{{ route('home') }}" class="img-responsive">
-                        <img src="{{ media(setting('site_logo_sticky'), 'theme/assets/images/logo/logo-header.png') }}" alt="{{ setting('site_name', 'SolidAction') }}">
+                        <img src="{{ media(setting('site_logo_sticky'), 'theme/assets/images/logo/logo-header.png') }}" alt="{{ setting('site_name', 'Solid’Action') }}">
                     </a>
                 </div>
                 <div class="right-col float-right">
@@ -155,7 +155,7 @@
         <nav class="menu-box">
             <div class="nav-logo">
                 <a href="{{ route('home') }}">
-                    <img src="{{ media(setting('site_logo_mobile'), 'theme/assets/images/logo/logo-footer.png') }}" alt="{{ setting('site_name', 'SolidAction') }}">
+                    <img src="{{ media(setting('site_logo_mobile'), 'theme/assets/images/logo/logo-footer.png') }}" alt="{{ setting('site_name', 'Solid’Action') }}">
                 </a>
             </div>
             <div class="menu-outer">

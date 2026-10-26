@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('title', 'Événements')
-@section('meta_description', 'Courses solidaires, dîners caritatifs, webinaires et formations : retrouvez tous les rendez-vous SolidAction.')
+@section('meta_description', 'Courses solidaires, dîners caritatifs, webinaires et formations : retrouvez tous les rendez-vous Solid’Action.')
 
 @section('content')
 

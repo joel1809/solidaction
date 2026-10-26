@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('title', 'Faire un don')
-@section('meta_description', 'Soutenez les programmes de SolidAction par un don unique ou mensuel, par Mobile Money, carte ou virement.')
+@section('meta_description', 'Soutenez les programmes de Solid’Action par un don unique ou mensuel, par Mobile Money, carte ou virement.')
 
 @section('content')
 

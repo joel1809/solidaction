@@ -10,11 +10,11 @@
                 <div class="sidebar-info-contents">
                     <div class="content-inner">
                         <div class="logo">
-                            <a href="{{ route('home') }}"><img src="{{ media(setting('site_logo'), 'theme/assets/images/logo/logo-header.png') }}" alt="{{ setting('site_name', 'SolidAction') }}" /></a>
+                            <a href="{{ route('home') }}"><img src="{{ media(setting('site_logo'), 'theme/assets/images/logo/logo-header.png') }}" alt="{{ setting('site_name', 'Solid’Action') }}" /></a>
                         </div>
                         <div class="content-box">
                             <h4>Qui sommes-nous ?</h4>
-                            <p>{{ setting('about_short', 'SolidAction est une organisation de solidarité qui agit auprès des familles vulnérables : accès à l\'eau, éducation, santé et urgences humanitaires.') }}</p>
+                            <p>{{ setting('about_short', 'Solid’Action est une organisation de solidarité qui agit auprès des familles vulnérables : accès à l\'eau, éducation, santé et urgences humanitaires.') }}</p>
                         </div>
                         <div class="form-inner">
                             <h4>Écrivez-nous</h4>

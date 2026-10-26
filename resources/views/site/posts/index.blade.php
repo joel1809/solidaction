@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('title', 'Actualités')
-@section('meta_description', 'Reportages de terrain, vie de l\'association et conseils aux donateurs : toute l\'actualité de SolidAction.')
+@section('meta_description', 'Reportages de terrain, vie de l\'association et conseils aux donateurs : toute l\'actualité de Solid’Action.')
 
 @section('content')
 

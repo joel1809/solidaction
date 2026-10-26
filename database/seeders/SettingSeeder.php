@@ -11,9 +11,9 @@ class SettingSeeder extends Seeder
     {
         $settings = [
             // Identité
-            ['site_name', 'SolidAction', 'general'],
+            ['site_name', 'Solid’Action', 'general'],
             ['site_tagline', 'Agir ensemble, changer des vies', 'general'],
-            ['site_description', 'SolidAction est une ONG ivoirienne qui mène des projets d\'accès à l\'eau, d\'éducation et de santé auprès des populations vulnérables de Côte d\'Ivoire.', 'general', 'textarea'],
+            ['site_description', 'Solid’Action est une ONG ivoirienne qui mène des projets d\'accès à l\'eau, d\'éducation et de santé auprès des populations vulnérables de Côte d\'Ivoire.', 'general', 'textarea'],
             ['currency_symbol', 'FCFA', 'general'],
             ['site_logo', null, 'general', 'image'],
             ['site_logo_sticky', null, 'general', 'image'],
@@ -37,7 +37,7 @@ class SettingSeeder extends Seeder
             ['social_youtube', 'https://youtube.com/@solidaction', 'social'],
 
             // Contenus éditoriaux
-            ['about_short', 'SolidAction agit depuis 2013 auprès des familles vulnérables de Côte d\'Ivoire : accès à l\'eau potable, éducation, santé et réponse aux urgences humanitaires.', 'content', 'textarea'],
+            ['about_short', 'Solid’Action agit depuis 2013 auprès des familles vulnérables de Côte d\'Ivoire : accès à l\'eau potable, éducation, santé et réponse aux urgences humanitaires.', 'content', 'textarea'],
             ['about_title', 'Depuis 2013 aux côtés des plus fragiles', 'content'],
             ['about_text', implode("\n\n", [
                 'Au cœur de Solid’Action bat une flamme qui illumine les vies dans l\'ombre depuis 2013. Nous sommes nés d\'une simple idée, forgée dans l\'esprit de partage et de solidarité, sur les réseaux sociaux.',
@@ -49,7 +49,7 @@ class SettingSeeder extends Seeder
             ]), 'content', 'textarea'],
             ['mission_title', 'Un petit don aujourd\'hui, un grand changement demain.', 'content'],
             ['mission_text', 'Nous construisons des projets avec les communautés locales : points d\'eau, écoles, centres de santé et réponse rapide aux situations d\'urgence. Chaque franc est tracé et audité par un cabinet indépendant.', 'content', 'textarea'],
-            ['footer_text', 'Depuis 2013, SolidAction mobilise donateurs et bénévoles autour de projets durables en Côte d\'Ivoire : eau potable, écoles, santé et réponse aux urgences.', 'content', 'textarea'],
+            ['footer_text', 'Depuis 2013, Solid’Action mobilise donateurs et bénévoles autour de projets durables en Côte d\'Ivoire : eau potable, écoles, santé et réponse aux urgences.', 'content', 'textarea'],
             ['intro_video', 'https://www.youtube.com/watch?v=MLpWrANjFbI', 'content'],
             ['stat_beneficiaries', '13700', 'content'],
 

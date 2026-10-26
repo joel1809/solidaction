@@ -11,7 +11,7 @@ class TeamSeeder extends Seeder
     public function run(): void
     {
         $members = [
-            ['Aminata Koné', 'Directrice générale', 'theme/assets/images/team/team-v1-1.jpg', 'Juriste de formation, Aminata a dirigé des programmes de développement dans le Nord ivoirien pendant douze ans avant de prendre la direction de SolidAction.'],
+            ['Aminata Koné', 'Directrice générale', 'theme/assets/images/team/team-v1-1.jpg', 'Juriste de formation, Aminata a dirigé des programmes de développement dans le Nord ivoirien pendant douze ans avant de prendre la direction de Solid’Action.'],
             ['Yao Kouadio', 'Responsable des programmes', 'theme/assets/images/team/team-v1-2.jpg', 'Yao conçoit et évalue les projets avec nos partenaires locaux. Il passe un tiers de l\'année sur le terrain.'],
             ['Adjoua N\'Guessan', 'Coordinatrice des bénévoles', 'theme/assets/images/team/team-v1-3.jpg', 'Adjoua accompagne les 240 bénévoles de l\'ONG, du premier entretien à la mission sur le terrain.'],
             ['Ibrahim Coulibaly', 'Responsable eau & assainissement', 'theme/assets/images/team/team-v1-4.jpg', 'Hydrogéologue, Ibrahim supervise les forages, les réseaux et la formation des comités de gestion.'],

@@ -22,7 +22,7 @@ class EventFactory extends Factory
             'ends_at' => now()->addDays(14)->setTime(21, 0),
             'location' => fake()->city(),
             'address' => fake()->streetAddress(),
-            'organizer' => 'SolidAction',
+            'organizer' => 'Solid’Action',
             'capacity' => 100,
             'ticket_price' => 0,
             'status' => 'published',

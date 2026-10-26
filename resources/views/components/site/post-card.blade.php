@@ -21,7 +21,7 @@
             <p>{{ Str::limit(strip_tags($post->excerpt ?: $post->body), 105) }}</p>
         </div>
         <ul class="meta-info">
-            <li><i class="fa fa-user" aria-hidden="true"></i> {{ $post->author->name ?? setting('site_name', 'SolidAction') }}</li>
+            <li><i class="fa fa-user" aria-hidden="true"></i> {{ $post->author->name ?? setting('site_name', 'Solid’Action') }}</li>
             <li><i class="fa fa-comment-o" aria-hidden="true"></i> {{ $post->approved_comments_count ?? $post->approvedComments()->count() }} commentaires</li>
         </ul>
     </div>

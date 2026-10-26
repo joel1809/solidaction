@@ -79,7 +79,7 @@
     <div class="single-sidebar-box">
         <div class="sidebar-slogan-box" style="background-image: url({{ theme_asset('assets/images/sidebar/sidebar-slogan-img.jpg') }});">
             <div class="icon">
-                <img src="{{ media(setting('site_logo'), 'theme/assets/images/logo/logo-header.png') }}" alt="{{ setting('site_name', 'SolidAction') }}" />
+                <img src="{{ media(setting('site_logo'), 'theme/assets/images/logo/logo-header.png') }}" alt="{{ setting('site_name', 'Solid’Action') }}" />
             </div>
             <p>Un petit don, un grand impact</p>
             <h2>Éducation &amp; santé<br>pour chaque enfant</h2>

@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('title', 'Qui sommes-nous')
-@section('meta_description', 'SolidAction, ONG de droit ivoirien : notre histoire, notre mission, notre gouvernance et nos engagements de transparence.')
+@section('meta_description', 'Solid’Action, ONG de droit ivoirien : notre histoire, notre mission, notre gouvernance et nos engagements de transparence.')
 
 @section('content')
 
@@ -82,7 +82,7 @@
                         <div class="text-holder">
                             <div class="top">
                                 <div class="icon">
-                                    <img src="{{ media(setting('site_logo'), 'theme/assets/images/logo/logo-header.png') }}" alt="{{ setting('site_name', 'SolidAction') }}">
+                                    <img src="{{ media(setting('site_logo'), 'theme/assets/images/logo/logo-header.png') }}" alt="{{ setting('site_name', 'Solid’Action') }}">
                                 </div>
                                 <div class="title">
                                     <h3>{{ setting('mission_title') }}</h3>

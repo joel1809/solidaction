@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('title', 'Notre équipe')
-@section('meta_description', 'Les salariés et responsables de programme qui pilotent les projets de SolidAction au quotidien.')
+@section('meta_description', 'Les salariés et responsables de programme qui pilotent les projets de Solid’Action au quotidien.')
 
 @section('content')
 

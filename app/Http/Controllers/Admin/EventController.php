@@ -30,7 +30,7 @@ class EventController extends Controller
     public function create()
     {
         return view('admin.events.form', [
-            'event' => new Event(['status' => 'published', 'organizer' => setting('site_name', 'SolidAction')]),
+            'event' => new Event(['status' => 'published', 'organizer' => setting('site_name', 'Solid’Action')]),
         ]);
     }
 

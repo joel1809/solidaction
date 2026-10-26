@@ -1,4 +1,4 @@
-# SolidAction
+# Solid’Action
 
 Site institutionnel et tableau d'administration d'une association de solidarité,
 construit sur **Laravel 12**. Le site public reprend intégralement le thème

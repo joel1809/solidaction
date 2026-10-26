@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('title', 'Témoignages')
-@section('meta_description', 'Donateurs, bénévoles, partenaires et bénéficiaires racontent leur expérience avec SolidAction.')
+@section('meta_description', 'Donateurs, bénévoles, partenaires et bénéficiaires racontent leur expérience avec Solid’Action.')
 
 @section('content')
 
