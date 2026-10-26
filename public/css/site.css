@@ -147,12 +147,14 @@
 /* Boutons de montants prédéfinis */
 .amount-presets {
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
     gap: 10px;
     margin-bottom: 14px;
 }
 
 .amount-presets button {
+    flex: 1 1 0;
     min-width: 86px;
     padding: 12px 18px;
     background: #fff;
