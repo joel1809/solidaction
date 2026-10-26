@@ -130,7 +130,9 @@
 }
 .header-top_left-content .single-item{
     position: relative;
-    display: block;
+    display: flex;
+    align-items: center;
+    height: 100%;
 }
 .header-top_left-content .single-item p{
     color: #ffffff;
@@ -142,7 +144,23 @@
 .header-top_left-carousel{
     position: relative;
     display: block;
+    width: 100%;
     padding-right: 70px;
+}
+.header-top_left-carousel .owl-stage{
+    display: flex;
+    align-items: stretch;
+}
+.header-top_left-carousel .owl-item{
+    display: flex;
+    flex-shrink: 0;
+    align-items: center;
+    overflow: hidden;
+    opacity: 0;
+    transition: opacity 300ms ease;
+}
+.header-top_left-carousel .owl-item.active{
+    opacity: 1;
 }
 .header-top_left-carousel .owl-nav {
     position: absolute;
