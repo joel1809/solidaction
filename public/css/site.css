@@ -689,6 +689,10 @@
 
 /* Colonne latérale sobre (page Contact) : carte blanche à fin liseré gris,
    sans barre de soulignement, titres et icônes plus discrets. */
+.contact-style1-area .sidebar-content-box--plain {
+    max-width: none;
+}
+
 .sidebar-content-box--plain .contact-info-sidebar {
     max-width: none;
     float: none;

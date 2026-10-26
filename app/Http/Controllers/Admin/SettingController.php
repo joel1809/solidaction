@@ -29,7 +29,6 @@ class SettingController extends Controller
             'contact_email_secondary' => ['label' => 'E-mail dons', 'type' => 'email'],
             'contact_phone' => ['label' => 'Téléphone accueil', 'type' => 'text'],
             'contact_phone_alt' => ['label' => 'Téléphone accueil (2e ligne)', 'type' => 'text', 'help' => 'Facultatif : affiché sous le numéro d\'accueil sur la page Contact.'],
-            'contact_phone_secondary' => ['label' => 'Téléphone dons', 'type' => 'text'],
             'contact_address' => ['label' => 'Adresse postale', 'type' => 'textarea'],
             'contact_hours' => ['label' => 'Horaires', 'type' => 'text'],
             'contact_map' => ['label' => 'URL de la carte intégrée', 'type' => 'text', 'help' => 'Lien « embed » OpenStreetMap ou Google Maps.'],
