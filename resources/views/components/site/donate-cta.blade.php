@@ -5,7 +5,7 @@
 @endphp
 
 <section class="donate-form-area">
-    <div class="donate-form-area_bg" style="background-image: url({{ theme_asset('assets/images/pattern/thm-pattern-3.png') }});"></div>
+    <div class="donate-form-area_bg" style="background-image: url({{ theme_asset('assets/images/pattern/thm-pattern-3.webp') }});"></div>
     <div class="auto-container">
         <div class="row">
             <div class="col-xl-12">
