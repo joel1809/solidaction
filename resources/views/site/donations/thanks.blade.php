@@ -45,9 +45,23 @@
                                     <td><strong>{{ $donation->reference }}</strong></td>
                                 </tr>
                                 <tr>
+                                    <th>Date</th>
+                                    <td>{{ $donation->created_at->format('d/m/Y') }}</td>
+                                </tr>
+                                <tr>
                                     <th>Montant</th>
                                     <td>{{ money($donation->amount, true) }}</td>
                                 </tr>
+                                <tr>
+                                    <th>Affectation</th>
+                                    <td>{{ $donation->cause?->title ?? 'Toutes nos actions (fonds libre)' }}</td>
+                                </tr>
+                                @if (filled($donation->fund_type))
+                                    <tr>
+                                        <th>Intitulé</th>
+                                        <td>{{ $donation->fund_type }}</td>
+                                    </tr>
+                                @endif
                                 <tr>
                                     <th>Fréquence</th>
                                     <td>{{ $donation->frequency_label }}</td>
@@ -60,6 +74,25 @@
                                     <th>Statut</th>
                                     <td>{{ $donation->status_label }}</td>
                                 </tr>
+                                <tr>
+                                    <th>Donateur</th>
+                                    <td>
+                                        {{ $donation->donor_name }}
+                                        @if ($donation->is_anonymous)
+                                            (anonyme sur le site)
+                                        @endif
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>E-mail</th>
+                                    <td>{{ $donation->donor_email }}</td>
+                                </tr>
+                                @if (filled($donation->donor_phone))
+                                    <tr>
+                                        <th>Téléphone</th>
+                                        <td>{{ $donation->donor_phone }}</td>
+                                    </tr>
+                                @endif
                             </tbody>
                         </table>
 
