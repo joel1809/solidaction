@@ -16,15 +16,8 @@
                     </div>
                     <div class="donate-form">
                         <form method="get" action="{{ route('donations.create') }}" class="donate-form-1">
-                            <ul class="clearfix">
+                            <ul class="clearfix donate-form-two-fields">
                                 <li class="select-box left">
-                                    <select class="selectpicker" name="frequence">
-                                        <option value="one_time">Don unique</option>
-                                        <option value="monthly">Don mensuel</option>
-                                        <option value="yearly">Don annuel</option>
-                                    </select>
-                                </li>
-                                <li class="select-box">
                                     <select class="selectpicker" name="montant">
                                         @foreach (explode(',', setting('donation_amounts', '2000,5000,10000,25000,50000')) as $preset)
                                             <option value="{{ trim($preset) }}">{{ money(trim($preset)) }}</option>
