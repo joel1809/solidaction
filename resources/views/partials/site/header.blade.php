@@ -48,7 +48,7 @@
                                 <p>Parrainez un enfant et offrez-lui une année scolaire complète</p>
                             </div>
                             <div class="single-item">
-                                <p>Appelez le {{ setting('contact_phone', '+225 27 22 41 18 30') }} pour soutenir nos actions</p>
+                                <p>Appelez le {{ setting('contact_phone', '+225 07 08 95 66 66') }} pour soutenir nos actions</p>
                             </div>
                         </div>
                     </div>

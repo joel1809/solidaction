@@ -23,9 +23,10 @@ class SettingSeeder extends Seeder
             // Contact
             ['contact_email', 'contact@solidaction.org', 'contact'],
             ['contact_email_secondary', 'dons@solidaction.org', 'contact'],
-            ['contact_phone', '+225 27 22 41 18 30', 'contact'],
+            ['contact_phone', '+225 07 08 95 66 66', 'contact'],
+            ['contact_phone_alt', '+225 07 48 87 08 78', 'contact'],
             ['contact_phone_secondary', '+225 07 08 12 34 56', 'contact'],
-            ['contact_address', 'Cocody Riviera 2, 08 BP 1234 Abidjan 08, Côte d\'Ivoire', 'contact', 'textarea'],
+            ['contact_address', 'Immeuble le Mali la porte 113, Abidjan, Côte d\'Ivoire', 'contact', 'textarea'],
             ['contact_hours', 'Du lundi au vendredi, 8h00 — 17h00', 'contact'],
             ['contact_map', 'https://www.openstreetmap.org/export/embed.html?bbox=-3.9800%2C5.3500%2C-3.9500%2C5.3700&layer=mapnik', 'contact'],
 

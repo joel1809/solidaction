@@ -20,7 +20,7 @@
                                     <span class="flaticon-phone-call"></span>
                                 </div>
                                 <div class="support-box">
-                                    <h5><a href="tel:{{ preg_replace('/\s+/', '', setting('contact_phone', '+2252722411830')) }}">{{ setting('contact_phone', '+225 27 22 41 18 30') }}</a></h5>
+                                    <h5><a href="tel:{{ preg_replace('/\s+/', '', setting('contact_phone', '+2250708956666')) }}">{{ setting('contact_phone', '+225 07 08 95 66 66') }}</a></h5>
                                 </div>
                             </div>
                         </div>

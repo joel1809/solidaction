@@ -85,7 +85,7 @@
                                             <h3>Siège social</h3>
                                         </div>
                                     </div>
-                                    <p>{!! nl2br(e(setting('contact_address', 'Cocody Riviera 2, 08 BP 1234 Abidjan 08'))) !!}</p>
+                                    <p>{!! nl2br(e(setting('contact_address', 'Immeuble le Mali la porte 113, Abidjan, Côte d\'Ivoire'))) !!}</p>
                                 </li>
 
                                 <li>
@@ -98,9 +98,14 @@
                                         </div>
                                     </div>
                                     <p>Accueil <a href="tel:{{ preg_replace('/\s+/', '', setting('contact_phone', '')) }}">{{ setting('contact_phone') }}</a></p>
-                                    @if (setting('contact_phone_secondary') && setting('contact_phone_secondary') !== setting('contact_phone'))
-                                        <p>Dons <a href="tel:{{ preg_replace('/\s+/', '', setting('contact_phone_secondary')) }}">{{ setting('contact_phone_secondary') }}</a></p>
+                                    @if (setting('contact_phone_alt') && setting('contact_phone_alt') !== setting('contact_phone'))
+                                        <p>Accueil <a href="tel:{{ preg_replace('/\s+/', '', setting('contact_phone_alt')) }}">{{ setting('contact_phone_alt') }}</a></p>
                                     @endif
+                                    @foreach (\App\Models\Donation::MOBILE_MONEY as $method => $key)
+                                        @if ($number = setting($key))
+                                            <p>{{ \App\Models\Donation::METHODS[$method] }} <a href="tel:{{ preg_replace('/\s+/', '', $number) }}">{{ $number }}</a></p>
+                                        @endif
+                                    @endforeach
                                 </li>
 
                                 <li>
