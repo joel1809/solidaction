@@ -26,6 +26,18 @@
                             a bien été enregistrée.
                         </p>
 
+                        @if ($donation->status === 'pending')
+                            <p style="text-align: left;">
+                                <strong>Pour finaliser votre don :</strong> {{ $donation->payment_instructions }}
+                            </p>
+                            <p style="text-align: left;">
+                                Dès réception de votre paiement, notre équipe valide votre don sous 48 heures ouvrées
+                                et vous envoie un mail de confirmation à {{ $donation->donor_email }}.
+                            </p>
+                        @endif
+
+                        <p style="text-align: left;">{{ setting('donation_tax_notice') }}</p>
+
                         <table class="info-table" style="text-align: left; margin-top: 34px;">
                             <tbody>
                                 <tr>
@@ -51,17 +63,6 @@
                             </tbody>
                         </table>
 
-                        @if ($donation->status === 'pending')
-                            <p style="text-align: left;">
-                                <strong>Pour finaliser votre don :</strong> {{ $donation->payment_instructions }}
-                            </p>
-                            <p style="text-align: left;">
-                                Dès réception de votre paiement, notre équipe valide votre don sous 48 heures ouvrées
-                                et vous envoie un mail de confirmation à {{ $donation->donor_email }}.
-                            </p>
-                        @endif
-
-                        <p style="text-align: left;">{{ setting('donation_tax_notice') }}</p>
 
                         <div style="margin-top: 30px;">
                             <a class="btn-one" href="{{ route('causes.index') }}">

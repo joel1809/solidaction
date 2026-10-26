@@ -13,7 +13,13 @@ Votre promesse de don de **{{ money($donation->amount, true) }}**@if ($donation-
 | Date | {{ $donation->created_at->format('d/m/Y') }} |
 </x-mail::table>
 
-Dès réception de votre paiement, notre équipe valide votre don sous 48 heures ouvrées et vous envoie un mail de confirmation.
+@if ($donation->status === 'pending')
+**Pour finaliser votre don :** {{ $donation->payment_instructions }}
+
+Dès réception de votre paiement, notre équipe valide votre don sous 48 heures ouvrées et vous envoie un mail de confirmation à {{ $donation->donor_email }}.
+@endif
+
+{{ setting('donation_tax_notice') }}
 
 Avec toute notre reconnaissance,<br>
 L'équipe {{ setting('site_name', config('app.name')) }}
