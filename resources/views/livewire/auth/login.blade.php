@@ -108,9 +108,4 @@ new #[Layout('components.layouts.auth')] class extends Component {
             <flux:button variant="primary" type="submit" class="w-full hover:!bg-brand-green-dark">{{ __('Log in') }}</flux:button>
         </div>
     </form>
-
-    <div class="space-x-1 text-center text-sm text-zinc-600">
-        Pas encore de compte ?
-        <x-text-link class="!text-brand-green decoration-brand-green/40 hover:decoration-brand-green" href="{{ route('register') }}">Créer un compte</x-text-link>
-    </div>
 </div>

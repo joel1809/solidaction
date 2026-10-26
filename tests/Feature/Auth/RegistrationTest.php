@@ -1,24 +1,17 @@
 <?php
 
-use Livewire\Volt\Volt;
+test('public registration is disabled', function () {
+    $this->get('/register')->assertNotFound();
+    $this->post('/register', [
+        'name' => 'Test User',
+        'email' => 'test@example.com',
+        'password' => 'password',
+        'password_confirmation' => 'password',
+    ])->assertNotFound();
 
-test('registration screen can be rendered', function () {
-    $response = $this->get('/register');
-
-    $response->assertStatus(200);
+    $this->assertGuest();
 });
 
-test('new users can register', function () {
-    $response = Volt::test('auth.register')
-        ->set('name', 'Test User')
-        ->set('email', 'test@example.com')
-        ->set('password', 'password')
-        ->set('password_confirmation', 'password')
-        ->call('register');
-
-    $response
-        ->assertHasNoErrors()
-        ->assertRedirect(route('dashboard', absolute: false));
-
-    $this->assertAuthenticated();
+test('login screen does not link to registration', function () {
+    $this->get('/login')->assertDontSee('Créer un compte');
 });
