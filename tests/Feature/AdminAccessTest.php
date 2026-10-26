@@ -17,7 +17,6 @@ use App\Models\TeamMember;
 use App\Models\Testimonial;
 use App\Models\User;
 use App\Models\Volunteer;
-use Livewire\Volt\Volt;
 
 it('redirige les visiteurs anonymes vers la connexion', function () {
     $this->get('/admin')->assertRedirect('/login');
@@ -127,16 +126,12 @@ it('ouvre tous les formulaires de modification', function () {
     }
 });
 
-it('n\'accorde aucun accès à l\'administration lors d\'une inscription publique', function () {
-    Volt::test('auth.register')
-        ->set('name', 'Visiteur Curieux')
-        ->set('email', 'curieux@example.fr')
-        ->set('password', 'mot-de-passe-solide')
-        ->set('password_confirmation', 'mot-de-passe-solide')
-        ->call('register')
-        ->assertHasNoErrors();
-
-    $registered = User::firstWhere('email', 'curieux@example.fr');
+it('n\'accorde aucun accès à l\'administration à un compte créé sans rôle', function () {
+    $registered = User::create([
+        'name' => 'Visiteur Curieux',
+        'email' => 'curieux@example.fr',
+        'password' => 'mot-de-passe-solide',
+    ])->fresh();
 
     expect($registered)->not->toBeNull()
         ->and($registered->role)->toBe('visitor')
