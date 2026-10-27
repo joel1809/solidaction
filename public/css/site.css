@@ -279,6 +279,26 @@
     margin-bottom: 0;
 }
 
+.features-style1_box .row > [class*="col-"] {
+    display: flex;
+}
+
+.features-style1_box .features-style1_single {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.features-style1_box .features-style1_single .text-holder {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.features-style1_box .features-style1_single .text-holder .btns-box {
+    margin-top: auto;
+}
+
 .empty-state {
     padding: 60px 30px;
     text-align: center;
