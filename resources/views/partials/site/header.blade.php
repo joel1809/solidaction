@@ -59,7 +59,7 @@
                         <ul class="clearfix">
                             @foreach (['twitter' => 'social_twitter', 'facebook' => 'social_facebook', 'linkedin' => 'social_linkedin', 'youtube' => 'social_youtube', 'instagram' => 'social_instagram'] as $icon => $key)
                                 @if ($url = setting($key))
-                                    <li><a href="{{ $url }}" target="_blank" rel="noopener"><i class="fa fa-{{ $icon }}" aria-hidden="true"></i></a></li>
+                                    <li><a><i class="fa fa-{{ $icon }}" aria-hidden="true"></i></a></li>
                                 @endif
                             @endforeach
                         </ul>
@@ -165,7 +165,7 @@
                 <ul class="clearfix">
                     @foreach (['facebook-square' => 'social_facebook', 'twitter-square' => 'social_twitter', 'linkedin-square' => 'social_linkedin', 'youtube-square' => 'social_youtube'] as $icon => $key)
                         @if ($url = setting($key))
-                            <li><a href="{{ $url }}" target="_blank" rel="noopener"><span class="fab fa fa-{{ $icon }}"></span></a></li>
+                            <li><a><span class="fab fa fa-{{ $icon }}"></span></a></li>
                         @endif
                     @endforeach
                 </ul>

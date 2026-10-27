@@ -1243,3 +1243,9 @@
         font-size: 38px;
     }
 }
+
+/* --- Icônes réseaux sans lien : Bootstrap force color: inherit sur a:not([href]) --- */
+.header-social-link-1 ul li a:not([href]),
+.mobile-menu .social-links li a:not([href]) {
+    color: #ffffff;
+}

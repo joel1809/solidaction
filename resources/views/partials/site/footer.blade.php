@@ -103,7 +103,7 @@
                     <ul class="social-links-style1">
                         @foreach (['twitter' => 'social_twitter', 'facebook' => 'social_facebook', 'linkedin' => 'social_linkedin', 'youtube' => 'social_youtube', 'instagram' => 'social_instagram'] as $icon => $key)
                             @if ($url = setting($key))
-                                <li><a href="{{ $url }}" target="_blank" rel="noopener"><i class="fa fa-{{ $icon }}" aria-hidden="true"></i></a></li>
+                                <li><a><i class="fa fa-{{ $icon }}" aria-hidden="true"></i></a></li>
                             @endif
                         @endforeach
                     </ul>
