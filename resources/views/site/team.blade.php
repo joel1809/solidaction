@@ -19,11 +19,6 @@
                 @forelse ($members as $member)
                     <div class="col-xl-3 col-lg-4 col-md-6" style="margin-bottom: 40px;">
                         <x-site.team-card :member="$member" />
-                        @if ($member->bio)
-                            <p style="margin-top: 14px; font-size: 15px; color: #777; text-align: center;">
-                                {{ Str::limit($member->bio, 130) }}
-                            </p>
-                        @endif
                     </div>
                 @empty
                     <div class="col-xl-12">
