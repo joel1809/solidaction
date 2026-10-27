@@ -25,7 +25,7 @@
             <div class="row">
                 @forelse ($events as $event)
                     <div class="col-xl-4 col-lg-6 col-md-6" style="margin-bottom: 40px;">
-                        <div class="single-blog-style1">
+                        <div class="single-blog-style1 event-card">
                             <div class="img-holder">
                                 <div class="inner">
                                     <img src="{{ media($event->image, 'theme/assets/images/events/event-details-1.jpg') }}" alt="{{ $event->title }}">
@@ -49,7 +49,7 @@
                                     <li><i class="fa fa-map-marker" aria-hidden="true"></i> {{ Str::limit($event->location, 24) }}</li>
                                     <li><i class="fa fa-clock-o" aria-hidden="true"></i> {{ $event->starts_at->format('H\hi') }}</li>
                                 </ul>
-                                <p style="margin-top: 10px; font-weight: 600;">
+                                <p class="event-card-status" style="margin-top: 10px; font-weight: 600;">
                                     @if ($event->is_past)
                                         <span style="color:#999;">Événement terminé</span>
                                     @elseif ($event->ticket_price > 0)

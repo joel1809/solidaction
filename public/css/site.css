@@ -254,6 +254,31 @@
     margin-top: auto;
 }
 
+.single-blog-style1.event-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.single-blog-style1.event-card .img-holder img {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.single-blog-style1.event-card .text-holder {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.single-blog-style1.event-card .text-holder .meta-info {
+    margin-top: auto;
+}
+
+.single-blog-style1.event-card .event-card-status {
+    margin-bottom: 0;
+}
+
 .empty-state {
     padding: 60px 30px;
     text-align: center;
