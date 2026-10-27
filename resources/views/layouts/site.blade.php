@@ -19,8 +19,6 @@
             ?: (request()->filled('q') ? 'noindex, follow' : 'index, follow');
         $ogImage = trim($__env->yieldContent('og_image'))
             ?: e(media(setting('og_image'), 'theme/assets/images/slides/slide-v1-1.jpg'));
-        $socialLinks = collect(['social_facebook', 'social_twitter', 'social_linkedin', 'social_youtube', 'social_instagram'])
-            ->map(fn ($key) => setting($key))->filter()->values()->all();
     @endphp
     <title>{!! $fullTitle !!}</title>
 
@@ -55,7 +53,6 @@
             'email' => setting('contact_email'),
             'telephone' => setting('contact_phone'),
             'address' => setting('contact_address'),
-            'sameAs' => $socialLinks ?: null,
         ]), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) !!}
     </script>
     @stack('structured_data')

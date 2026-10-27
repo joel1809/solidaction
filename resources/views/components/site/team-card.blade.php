@@ -9,7 +9,7 @@
         <div class="overly-box">
             <ul class="social-links">
                 @forelse ($member->socialLinks() as $network => $url)
-                    <li><a href="{{ $url }}" target="_blank" rel="noopener"><i class="fa fa-{{ $network }}" aria-hidden="true"></i></a></li>
+                    <li><a><i class="fa fa-{{ $network }}" aria-hidden="true"></i></a></li>
                 @empty
                     <li><a href="{{ route('team') }}"><i class="fa fa-user" aria-hidden="true"></i></a></li>
                 @endforelse
