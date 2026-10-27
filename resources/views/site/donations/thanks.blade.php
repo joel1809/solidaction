@@ -63,10 +63,6 @@
                                     </tr>
                                 @endif
                                 <tr>
-                                    <th>Fréquence</th>
-                                    <td>{{ $donation->frequency_label }}</td>
-                                </tr>
-                                <tr>
                                     <th>Moyen de paiement</th>
                                     <td>{{ $donation->method_label }}</td>
                                 </tr>

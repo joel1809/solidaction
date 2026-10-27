@@ -106,7 +106,6 @@ it('enregistre un don saisi manuellement', function () {
         'donor_name' => 'Entreprise Lumen',
         'donor_email' => 'mecenat@lumen.example',
         'amount' => 5000,
-        'frequency' => 'yearly',
         'payment_method' => 'transfer',
         'status' => 'completed',
     ])->assertRedirect()->assertSessionHas('success');

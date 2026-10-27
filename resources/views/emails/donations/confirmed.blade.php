@@ -8,7 +8,6 @@ Nous avons bien reçu votre don de **{{ money($donation->amount, true) }}**@if (
 |:--|:--|
 | Référence | **{{ $donation->reference }}** |
 | Montant | {{ money($donation->amount, true) }} |
-| Fréquence | {{ $donation->frequency_label }} |
 | Moyen de paiement | {{ $donation->method_label }} |
 | Date de validation | {{ ($donation->paid_at ?? now())->format('d/m/Y') }} |
 </x-mail::table>

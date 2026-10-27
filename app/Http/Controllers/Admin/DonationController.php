@@ -33,7 +33,7 @@ class DonationController extends Controller
     public function create()
     {
         return view('admin.donations.form', [
-            'donation' => new Donation(['status' => 'completed', 'frequency' => 'one_time', 'payment_method' => 'transfer']),
+            'donation' => new Donation(['status' => 'completed', 'payment_method' => 'transfer']),
             'causes' => Cause::orderBy('title')->pluck('title', 'id'),
         ]);
     }
@@ -125,7 +125,7 @@ class DonationController extends Controller
 
             // BOM pour une ouverture correcte dans Excel (accents).
             fwrite($handle, "\xEF\xBB\xBF");
-            fputcsv($handle, ['Référence', 'Date', 'Donateur', 'E-mail', 'Téléphone', 'Cause', 'Montant', 'Fréquence', 'Moyen', 'Statut'], ';');
+            fputcsv($handle, ['Référence', 'Date', 'Donateur', 'E-mail', 'Téléphone', 'Cause', 'Montant', 'Moyen', 'Statut'], ';');
 
             foreach ($donations as $donation) {
                 fputcsv($handle, [
@@ -136,7 +136,6 @@ class DonationController extends Controller
                     $donation->donor_phone,
                     $donation->cause->title ?? 'Fonds libre',
                     number_format((float) $donation->amount, 2, ',', ''),
-                    $donation->frequency_label,
                     $donation->method_label,
                     $donation->status_label,
                 ], ';');
@@ -167,7 +166,6 @@ class DonationController extends Controller
                     )));
             })
             ->when($request->filled('status'), fn ($query) => $query->where('status', $request->string('status')))
-            ->when($request->filled('frequency'), fn ($query) => $query->where('frequency', $request->string('frequency')))
             ->when($request->filled('cause'), fn ($query) => $query->where('cause_id', $request->integer('cause')))
             ->when($request->filled('from'), fn ($query) => $query->whereDate('created_at', '>=', $request->date('from')))
             ->when($request->filled('to'), fn ($query) => $query->whereDate('created_at', '<=', $request->date('to')));
@@ -182,7 +180,6 @@ class DonationController extends Controller
             'donor_phone' => ['nullable', 'string', 'max:40'],
             'donor_address' => ['nullable', 'string', 'max:255'],
             'amount' => ['required', 'numeric', 'min:0.01'],
-            'frequency' => ['required', Rule::in(array_keys(Donation::FREQUENCIES))],
             'payment_method' => ['required', Rule::in(array_keys(Donation::METHODS))],
             'status' => ['required', Rule::in(array_keys(Donation::STATUSES))],
             'fund_type' => ['nullable', 'string', 'max:120'],

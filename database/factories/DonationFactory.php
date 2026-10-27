@@ -15,7 +15,6 @@ class DonationFactory extends Factory
             'donor_email' => fake()->safeEmail(),
             'donor_phone' => fake()->phoneNumber(),
             'amount' => fake()->numberBetween(20, 500),
-            'frequency' => 'one_time',
             'payment_method' => 'card',
             'status' => 'completed',
             'is_anonymous' => false,

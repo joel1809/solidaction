@@ -48,7 +48,7 @@ inscriptions mais pas les utilisateurs ni les paramètres du site.
 | `/` | Carrousel, piliers d'action, cause à la une, collectes, compteurs, mission, équipe, événements, témoignages, actualités, partenaires |
 | `/a-propos` | Présentation, chiffres clés, mission, équipe, FAQ, témoignages |
 | `/causes` · `/causes/{slug}` | Liste filtrable par programme et par mot-clé, fiche détaillée avec jauge de collecte et derniers dons |
-| `/faire-un-don` | Formulaire de don (montant libre ou prédéfini, unique/mensuel/annuel, affectation à une cause) |
+| `/faire-un-don` | Formulaire de don (montant libre ou prédéfini, affectation à une cause) |
 | `/don/{reference}/merci` | Confirmation avec référence et instructions de virement |
 | `/evenements` · `/evenements/{slug}` | Agenda à venir / passé, fiche détaillée et inscription avec contrôle des places |
 | `/actualites` · `/actualites/{slug}` | Articles en grille ou en liste, recherche, catégories, mots-clés, commentaires modérés |
@@ -72,7 +72,7 @@ statut de paiement, derniers dons, prochains événements et bandeau « à trait
 **Modules de gestion**
 
 - **Collecte** — causes (objectif, échéance, mise à la une, image) ; dons
-  (filtres par statut/fréquence/cause/période, changement de statut en un clic,
+  (filtres par statut/cause/période, changement de statut en un clic,
   saisie manuelle, export CSV)
 - **Contenus** — actualités, commentaires à modérer, catégories, pages
 - **Mobilisation** — événements, inscriptions, candidatures de bénévoles

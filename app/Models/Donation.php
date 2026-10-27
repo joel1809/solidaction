@@ -17,7 +17,7 @@ class Donation extends Model
 
     protected $fillable = [
         'reference', 'cause_id', 'donor_name', 'donor_email', 'donor_phone',
-        'donor_address', 'amount', 'frequency', 'fund_type', 'payment_method',
+        'donor_address', 'amount', 'fund_type', 'payment_method',
         'status', 'is_anonymous', 'message', 'paid_at',
     ];
 
@@ -25,12 +25,6 @@ class Donation extends Model
         'amount' => 'decimal:2',
         'is_anonymous' => 'boolean',
         'paid_at' => 'datetime',
-    ];
-
-    public const FREQUENCIES = [
-        'one_time' => 'Don unique',
-        'monthly' => 'Mensuel',
-        'yearly' => 'Annuel',
     ];
 
     public const STATUSES = [
@@ -148,11 +142,6 @@ class Donation extends Model
     public function getStatusLabelAttribute(): string
     {
         return self::STATUSES[$this->status] ?? $this->status;
-    }
-
-    public function getFrequencyLabelAttribute(): string
-    {
-        return self::FREQUENCIES[$this->frequency] ?? $this->frequency;
     }
 
     public function getMethodLabelAttribute(): string

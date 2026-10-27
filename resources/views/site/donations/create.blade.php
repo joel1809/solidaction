@@ -1,7 +1,7 @@
 @extends('layouts.site')
 
 @section('title', 'Faire un don')
-@section('meta_description', 'Soutenez les programmes de Solid’Action par un don unique ou mensuel, par Mobile Money, carte ou virement.')
+@section('meta_description', 'Soutenez les programmes de Solid’Action par un don, par Mobile Money, carte ou virement.')
 
 @section('content')
 
@@ -12,7 +12,7 @@
             <div class="row">
                 <div class="col-xl-8">
                     <x-site.sec-title subtitle="Votre générosité en action" title="Choisissez votre contribution" :center="false">
-                        Un don unique ou mensuel, affecté au projet de votre choix. Vous recevez un reçu de don et le bilan
+                        Un don affecté au projet de votre choix. Vous recevez un reçu de don et le bilan
                         du projet que vous avez soutenu.
                     </x-site.sec-title>
 
@@ -33,11 +33,6 @@
                                 value="{{ old('amount', $presetAmount ?? request('montant')) }}" placeholder="Autre montant" required>
                             @error('amount') <span class="field-error">{{ $message }}</span> @enderror
                         </div>
-
-                        {{-- Fréquence : non proposée sur le formulaire, reprise du bandeau d'appel au don le cas échéant --}}
-                        @php($frequency = old('frequency', request('frequence', 'one_time')))
-                        <input type="hidden" name="frequency"
-                            value="{{ array_key_exists($frequency, \App\Models\Donation::FREQUENCIES) ? $frequency : 'one_time' }}">
 
                         <div class="form-row">
                             <label for="cause_id">Affecter mon don à</label>

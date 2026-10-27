@@ -45,9 +45,6 @@
                     <x-admin.field name="cause_id" label="Cause soutenue" type="select" :model="$donation"
                         :options="$causes->all()" placeholder="Fonds libre" />
 
-                    <x-admin.field name="frequency" label="Fréquence" type="select" :model="$donation" required
-                        :options="\App\Models\Donation::FREQUENCIES" />
-
                     <x-admin.field name="payment_method" label="Moyen de paiement" type="select" :model="$donation"
                         required :options="\App\Models\Donation::METHODS" />
 

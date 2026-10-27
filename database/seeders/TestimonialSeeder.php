@@ -12,9 +12,9 @@ class TestimonialSeeder extends Seeder
         $testimonials = [
             [
                 'name' => 'Christelle Kouassi',
-                'location' => 'Donatrice mensuelle, Cocody',
+                'location' => 'Donatrice, Cocody',
                 'title' => 'Je sais exactement où va mon don',
-                'content' => 'Je donne 10 000 FCFA par mois par Orange Money depuis quatre ans. Je reçois un bilan de chaque projet, avec les factures et les photos. C\'est la seule association où j\'ai cette impression de transparence totale.',
+                'content' => 'Je donne par Orange Money depuis quatre ans. Je reçois un bilan de chaque projet, avec les factures et les photos. C\'est la seule association où j\'ai cette impression de transparence totale.',
             ],
             [
                 'name' => 'Ousmane Sylla',

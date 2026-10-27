@@ -28,10 +28,6 @@
                         </dd>
                     </div>
                     <div>
-                        <dt class="text-xs uppercase tracking-wide text-zinc-500">Fréquence</dt>
-                        <dd class="mt-1 text-sm text-zinc-800">{{ $donation->frequency_label }}</dd>
-                    </div>
-                    <div>
                         <dt class="text-xs uppercase tracking-wide text-zinc-500">Moyen de paiement</dt>
                         <dd class="mt-1 text-sm text-zinc-800">{{ $donation->method_label }}</dd>
                     </div>

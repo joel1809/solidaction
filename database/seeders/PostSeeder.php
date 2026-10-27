@@ -73,10 +73,10 @@ class PostSeeder extends Seeder
                 'days_ago' => 58,
             ],
             [
-                'title' => 'Le don mensuel, discret mais décisif',
+                'title' => 'Donner par Mobile Money, simple et traçable',
                 'category' => 'conseils-aux-donateurs',
                 'image' => 'theme/assets/images/blog/blog-v1-8.jpg',
-                'excerpt' => '5 000 FCFA par mois valent mieux qu\'un don ponctuel de 60 000 FCFA : nos équipes peuvent enfin planifier.',
+                'excerpt' => 'Orange Money, MTN MoMo, Moov Money ou Wave : quelques secondes suffisent, et chaque franc est rapproché de votre référence de don.',
                 'tags' => ['donation', 'conseils'],
                 'days_ago' => 72,
             ],
@@ -123,7 +123,7 @@ class PostSeeder extends Seeder
             <li>Deux visites de suivi par an pendant trois ans ;</li>
             <li>Publication des résultats dans notre rapport annuel.</li>
         </ul>
-        <p>Vous pouvez soutenir ces programmes par un don ponctuel ou régulier. Chaque contribution est affectée au projet que vous choisissez, et vous recevez un bilan détaillé à sa clôture.</p>
+        <p>Vous pouvez soutenir ces programmes par un don. Chaque contribution est affectée au projet que vous choisissez, et vous recevez un bilan détaillé à sa clôture.</p>
         HTML;
     }
 
@@ -132,7 +132,7 @@ class PostSeeder extends Seeder
         $comments = [
             ['Rose Assi', 'rose.assi@example.com', 'Merci pour ce récit très concret, on comprend enfin où va l\'argent.', 'approved'],
             ['Arsène Gnahoré', 'arsene.gnahore@example.com', 'Serait-il possible de visiter un chantier en tant que donateur ?', 'approved'],
-            ['Salimata Diomandé', 'salimata.diomande@example.com', 'Je viens de mettre en place un don mensuel par Wave après avoir lu cet article.', 'approved'],
+            ['Salimata Diomandé', 'salimata.diomande@example.com', 'Je viens de faire mon premier don par Wave après avoir lu cet article.', 'approved'],
             ['Anonyme', 'spam@example.com', 'Super site, visitez le mien pour gagner de l\'argent facilement.', 'spam'],
             ['Hervé Tanoh', 'herve.tanoh@example.com', 'Avez-vous des chiffres sur le taux de panne des forages à cinq ans ?', 'pending'],
         ];

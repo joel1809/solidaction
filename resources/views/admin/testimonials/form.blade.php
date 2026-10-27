@@ -24,7 +24,7 @@
                     <div class="grid gap-5 sm:grid-cols-2">
                         <x-admin.field name="name" label="Auteur" :model="$testimonial" required />
                         <x-admin.field name="location" label="Qualité / ville" :model="$testimonial"
-                            placeholder="Ex. : Donatrice mensuelle, Cocody" />
+                            placeholder="Ex. : Donatrice, Cocody" />
                     </div>
                 </div>
             </x-admin.card>

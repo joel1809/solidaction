@@ -8,7 +8,6 @@ Votre promesse de don de **{{ money($donation->amount, true) }}**@if ($donation-
 |:--|:--|
 | Référence | **{{ $donation->reference }}** |
 | Montant | {{ money($donation->amount, true) }} |
-| Fréquence | {{ $donation->frequency_label }} |
 | Moyen de paiement | {{ $donation->method_label }} |
 | Date | {{ $donation->created_at->format('d/m/Y') }} |
 </x-mail::table>

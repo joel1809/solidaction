@@ -28,7 +28,7 @@ class CategorySeeder extends Seeder
         $postCategories = [
             ['Reportages', 'Les récits de nos équipes sur le terrain.'],
             ['Vie de l\'association', 'Coulisses, gouvernance et bénévolat.'],
-            ['Conseils aux donateurs', 'Mobile Money, legs et dons réguliers.'],
+            ['Conseils aux donateurs', 'Mobile Money, legs et mécénat.'],
             ['Plaidoyer', 'Nos prises de position publiques.'],
         ];
 

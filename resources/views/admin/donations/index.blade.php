@@ -21,7 +21,6 @@
     <x-admin.filters :action="route('admin.donations.index')" placeholder="Nom, e-mail, téléphone ou référence…" dates
         :selects="[
             'status' => ['label' => 'Statut', 'options' => \App\Models\Donation::STATUSES],
-            'frequency' => ['label' => 'Fréquence', 'options' => \App\Models\Donation::FREQUENCIES],
             'cause' => ['label' => 'Cause', 'options' => $causes->all(), 'placeholder' => 'Toutes'],
         ]" />
 
@@ -31,7 +30,7 @@
                 <x-admin.button icon="plus" :href="route('admin.donations.create')">Saisir un don</x-admin.button>
             </x-admin.empty>
         @else
-            <x-admin.table :head="['Référence', 'Donateur', 'Cause', 'Montant' => 'right', 'Fréquence', 'Statut', 'Date', 'Actions' => 'right']">
+            <x-admin.table :head="['Référence', 'Donateur', 'Cause', 'Montant' => 'right', 'Statut', 'Date', 'Actions' => 'right']">
                 @foreach ($donations as $donation)
                     <tr class="hover:bg-zinc-50">
                         <td class="px-5 py-3">
@@ -44,7 +43,6 @@
                         </td>
                         <td class="px-5 py-3 text-zinc-600">{{ Str::limit($donation->cause->title ?? 'Fonds libre', 26) }}</td>
                         <td class="px-5 py-3 text-right font-semibold tabular-nums text-zinc-900">{{ money($donation->amount, true) }}</td>
-                        <td class="px-5 py-3 text-zinc-600">{{ $donation->frequency_label }}</td>
                         <td class="px-5 py-3">
                             <x-admin.status-form :action="route('admin.donations.status', $donation)"
                                 :options="\App\Models\Donation::STATUSES" :current="$donation->status" />

@@ -83,7 +83,7 @@
                             @php
                                 $features = [
                                     ['icon' => 'feature-v1-1', 'style' => '', 'title' => 'Soutenir une cause', 'text' => 'Choisissez un projet et suivez l\'avancement de la collecte en toute transparence.', 'url' => route('causes.index'), 'cta' => 'Voir les causes'],
-                                    ['icon' => 'feature-v1-2', 'style' => 'style2', 'title' => 'Faire un don', 'text' => 'Don unique ou mensuel : 100 % de votre geste sert nos programmes de terrain.', 'url' => route('donations.create'), 'cta' => 'Je donne'],
+                                    ['icon' => 'feature-v1-2', 'style' => 'style2', 'title' => 'Faire un don', 'text' => '100 % de votre geste sert nos programmes de terrain.', 'url' => route('donations.create'), 'cta' => 'Je donne'],
                                     ['icon' => 'feature-v1-3', 'style' => 'style3', 'title' => 'Devenir bénévole', 'text' => 'Donnez de votre temps et de vos compétences auprès de nos équipes locales.', 'url' => route('volunteers.create'), 'cta' => 'Je m\'engage'],
                                 ];
                             @endphp
