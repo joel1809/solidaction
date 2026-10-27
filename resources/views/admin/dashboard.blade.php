@@ -7,7 +7,7 @@
 
     {{-- ================== Actions en attente ================== --}}
     @if (array_sum($todo) > 0)
-        <div class="mb-6 flex flex-wrap items-center gap-3 rounded-xl border border-amber-200 bg-amber-50 px-5 py-4">
+        <div class="mb-6 flex flex-wrap items-center gap-3 rounded-xl border border-[#e5e5e5] bg-white px-5 py-4">
             <p class="text-sm font-medium text-amber-900">À traiter :</p>
             @if ($todo['donations'])
                 <a href="{{ route('admin.donations.index', ['status' => 'pending']) }}"
