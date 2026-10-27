@@ -12,7 +12,7 @@
         <div class="container">
             <x-site.sec-title subtitle="Ils en parlent mieux que nous" title="Paroles de donateurs et de partenaires" />
 
-            <div class="row">
+            <div class="row testimonial-grid">
                 @forelse ($testimonials as $testimonial)
                     <div class="col-xl-6 col-lg-6">
                         <div class="testimonial-grid-item">
@@ -39,9 +39,15 @@
                     </div>
                 @endforelse
             </div>
+
+            @if ($testimonials->hasPages())
+                <div class="row">
+                    <div class="col-xl-12">
+                        {{ $testimonials->links() }}
+                    </div>
+                </div>
+            @endif
         </div>
     </section>
-
-    <x-site.partners :partners="$partners" />
 
 @endsection

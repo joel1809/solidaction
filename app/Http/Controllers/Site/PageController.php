@@ -7,7 +7,6 @@ use App\Models\Cause;
 use App\Models\Donation;
 use App\Models\Faq;
 use App\Models\Page;
-use App\Models\Partner;
 use App\Models\TeamMember;
 use App\Models\Testimonial;
 use App\Models\Volunteer;
@@ -36,8 +35,7 @@ class PageController extends Controller
     public function testimonials()
     {
         return view('site.testimonials', [
-            'testimonials' => Testimonial::active()->orderBy('sort_order')->get(),
-            'partners' => Partner::active()->orderBy('sort_order')->get(),
+            'testimonials' => Testimonial::active()->orderBy('sort_order')->paginate(4),
         ]);
     }
 

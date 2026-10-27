@@ -512,9 +512,19 @@
 }
 
 /* --- Témoignages en grille --- */
+.testimonial-grid {
+    margin-right: -20px;
+    margin-left: -20px;
+}
+
+.testimonial-grid > [class*="col-"] {
+    margin-bottom: 40px;
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
 .testimonial-grid-item {
     height: 100%;
-    margin-bottom: 30px;
     padding: 34px 32px;
     background: #fff;
     border: 1px solid #f0efed;
