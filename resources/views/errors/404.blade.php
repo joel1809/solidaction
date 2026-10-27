@@ -1,6 +1,7 @@
 @extends('layouts.site')
 
 @section('title', 'Page introuvable')
+@section('robots', 'noindex, follow')
 
 @section('content')
 

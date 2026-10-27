@@ -98,3 +98,46 @@ it('renvoie une 404 pour une page désactivée', function () {
 
     $this->get('/page/'.$page->slug)->assertNotFound();
 });
+
+it('expose les métadonnées SEO et un h1 unique sur les pages publiques', function () {
+    $post = Post::factory()->create(['title' => 'Nouvelles du terrain']);
+
+    $response = $this->get(route('posts.show', $post))->assertOk();
+
+    $response->assertSee('<link rel="canonical" href="'.route('posts.show', $post).'">', false)
+        ->assertSee('<meta property="og:type" content="article">', false)
+        ->assertSee('<meta name="robots" content="index, follow">', false)
+        ->assertSee('"@type":"Article"', false)
+        ->assertSee('"@type":"BreadcrumbList"', false);
+
+    expect(substr_count($response->getContent(), '<h1'))->toBe(1);
+    expect(substr_count($this->get('/')->getContent(), '<h1'))->toBe(1);
+});
+
+it('génère un sitemap contenant les contenus publiés uniquement', function () {
+    $published = Cause::factory()->create();
+    $draft = Cause::factory()->draft()->create();
+    $post = Post::factory()->create();
+
+    $this->get('/sitemap.xml')
+        ->assertOk()
+        ->assertHeader('Content-Type', 'application/xml; charset=UTF-8')
+        ->assertSee(route('causes.show', $published), false)
+        ->assertSee(route('posts.show', $post), false)
+        ->assertDontSee(route('causes.show', $draft), false);
+});
+
+it('référence le sitemap dans robots.txt en production', function () {
+    app()->detectEnvironment(fn () => 'production');
+
+    $this->get('/robots.txt')
+        ->assertOk()
+        ->assertSee('Disallow: /admin')
+        ->assertSee('Sitemap: '.route('sitemap'));
+});
+
+it('désindexe les résultats de recherche', function () {
+    $this->get('/actualites?q=forage')
+        ->assertOk()
+        ->assertSee('<meta name="robots" content="noindex, follow">', false);
+});

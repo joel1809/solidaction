@@ -1227,3 +1227,19 @@
         max-width: 50%;
     }
 }
+
+/* --- Titre de page en <h1> (le thème ne style que le <h2>) --- */
+.breadcrumb-area .title h1 {
+    color: #ffffff;
+    font-size: 48px;
+    line-height: 1.2em;
+    font-weight: 700;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+@media only screen and (max-width: 767px) {
+    .breadcrumb-area .title h1 {
+        font-size: 38px;
+    }
+}

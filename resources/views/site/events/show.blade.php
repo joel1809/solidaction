@@ -1,7 +1,29 @@
 @extends('layouts.site')
 
 @section('title', $event->title)
-@section('meta_description', Str::limit(strip_tags($event->excerpt), 155))
+@section('meta_description', Str::limit(strip_tags($event->excerpt ?: $event->description), 155))
+@push('structured_data')
+    <script type="application/ld+json">
+        {!! json_encode(array_filter([
+            '@context' => 'https://schema.org',
+            '@type' => 'Event',
+            'name' => $event->title,
+            'description' => Str::limit(strip_tags($event->excerpt ?: $event->description), 155),
+            'image' => media($event->image, 'theme/assets/images/events/event-details-1.jpg'),
+            'startDate' => $event->starts_at?->toAtomString(),
+            'endDate' => $event->ends_at?->toAtomString(),
+            'eventAttendanceMode' => 'https://schema.org/OfflineEventAttendanceMode',
+            'location' => $event->location ? array_filter([
+                '@type' => 'Place',
+                'name' => $event->location,
+                'address' => $event->address,
+            ]) : null,
+            'organizer' => ['@type' => 'Organization', 'name' => $event->organizer ?: setting('site_name', 'Solid’Action'), 'url' => route('home')],
+            'url' => route('events.show', $event),
+        ]), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) !!}
+    </script>
+@endpush
+@section('og_image', media($event->image, 'theme/assets/images/events/event-details-1.jpg'))
 
 @section('content')
 

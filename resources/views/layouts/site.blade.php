@@ -3,12 +3,62 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>@yield('title', setting('site_name', 'Solid’Action')) &mdash; {{ setting('site_tagline', 'Agir ensemble, changer des vies') }}</title>
+    @php
+        // Les sections sont déjà échappées par Blade : on échappe ici uniquement les réglages.
+        $siteName = e(setting('site_name', 'Solid’Action'));
+        $pageTitle = trim($__env->yieldContent('title'));
+        $fullTitle = $pageTitle !== ''
+            ? $pageTitle.' &mdash; '.$siteName
+            : $siteName.' &mdash; '.e(setting('site_tagline', 'Agir ensemble, changer des vies'));
+        $metaDescription = trim($__env->yieldContent('meta_description'))
+            ?: e(setting('site_description', 'ONG de solidarité internationale : dons, parrainages, bénévolat et actions de terrain.'));
+        $currentPage = request()->integer('page');
+        $canonical = trim($__env->yieldContent('canonical'))
+            ?: e(url()->current().($currentPage > 1 ? '?page='.$currentPage : ''));
+        $robots = trim($__env->yieldContent('robots'))
+            ?: (request()->filled('q') ? 'noindex, follow' : 'index, follow');
+        $ogImage = trim($__env->yieldContent('og_image'))
+            ?: e(media(setting('og_image'), 'theme/assets/images/slides/slide-v1-1.jpg'));
+        $socialLinks = collect(['social_facebook', 'social_twitter', 'social_linkedin', 'social_youtube', 'social_instagram'])
+            ->map(fn ($key) => setting($key))->filter()->values()->all();
+    @endphp
+    <title>{!! $fullTitle !!}</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="description" content="@yield('meta_description', setting('site_description', 'ONG de solidarité internationale : dons, parrainages, bénévolat et actions de terrain.'))">
+    <meta name="description" content="{!! $metaDescription !!}">
+    <meta name="robots" content="{{ $robots }}">
+    <link rel="canonical" href="{!! $canonical !!}">
     <meta name="csrf-token" content="{{ csrf_token() }}">
+
+    {{-- Partage sur les réseaux sociaux --}}
+    <meta property="og:locale" content="{{ app()->getLocale() === 'fr' ? 'fr_FR' : str_replace('-', '_', app()->getLocale()) }}">
+    <meta property="og:site_name" content="{!! $siteName !!}">
+    <meta property="og:type" content="@yield('og_type', 'website')">
+    <meta property="og:title" content="{!! $pageTitle !== '' ? $pageTitle : $fullTitle !!}">
+    <meta property="og:description" content="{!! $metaDescription !!}">
+    <meta property="og:url" content="{!! $canonical !!}">
+    <meta property="og:image" content="{!! $ogImage !!}">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{!! $pageTitle !== '' ? $pageTitle : $fullTitle !!}">
+    <meta name="twitter:description" content="{!! $metaDescription !!}">
+    <meta name="twitter:image" content="{!! $ogImage !!}">
+
+    <script type="application/ld+json">
+        {!! json_encode(array_filter([
+            '@context' => 'https://schema.org',
+            '@type' => 'NGO',
+            'name' => setting('site_name', 'Solid’Action'),
+            'url' => route('home'),
+            'logo' => media(setting('site_logo'), 'theme/assets/images/logo/logo-header.png'),
+            'description' => setting('site_description', 'ONG de solidarité internationale : dons, parrainages, bénévolat et actions de terrain.'),
+            'email' => setting('contact_email'),
+            'telephone' => setting('contact_phone'),
+            'address' => setting('contact_address'),
+            'sameAs' => $socialLinks ?: null,
+        ]), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) !!}
+    </script>
+    @stack('structured_data')
 
     <link rel="stylesheet" href="{{ theme_asset('assets/css/aos.css') }}">
     <link rel="stylesheet" href="{{ theme_asset('assets/css/bootstrap.min.css') }}">

@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="title">
-                        <h2>{{ $title }}</h2>
+                        <h1>{{ $title }}</h1>
                     </div>
                     <div class="border-box"></div>
                     <div class="breadcrumb-menu">
@@ -45,3 +45,24 @@
         </div>
     </div>
 </section>
+
+@push('structured_data')
+    @php
+        $trail = [['name' => 'Accueil', 'url' => route('home')]];
+        foreach ($items as $label => $url) {
+            $trail[] = is_int($label) ? ['name' => $url, 'url' => url()->current()] : ['name' => $label, 'url' => $url];
+        }
+    @endphp
+    <script type="application/ld+json">
+        {!! json_encode([
+            '@context' => 'https://schema.org',
+            '@type' => 'BreadcrumbList',
+            'itemListElement' => collect($trail)->values()->map(fn ($crumb, $i) => [
+                '@type' => 'ListItem',
+                'position' => $i + 1,
+                'name' => $crumb['name'],
+                'item' => $crumb['url'],
+            ])->all(),
+        ], JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) !!}
+    </script>
+@endpush

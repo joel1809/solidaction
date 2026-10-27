@@ -42,6 +42,9 @@ Route::post('/newsletter', [Site\SubscriberController::class, 'store'])->name('n
 
 Route::get('/page/{page:slug}', [Site\PageController::class, 'show'])->name('pages.show');
 
+Route::get('/sitemap.xml', [Site\SeoController::class, 'sitemap'])->name('sitemap');
+Route::get('/robots.txt', [Site\SeoController::class, 'robots'])->name('robots');
+
 /*
 |--------------------------------------------------------------------------
 | Administration

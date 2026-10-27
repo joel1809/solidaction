@@ -1,7 +1,8 @@
 @extends('layouts.site')
 
 @section('title', $cause->title)
-@section('meta_description', Str::limit(strip_tags($cause->excerpt), 155))
+@section('meta_description', Str::limit(strip_tags($cause->excerpt ?: $cause->description), 155))
+@section('og_image', media($cause->image, 'theme/assets/images/causes/cause-details-image-1.jpg'))
 
 @section('content')
 

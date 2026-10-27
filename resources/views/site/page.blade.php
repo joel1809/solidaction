@@ -1,7 +1,8 @@
 @extends('layouts.site')
 
 @section('title', $page->title)
-@section('meta_description', $page->meta_description)
+@section('meta_description', $page->meta_description ?: Str::limit(strip_tags($page->content), 155))
+@section('og_image', media($page->image, 'theme/assets/images/slides/slide-v1-1.jpg'))
 
 @section('content')
 

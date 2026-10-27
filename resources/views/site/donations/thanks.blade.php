@@ -1,6 +1,7 @@
 @extends('layouts.site')
 
 @section('title', 'Merci pour votre don')
+@section('robots', 'noindex, nofollow')
 
 @section('content')
 

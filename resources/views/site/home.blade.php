@@ -1,8 +1,8 @@
 @extends('layouts.site')
 
-@section('title', 'Accueil')
-
 @section('content')
+
+    <h1 class="sr-only">{{ setting('site_name', 'Solid’Action') }} &mdash; {{ setting('site_tagline', 'Agir ensemble, changer des vies') }}</h1>
 
     {{-- ======================= Slider ======================= --}}
     <section class="main-slider style1">

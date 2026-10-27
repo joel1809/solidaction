@@ -1,7 +1,25 @@
 @extends('layouts.site')
 
 @section('title', $post->title)
-@section('meta_description', Str::limit(strip_tags($post->excerpt), 155))
+@section('meta_description', Str::limit(strip_tags($post->excerpt ?: $post->body), 155))
+@push('structured_data')
+    <script type="application/ld+json">
+        {!! json_encode(array_filter([
+            '@context' => 'https://schema.org',
+            '@type' => 'Article',
+            'headline' => $post->title,
+            'description' => Str::limit(strip_tags($post->excerpt ?: $post->body), 155),
+            'image' => media($post->image, 'theme/assets/images/blog/blog-details-1.jpg'),
+            'datePublished' => $post->published_at?->toAtomString(),
+            'dateModified' => $post->updated_at?->toAtomString(),
+            'author' => $post->author ? ['@type' => 'Person', 'name' => $post->author->name] : null,
+            'publisher' => ['@type' => 'NGO', 'name' => setting('site_name', 'Solid’Action')],
+            'mainEntityOfPage' => route('posts.show', $post),
+        ]), JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG) !!}
+    </script>
+@endpush
+@section('og_image', media($post->image, 'theme/assets/images/blog/blog-details-1.jpg'))
+@section('og_type', 'article')
 
 @section('content')
 
