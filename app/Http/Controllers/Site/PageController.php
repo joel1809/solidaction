@@ -17,10 +17,6 @@ class PageController extends Controller
     public function about()
     {
         return view('site.about', [
-            'team' => TeamMember::active()->orderBy('sort_order')->take(4)->get(),
-            'testimonials' => Testimonial::active()->orderBy('sort_order')->get(),
-            'partners' => Partner::active()->orderBy('sort_order')->get(),
-            'faqs' => Faq::active()->orderBy('sort_order')->take(4)->get(),
             'stats' => [
                 'donations' => (float) Donation::completed()->sum('amount'),
                 'causes' => Cause::published()->count(),
