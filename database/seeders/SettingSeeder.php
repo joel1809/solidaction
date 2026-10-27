@@ -19,6 +19,7 @@ class SettingSeeder extends Seeder
             ['site_logo_sticky', null, 'general', 'image'],
             ['site_logo_mobile', null, 'general', 'image'],
             ['site_logo_footer', null, 'general', 'image'],
+            ['og_image', null, 'general', 'image'],
 
             // Contact
             ['contact_email', 'contact@solidaction.org', 'contact'],

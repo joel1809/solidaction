@@ -44,6 +44,12 @@
             </div>
         </x-admin.card>
 
+        <x-admin.card title="Partage sur les réseaux sociaux"
+            subtitle="Image affichée quand une page sans visuel propre est partagée (Facebook, WhatsApp, LinkedIn…).">
+            <x-admin.image-field :name="$shareImage" label="Image de partage" :current="setting($shareImage)"
+                help="JPG ou PNG, 1200 × 630 px recommandé — 4 Mo maximum. Laissez vide pour utiliser l'image du bandeau d'accueil." />
+        </x-admin.card>
+
         <div class="sticky bottom-4 flex items-center gap-3 rounded-xl border border-zinc-200 bg-white/95 p-4 shadow-lg">
             <x-admin.button type="submit" icon="check">Enregistrer les paramètres</x-admin.button>
             <p class="text-xs text-zinc-500">Les modifications sont visibles immédiatement sur le site public.</p>

@@ -309,6 +309,21 @@ it('enregistre les paramètres du site', function () {
     $this->get('/')->assertOk()->assertSee('SolidAction Europe');
 });
 
+it('enregistre l\'image de partage utilisée par les balises Open Graph', function () {
+    Storage::fake('public');
+
+    $this->put(route('admin.settings.update'), [
+        'site_name' => 'Solid’Action',
+        'og_image' => UploadedFile::fake()->image('partage.jpg', 1200, 630),
+    ])->assertRedirect()->assertSessionHas('success');
+
+    $path = Setting::read('og_image');
+    Storage::disk('public')->assertExists($path);
+
+    $this->get('/')->assertOk()
+        ->assertSee('<meta property="og:image" content="'.asset('storage/'.$path).'">', false);
+});
+
 it('refuse un e-mail invalide dans les paramètres', function () {
     $this->put(route('admin.settings.update'), [
         'site_name' => 'Test',

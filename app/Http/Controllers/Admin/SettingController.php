@@ -71,11 +71,15 @@ class SettingController extends Controller
         'site_logo_footer' => 'Logo du pied de page',
     ];
 
+    /** Image affichée lors du partage d'une page sur les réseaux sociaux. */
+    private const SHARE_IMAGE = 'og_image';
+
     public function edit()
     {
         return view('admin.settings.edit', [
             'schema' => self::SCHEMA,
             'logos' => self::LOGOS,
+            'shareImage' => self::SHARE_IMAGE,
         ]);
     }
 
@@ -98,6 +102,8 @@ class SettingController extends Controller
             $rules[$key] = ['nullable', 'image', 'max:2048'];
         }
 
+        $rules[self::SHARE_IMAGE] = ['nullable', 'image', 'max:4096'];
+
         $data = $request->validate($rules);
 
         foreach (self::SCHEMA as $group => $fields) {
@@ -110,6 +116,9 @@ class SettingController extends Controller
             $path = $this->uploadedImage($request, $key, 'branding', Setting::read($key));
             Setting::put($key, $path, 'general', 'image');
         }
+
+        $path = $this->uploadedImage($request, self::SHARE_IMAGE, 'branding', Setting::read(self::SHARE_IMAGE));
+        Setting::put(self::SHARE_IMAGE, $path, 'general', 'image');
 
         return back()->with('success', 'Les paramètres du site ont été enregistrés.');
     }
