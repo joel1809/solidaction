@@ -1260,3 +1260,14 @@
     object-position: center bottom;
     z-index: -2;
 }
+
+/* --- Cause à la une : l'image remplit le cercle quel que soit son format --- */
+.causes-style1_image-box .main {
+    max-width: 100%;
+    aspect-ratio: 1 / 1;
+}
+.causes-style1_image-box .main img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
