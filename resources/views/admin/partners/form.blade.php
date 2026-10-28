@@ -19,7 +19,7 @@
             <div class="space-y-5">
                 <x-admin.field name="name" label="Nom du partenaire" :model="$partner" required />
                 <x-admin.field name="url" label="Site web" :model="$partner" placeholder="https://" />
-                <x-admin.image-field name="logo" label="Logo" :current="$partner->logo"
+                <x-admin.image-field name="logo" label="Logo" :current="$partner->logo" contain
                     help="PNG à fond transparent recommandé, 300 × 120 px." />
                 <x-admin.field name="sort_order" label="Ordre d'affichage" type="number" :model="$partner" />
                 <x-admin.field name="is_active" type="checkbox" label="Afficher sur le site" :model="$partner" />

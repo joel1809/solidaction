@@ -19,9 +19,9 @@
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
             @foreach ($partners as $partner)
                 <div class="rounded-xl border border-zinc-200 bg-white p-4 shadow-sm">
-                    <div class="grid h-20 place-items-center rounded-lg bg-zinc-50 p-3">
+                    <div class="h-20 overflow-hidden rounded-lg bg-zinc-50 p-3">
                         <img src="{{ media($partner->logo, 'theme/assets/images/brand/brand-logo-1.png') }}"
-                            alt="{{ $partner->name }}" class="max-h-full max-w-full object-contain">
+                            alt="{{ $partner->name }}" class="size-full object-contain">
                     </div>
                     <div class="mt-3 flex items-start justify-between gap-2">
                         <div class="min-w-0">

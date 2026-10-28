@@ -1271,3 +1271,23 @@
     object-fit: cover;
     object-position: center;
 }
+
+/* --- Partenaires : logos de taille uniforme, contenus dans un cadre fixe --- */
+.partner-area .sec-title {
+    margin-bottom: 50px;
+}
+.partner-area .single-partner-logo .logo-box {
+    margin: 0;
+}
+.partner-area .single-partner-logo .logo-box a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    padding: 10px 15px;
+}
+.partner-area .single-partner-logo .logo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

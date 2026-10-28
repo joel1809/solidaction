@@ -3,6 +3,8 @@
 @if ($partners->isNotEmpty())
     <section class="partner-area">
         <div class="container">
+            <x-site.sec-title subtitle="Ils nous font confiance" title="Nos partenaires" />
+
             <div class="row">
                 <div class="col-xl-12">
                     <div class="partner-content">

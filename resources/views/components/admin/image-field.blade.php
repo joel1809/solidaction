@@ -3,6 +3,7 @@
     'label' => 'Image',
     'current' => null,
     'help' => 'JPG, PNG ou WebP — 4 Mo maximum.',
+    'contain' => false,
 ])
 
 @php
@@ -16,7 +17,7 @@
     <div class="flex items-start gap-4">
         <div class="grid size-24 shrink-0 place-items-center overflow-hidden rounded-lg border border-zinc-200 bg-zinc-50">
             <img id="{{ $id }}-preview" src="{{ $preview }}" alt=""
-                class="size-full object-cover {{ $preview ? '' : 'hidden' }}">
+                class="size-full {{ $contain ? 'object-contain p-2' : 'object-cover' }} {{ $preview ? '' : 'hidden' }}">
             @unless ($preview)
                 <x-admin.icon name="photo" class="size-7 text-zinc-300" />
             @endunless
