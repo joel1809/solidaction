@@ -11,7 +11,16 @@
             <div class="banner-carousel owl-theme owl-carousel">
                 @forelse ($sliders as $slide)
                     <div class="slide">
-                        <div class="image-layer" style="background-image:url({{ media($slide->image, 'theme/assets/images/slides/slide-v1-1.jpg') }}){{ ($focus = $slide->focusPosition()) ? ";background-position:{$focus};transform-origin:{$focus}" : '' }}"></div>
+                        @php $focus = $slide->focusPosition(); @endphp
+                        @if ($srcset = $slide->imageSrcset())
+                            <div class="image-layer"{!! $focus ? ' style="transform-origin:'.$focus.'"' : '' !!}>
+                                <img class="image-layer-img" src="{{ media(Arr::last($slide->image_variants)) }}" srcset="{{ $srcset }}" sizes="100vw"
+                                    alt="" decoding="async" @if ($loop->first) fetchpriority="high" @endif
+                                    @if ($focus) style="object-position:{{ $focus }}" @endif>
+                            </div>
+                        @else
+                            <div class="image-layer" style="background-image:url({{ media($slide->image, 'theme/assets/images/slides/slide-v1-1.jpg') }}){{ $focus ? ";background-position:{$focus};transform-origin:{$focus}" : '' }}"></div>
+                        @endif
                         <div class="auto-container">
                             <div class="content">
                                 <h3>{{ $slide->subtitle }}</h3>

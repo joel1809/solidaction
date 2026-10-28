@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Admin\Concerns\HandlesUploads;
 use App\Http\Controllers\Controller;
 use App\Models\Slider;
+use App\Support\ResponsiveImage;
 use Illuminate\Http\Request;
 
 class SliderController extends Controller
@@ -28,7 +29,7 @@ class SliderController extends Controller
         $data = $this->validated($request);
         $data['image'] = $this->uploadedImage($request, 'image', 'sliders');
 
-        Slider::create($data);
+        Slider::create($data)->refreshImageVariants();
 
         return redirect()->route('admin.sliders.index')->with('success', 'La diapositive a été ajoutée.');
     }
@@ -43,7 +44,13 @@ class SliderController extends Controller
         $data = $this->validated($request);
         $data['image'] = $this->uploadedImage($request, 'image', 'sliders', $slider->image);
 
+        $imageChanged = $data['image'] !== $slider->image;
+
         $slider->update($data);
+
+        if ($imageChanged) {
+            $slider->refreshImageVariants();
+        }
 
         return redirect()->route('admin.sliders.index')->with('success', 'La diapositive a été mise à jour.');
     }
@@ -51,6 +58,7 @@ class SliderController extends Controller
     public function destroy(Slider $slider)
     {
         $this->deleteImage($slider->image);
+        ResponsiveImage::delete($slider->image_variants);
         $slider->delete();
 
         return redirect()->route('admin.sliders.index')->with('success', 'La diapositive a été supprimée.');

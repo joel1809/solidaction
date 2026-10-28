@@ -1249,3 +1249,14 @@
 .mobile-menu .social-links li a:not([href]) {
     color: #ffffff;
 }
+
+/* --- Carrousel d'accueil : images responsives (srcset) --- */
+.main-slider .slide .image-layer-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom;
+    z-index: -2;
+}

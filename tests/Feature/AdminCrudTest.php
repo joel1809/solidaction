@@ -414,3 +414,47 @@ it('enregistre le point focal d\'une diapositive et l\'applique sur l\'accueil',
     $this->put(route('admin.sliders.update', $slider), $fields + ['focus_x' => 140, 'focus_y' => 20])
         ->assertSessionHasErrors('focus_x');
 });
+
+it('convertit l\'image d\'une diapositive en WebP à plusieurs largeurs', function () {
+    Storage::fake('public');
+
+    $this->post(route('admin.sliders.store'), [
+        'title' => 'Agir ensemble',
+        'is_active' => 1,
+        'image' => UploadedFile::fake()->image('bandeau.jpg', 3000, 1500),
+    ])->assertRedirect(route('admin.sliders.index'));
+
+    $slider = Slider::firstWhere('title', 'Agir ensemble');
+
+    expect(array_keys($slider->image_variants))->toBe([1280, 1920, 2560, 3000]);
+    foreach ($slider->image_variants as $width => $path) {
+        Storage::disk('public')->assertExists($path);
+        expect(getimagesize(Storage::disk('public')->path($path)))
+            ->{0}->toBe($width)
+            ->mime->toBe('image/webp');
+    }
+
+    $this->get(route('home'))
+        ->assertSee('-1920.webp 1920w', false)
+        ->assertSee('sizes="100vw"', false);
+
+    $variants = $slider->image_variants;
+    $this->delete(route('admin.sliders.destroy', $slider));
+
+    foreach ($variants as $path) {
+        Storage::disk('public')->assertMissing($path);
+    }
+});
+
+it('ne génère pas de déclinaison plus large qu\'une petite image', function () {
+    Storage::fake('public');
+
+    $slider = Slider::factory()->create();
+
+    $this->put(route('admin.sliders.update', $slider), [
+        'title' => $slider->title,
+        'image' => UploadedFile::fake()->image('petite.png', 900, 600),
+    ]);
+
+    expect(array_keys($slider->fresh()->image_variants))->toBe([900]);
+});

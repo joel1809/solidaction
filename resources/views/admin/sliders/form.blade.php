@@ -82,7 +82,7 @@
         <div class="space-y-6">
             <x-admin.card title="Image de fond">
                 <x-admin.image-field name="image" label="Visuel plein écran" :current="$slider->image"
-                    help="Format large recommandé (1920 × 900 px), 6 Mo maximum." />
+                    help="Paysage, 2560 px de large minimum (idéal : 3840 px), 6 Mo maximum. Convertie automatiquement en WebP à plusieurs tailles." />
             </x-admin.card>
 
             <x-admin.card title="Affichage">
