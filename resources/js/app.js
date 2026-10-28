@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initDropdowns();
     initConfirmForms();
     initImagePreviews();
+    initFocusPickers();
     initSlugs();
     initBulkToggles();
     initChartTooltips();
@@ -102,6 +103,68 @@ function initImagePreviews() {
 
             target.src = URL.createObjectURL(file);
             target.classList.remove('hidden');
+        });
+    });
+}
+
+/** Choix du point focal d'une image (clic sur l'aperçu). */
+function initFocusPickers() {
+    document.querySelectorAll('[data-focus-picker]').forEach((picker) => {
+        const inputX = picker.querySelector('[data-focus-x]');
+        const inputY = picker.querySelector('[data-focus-y]');
+        const area = picker.querySelector('[data-focus-area]');
+        const image = picker.querySelector('[data-focus-image]');
+        const marker = picker.querySelector('[data-focus-marker]');
+        const label = picker.querySelector('[data-focus-label]');
+        const previews = picker.querySelectorAll('[data-focus-preview]');
+        const source = document.querySelector(picker.dataset.focusSource);
+
+        const render = () => {
+            const isSet = inputX.value !== '' && inputY.value !== '';
+            const position = isSet ? `${inputX.value}% ${inputY.value}%` : 'center bottom';
+
+            marker.classList.toggle('hidden', !isSet);
+            marker.style.left = `${inputX.value || 50}%`;
+            marker.style.top = `${inputY.value || 50}%`;
+            previews.forEach((preview) => {
+                preview.style.backgroundPosition = position;
+            });
+            label.textContent = isSet
+                ? `Point focal : ${inputX.value} % horizontal, ${inputY.value} % vertical.`
+                : 'Aucun point focal : cadrage par défaut (centre bas).';
+        };
+
+        area.addEventListener('click', (event) => {
+            const rect = image.getBoundingClientRect();
+            const clamp = (value) => Math.round(Math.min(100, Math.max(0, value)));
+
+            inputX.value = clamp(((event.clientX - rect.left) / rect.width) * 100);
+            inputY.value = clamp(((event.clientY - rect.top) / rect.height) * 100);
+            render();
+        });
+
+        picker.querySelector('[data-focus-reset]')?.addEventListener('click', () => {
+            inputX.value = '';
+            inputY.value = '';
+            render();
+        });
+
+        // Nouvelle image choisie : on l'affiche et on repart du cadrage par défaut.
+        source?.addEventListener('change', () => {
+            const file = source.files?.[0];
+
+            if (!file) {
+                return;
+            }
+
+            const url = URL.createObjectURL(file);
+            image.src = url;
+            previews.forEach((preview) => {
+                preview.style.backgroundImage = `url('${url}')`;
+            });
+            inputX.value = '';
+            inputY.value = '';
+            render();
         });
     });
 }

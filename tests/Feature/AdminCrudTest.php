@@ -11,6 +11,7 @@ use App\Models\Page;
 use App\Models\Post;
 use App\Models\PostMedia;
 use App\Models\Setting;
+use App\Models\Slider;
 use App\Models\TeamMember;
 use App\Models\User;
 use App\Models\Volunteer;
@@ -393,4 +394,23 @@ it('renvoie vers le formulaire avec un message clair quand l\'envoi dépasse pos
     $this->get($edit.'?envoi=trop-volumineux')
         ->assertOk()
         ->assertSee('Les fichiers envoyés étaient trop volumineux');
+});
+
+it('enregistre le point focal d\'une diapositive et l\'applique sur l\'accueil', function () {
+    $slider = Slider::factory()->create();
+    $fields = ['title' => $slider->title, 'is_active' => 1];
+
+    $this->put(route('admin.sliders.update', $slider), $fields + ['focus_x' => 30, 'focus_y' => 20])
+        ->assertRedirect(route('admin.sliders.index'));
+
+    expect($slider->fresh()->focusPosition())->toBe('30% 20%');
+
+    $this->get(route('home'))->assertSee('background-position:30% 20%', false);
+
+    $this->put(route('admin.sliders.update', $slider), $fields + ['focus_x' => '', 'focus_y' => '']);
+
+    expect($slider->fresh()->focusPosition())->toBeNull();
+
+    $this->put(route('admin.sliders.update', $slider), $fields + ['focus_x' => 140, 'focus_y' => 20])
+        ->assertSessionHasErrors('focus_x');
 });

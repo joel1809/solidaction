@@ -69,6 +69,8 @@ class SliderController extends Controller
             'sort_order' => ['nullable', 'integer', 'min:0'],
             'is_active' => ['nullable', 'boolean'],
             'image' => ['nullable', 'image', 'max:6144'],
-        ], [], ['title' => 'titre']);
+            'focus_x' => ['nullable', 'integer', 'between:0,100', 'required_with:focus_y'],
+            'focus_y' => ['nullable', 'integer', 'between:0,100', 'required_with:focus_x'],
+        ], [], ['title' => 'titre', 'focus_x' => 'point focal', 'focus_y' => 'point focal']);
     }
 }
