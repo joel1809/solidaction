@@ -109,7 +109,7 @@
                         </table>
 
                         <div class="content-prose">
-                            {!! $cause->description !!}
+                            {!! safe_html($cause->description) !!}
                         </div>
 
                         @if ($recentDonations->isNotEmpty())

@@ -13,7 +13,7 @@
             <div class="row">
                 <div class="col-xl-10 offset-xl-1">
                     <div class="content-prose">
-                        {!! $page->content !!}
+                        {!! safe_html($page->content) !!}
                     </div>
                 </div>
             </div>

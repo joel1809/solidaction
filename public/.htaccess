@@ -5,6 +5,12 @@
 
     RewriteEngine On
 
+    # Block hidden files (.env, .git…), any PHP script other than the front
+    # controller (uploads included) and the theme's original demo pages
+    RewriteRule (^|/)\.(?!well-known/) - [F]
+    RewriteRule ^(?!index\.php$).+\.(php\d?|phtml|phar)$ - [F,NC]
+    RewriteRule ^theme/.+\.html?$ - [F,NC]
+
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
     RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]

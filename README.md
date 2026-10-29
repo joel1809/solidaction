@@ -131,6 +131,22 @@ comptes (dernier administrateur, auto-rétrogradation, inscription publique).
 
 ---
 
+## Mise en ligne (hébergement mutualisé IONOS)
+
+1. **Base** — importer l'export SQL dans la base IONOS via phpMyAdmin.
+2. **Fichiers** — téléverser le projet (avec `vendor/` installé en `--no-dev`,
+   `public/build/` compilé et `storage/app/public/uploads/`) par SFTP.
+3. **Domaine** — faire pointer le domaine sur le dossier `public/` du projet
+   (le `.htaccess` racine n'est qu'un filet de sécurité).
+4. **`.env`** — `APP_ENV=production`, `APP_DEBUG=false`, `APP_URL` en https,
+   `SESSION_SECURE_COOKIE=true`, identifiants de la base IONOS.
+5. **SSH (facultatif)** — `php artisan storage:link` puis
+   `php artisan config:cache && php artisan view:cache`. Sans lien symbolique,
+   les images téléversées restent servies par Laravel (`serve` du disque public).
+
+Les dossiers `storage/` et `bootstrap/cache/` doivent être accessibles en
+écriture par PHP.
+
 ## Points d'attention avant mise en production
 
 1. **Paiement** — les dons sont enregistrés comme promesses au statut

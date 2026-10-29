@@ -49,13 +49,19 @@ class DonationController extends Controller
         $donation = Donation::create($data);
         $donation->sendReceipt();
 
+        // La page Merci affiche les coordonnées du donateur : seule la session
+        // qui a fait le don peut l'ouvrir, la référence seule ne suffit pas.
+        $request->session()->push('donations', $donation->reference);
+
         return redirect()
             ->route('donations.thanks', $donation->reference)
             ->with('success', 'Merci ! Votre promesse de don a bien été enregistrée.');
     }
 
-    public function thanks(Donation $donation)
+    public function thanks(Request $request, Donation $donation)
     {
+        abort_unless(in_array($donation->reference, $request->session()->get('donations', []), true), 404);
+
         return view('site.donations.thanks', [
             'donation' => $donation->load('cause'),
         ]);

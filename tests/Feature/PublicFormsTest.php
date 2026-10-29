@@ -34,6 +34,34 @@ it('enregistre un don et redirige vers la page de remerciement', function () {
         ->assertSee($donation->reference);
 });
 
+it('cache la page de remerciement d\'un don à un autre visiteur', function () {
+    $donation = Donation::factory()->create();
+
+    $this->get(route('donations.thanks', $donation->reference))->assertNotFound();
+});
+
+it('limite les envois en rafale des formulaires publics', function () {
+    foreach (range(1, 5) as $i) {
+        $this->post('/newsletter', ['email' => "abonne{$i}@example.fr"])->assertRedirect();
+    }
+
+    $this->post('/newsletter', ['email' => 'abonne6@example.fr'])->assertTooManyRequests();
+});
+
+it('retire les scripts du contenu riche des articles', function () {
+    $post = Post::factory()->create([
+        'status' => 'published',
+        'published_at' => now()->subDay(),
+        'body' => '<p>Bonjour<script>alert(1)</script></p><a href="javascript:alert(2)">lien</a>',
+    ]);
+
+    $this->get(route('posts.show', $post))
+        ->assertOk()
+        ->assertSee('Bonjour')
+        ->assertDontSee('alert(1)', false)
+        ->assertDontSee('javascript:alert(2)', false);
+});
+
 it('refuse un don sans montant valide', function () {
     $this->post('/faire-un-don', [
         'donor_name' => 'Test',

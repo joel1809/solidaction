@@ -33,7 +33,7 @@ return [
         'local' => [
             'driver' => 'local',
             'root' => storage_path('app/private'),
-            'serve' => true,
+            'serve' => false,
             'throw' => false,
         ],
 
@@ -42,6 +42,9 @@ return [
             'root' => storage_path('app/public'),
             'url' => env('APP_URL').'/storage',
             'visibility' => 'public',
+            // Repli si le lien symbolique public/storage manque sur l'hébergement :
+            // Laravel sert alors lui-même les images téléversées.
+            'serve' => true,
             'throw' => false,
         ],
 

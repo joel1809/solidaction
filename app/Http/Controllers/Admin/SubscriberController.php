@@ -43,7 +43,7 @@ class SubscriberController extends Controller
             fputcsv($handle, ['E-mail', 'Inscrit le'], ';');
 
             foreach ($subscribers as $subscriber) {
-                fputcsv($handle, [$subscriber->email, $subscriber->created_at->format('d/m/Y')], ';');
+                fputcsv($handle, csv_row([$subscriber->email, $subscriber->created_at->format('d/m/Y')]), ';');
             }
 
             fclose($handle);

@@ -52,7 +52,7 @@
                     <h2 style="font-size: 36px; line-height: 46px; margin-bottom: 26px;">{{ $post->title }}</h2>
 
                     <div class="content-prose">
-                        {!! $post->body !!}
+                        {!! safe_html($post->body) !!}
                     </div>
 
                     @if ($post->gallery->isNotEmpty())

@@ -21,24 +21,24 @@ Route::get('/causes', [Site\CauseController::class, 'index'])->name('causes.inde
 Route::get('/causes/{cause:slug}', [Site\CauseController::class, 'show'])->name('causes.show');
 
 Route::get('/faire-un-don', [Site\DonationController::class, 'create'])->name('donations.create');
-Route::post('/faire-un-don', [Site\DonationController::class, 'store'])->name('donations.store');
+Route::post('/faire-un-don', [Site\DonationController::class, 'store'])->name('donations.store')->middleware('throttle:forms');
 Route::get('/don/{donation:reference}/merci', [Site\DonationController::class, 'thanks'])->name('donations.thanks');
 
 Route::get('/evenements', [Site\EventController::class, 'index'])->name('events.index');
 Route::get('/evenements/{event:slug}', [Site\EventController::class, 'show'])->name('events.show');
-Route::post('/evenements/{event:slug}/inscription', [Site\EventController::class, 'register'])->name('events.register');
+Route::post('/evenements/{event:slug}/inscription', [Site\EventController::class, 'register'])->name('events.register')->middleware('throttle:forms');
 
 Route::get('/actualites', [Site\PostController::class, 'index'])->name('posts.index');
 Route::get('/actualites/{post:slug}', [Site\PostController::class, 'show'])->name('posts.show');
-Route::post('/actualites/{post:slug}/commentaires', [Site\PostController::class, 'comment'])->name('posts.comment');
+Route::post('/actualites/{post:slug}/commentaires', [Site\PostController::class, 'comment'])->name('posts.comment')->middleware('throttle:forms');
 
 Route::get('/contact', [Site\ContactController::class, 'create'])->name('contact.create');
-Route::post('/contact', [Site\ContactController::class, 'store'])->name('contact.store');
+Route::post('/contact', [Site\ContactController::class, 'store'])->name('contact.store')->middleware('throttle:forms');
 
 Route::get('/devenir-benevole', [Site\VolunteerController::class, 'create'])->name('volunteers.create');
-Route::post('/devenir-benevole', [Site\VolunteerController::class, 'store'])->name('volunteers.store');
+Route::post('/devenir-benevole', [Site\VolunteerController::class, 'store'])->name('volunteers.store')->middleware('throttle:forms');
 
-Route::post('/newsletter', [Site\SubscriberController::class, 'store'])->name('newsletter.store');
+Route::post('/newsletter', [Site\SubscriberController::class, 'store'])->name('newsletter.store')->middleware('throttle:forms');
 
 Route::get('/page/{page:slug}', [Site\PageController::class, 'show'])->name('pages.show');
 

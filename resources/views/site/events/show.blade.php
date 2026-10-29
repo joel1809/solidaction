@@ -77,7 +77,7 @@
                     </table>
 
                     <div class="content-prose">
-                        {!! $event->description !!}
+                        {!! safe_html($event->description) !!}
                     </div>
 
                     {{-- Formulaire d'inscription --}}

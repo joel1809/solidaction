@@ -128,7 +128,7 @@ class DonationController extends Controller
             fputcsv($handle, ['Référence', 'Date', 'Donateur', 'E-mail', 'Téléphone', 'Cause', 'Montant', 'Moyen', 'Statut'], ';');
 
             foreach ($donations as $donation) {
-                fputcsv($handle, [
+                fputcsv($handle, csv_row([
                     $donation->reference,
                     $donation->created_at->format('d/m/Y H:i'),
                     $donation->donor_name,
@@ -138,7 +138,7 @@ class DonationController extends Controller
                     number_format((float) $donation->amount, 2, ',', ''),
                     $donation->method_label,
                     $donation->status_label,
-                ], ';');
+                ]), ';');
             }
 
             fclose($handle);

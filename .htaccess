@@ -1,0 +1,13 @@
+# Filet de sécurité : si le domaine pointe par erreur sur la racine du projet
+# au lieu du dossier public/, toute requête est renvoyée dans public/ : le code
+# et les secrets (.env, storage, vendor…) ne sont jamais servis tels quels.
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    RewriteRule (^|/)\. - [F]
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+<IfModule !mod_rewrite.c>
+    Require all denied
+</IfModule>
