@@ -7,7 +7,7 @@
 @section('content')
 
     <x-site.breadcrumb :title="$cause->title" :items="['Nos causes' => route('causes.index'), Str::limit($cause->title, 30)]"
-        image="theme/assets/images/breadcrumb/breadcrumb-3.jpg" />
+        image="theme/assets/images/breadcrumb/breadcrumb-cause.jpg" />
 
     <section class="cause-details-area" style="padding: 110px 0 80px;">
         <div class="container">
