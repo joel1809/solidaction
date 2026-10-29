@@ -11,7 +11,6 @@ Elles sont recadrées pour le site.
 | `slides/slide-v1-3.jpg` | [A group of African schoolchildren engaged in learning at an outdoor class setting](https://www.pexels.com/photo/photo-of-children-sitting-behind-their-desks-25457343/) | Justin muhinda |
 | `breadcrumb/breadcrumb-2.jpg` | [Group of People Standing with Their Hands in a Huddle](https://www.pexels.com/photo/group-of-people-standing-with-their-hands-in-a-huddle-8556402/) | Edmond Dantès |
 | `breadcrumb/breadcrumb-4.jpg` | [African women engaged in community work in a rural village setting in Korhogo, Côte d'Ivoire](https://www.pexels.com/photo/women-working-in-village-17072424/) | Alfred Desiré Nebout |
-| `breadcrumb/breadcrumb-6.jpg` | [Aerial view of a busy bridge over a lake in Abidjan with motor vehicles in motion](https://www.pexels.com/photo/aerial-view-of-gray-concrete-bridge-7381788/) | Silvere Meya |
 | `breadcrumb/breadcrumb-7.jpg` | [Three women in traditional African clothing at a lively cultural event in Abidjan](https://www.pexels.com/photo/photo-of-women-in-colorful-traditional-wear-12634787/) | Adera Abdoulaye Dolo |
 | `breadcrumb/breadcrumb-cause.jpg` | [Man in traditional attire gifting a child during a community event outdoors](https://www.pexels.com/photo/community-giving-event-in-rural-setting-39391434/) | Ousmane GUINDO |
 | `breadcrumb/breadcrumb-faq.jpg` | [A group of African women and children sitting and talking in a park setting](https://www.pexels.com/photo/african-women-and-kids-sitting-under-a-tree-in-a-city-12429854/) | Xavier Messina |
