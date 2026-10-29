@@ -6,7 +6,7 @@
 @section('content')
 
     <x-site.breadcrumb title="Questions fréquentes" :items="['Association' => route('about'), 'FAQ']"
-        image="theme/assets/images/breadcrumb/breadcrumb-3.jpg" />
+        image="theme/assets/images/breadcrumb/breadcrumb-faq.jpg" />
 
     <section class="faq-style1-area" style="padding: 110px 0 90px;">
         <div class="container">
