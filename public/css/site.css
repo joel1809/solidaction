@@ -695,6 +695,11 @@
     color: var(--thm-gray);
 }
 
+/* Colonne latérale sans le grand fond gris débordant (page détail cause). */
+.sidebar-content-box--no-bg::before {
+    display: none;
+}
+
 /* Colonne latérale sobre (page Don) : pas de grand fond gris débordant,
    de simples encadrés blancs bordés. */
 .sidebar-content-box--plain::before,

@@ -134,7 +134,7 @@
 
                 {{-- ================= Colonne latérale ================= --}}
                 <div class="col-xl-4">
-                    <div class="sidebar-content-box">
+                    <div class="sidebar-content-box sidebar-content-box--no-bg">
                         <div class="single-sidebar-box">
                             <div class="sidebar-categories">
                                 <div class="title">
