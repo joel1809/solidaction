@@ -5,7 +5,7 @@
 
 @section('content')
 
-    <x-site.breadcrumb title="Nos événements" :items="['Événements']" image="theme/assets/images/breadcrumb/breadcrumb-5.jpg" />
+    <x-site.breadcrumb title="Nos événements" :items="['Événements']" image="theme/assets/images/breadcrumb/breadcrumb-events.jpg" />
 
     <section class="event-page-one" style="padding: 110px 0 80px;">
         <div class="container">

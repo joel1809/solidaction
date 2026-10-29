@@ -28,7 +28,7 @@
 @section('content')
 
     <x-site.breadcrumb :title="$event->title" :items="['Événements' => route('events.index'), Str::limit($event->title, 30)]"
-        image="theme/assets/images/breadcrumb/breadcrumb-5.jpg" />
+        image="theme/assets/images/breadcrumb/breadcrumb-events.jpg" />
 
     <section class="event-details-area" style="padding: 110px 0 80px;">
         <div class="container">
