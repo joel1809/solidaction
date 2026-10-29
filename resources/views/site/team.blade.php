@@ -6,7 +6,7 @@
 @section('content')
 
     <x-site.breadcrumb title="Notre équipe" :items="['Association' => route('about'), 'Notre équipe']"
-        image="theme/assets/images/breadcrumb/breadcrumb-7.jpg" />
+        image="theme/assets/images/breadcrumb/journee-verte.jpg" />
 
     <section class="team-page-one" style="padding: 110px 0 80px;">
         <div class="container">

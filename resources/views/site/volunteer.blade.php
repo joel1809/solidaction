@@ -6,7 +6,7 @@
 @section('content')
 
     <x-site.breadcrumb title="Devenir bénévole" :items="['Association' => route('about'), 'Devenir bénévole']"
-        image="theme/assets/images/breadcrumb/breadcrumb-7.jpg" />
+        image="theme/assets/images/breadcrumb/journee-verte.jpg" />
 
     <section class="volunteer-area" style="padding: 110px 0 90px;">
         <div class="container">
