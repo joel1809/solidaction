@@ -10,7 +10,7 @@ Elles sont recadrées pour le site.
 | `slides/slide-v1-2.jpg` | [Group of children gathering water from a well in Kitgum, Uganda](https://www.pexels.com/photo/photo-of-children-drinking-water-28101466/) | illustrate Digital Ug |
 | `slides/slide-v1-3.jpg` | [A group of African schoolchildren engaged in learning at an outdoor class setting](https://www.pexels.com/photo/photo-of-children-sitting-behind-their-desks-25457343/) | Justin muhinda |
 | `breadcrumb/breadcrumb-1.jpg` | [Contemporary cityscape of Abidjan featuring high-rise buildings by the waterfront under overcast skies](https://www.pexels.com/photo/residential-buildings-by-water-in-city-18435332/) | Jean Marc Bonnel |
-| `breadcrumb/breadcrumb-2.jpg` | [Stunning aerial shot of a bridge crossing the lagoon in Abidjan, Côte d'Ivoire, under vibrant skies](https://www.pexels.com/photo/aerial-view-of-a-bridge-7381787/) | Silvere Meya |
+| `breadcrumb/breadcrumb-2.jpg` | [Group of People Standing with Their Hands in a Huddle](https://www.pexels.com/photo/group-of-people-standing-with-their-hands-in-a-huddle-8556402/) | Edmond Dantès |
 | `breadcrumb/breadcrumb-4.jpg` | [African women engaged in community work in a rural village setting in Korhogo, Côte d'Ivoire](https://www.pexels.com/photo/women-working-in-village-17072424/) | Alfred Desiré Nebout |
 | `breadcrumb/breadcrumb-6.jpg` | [Aerial view of a busy bridge over a lake in Abidjan with motor vehicles in motion](https://www.pexels.com/photo/aerial-view-of-gray-concrete-bridge-7381788/) | Silvere Meya |
 | `breadcrumb/breadcrumb-7.jpg` | [Three women in traditional African clothing at a lively cultural event in Abidjan](https://www.pexels.com/photo/photo-of-women-in-colorful-traditional-wear-12634787/) | Adera Abdoulaye Dolo |
