@@ -48,6 +48,7 @@ class SettingController extends Controller
             'mission_text' => ['label' => 'Texte de la mission', 'type' => 'textarea'],
             'footer_text' => ['label' => 'Texte du pied de page', 'type' => 'textarea'],
             'intro_video' => ['label' => 'Vidéo de présentation', 'type' => 'text', 'help' => 'Lien YouTube ou Vimeo.'],
+            'credits_whatsapp' => ['label' => 'WhatsApp « Hosanna Technologie »', 'type' => 'text', 'help' => 'Numéro WhatsApp (ex. : +225 07 00 00 00 00) ou lien complet. Laissé vide, la mention du pied de page n\'est pas cliquable.'],
         ],
         'donation' => [
             'donation_amounts' => ['label' => 'Montants proposés', 'type' => 'text', 'help' => 'Séparés par des virgules, ex. : 2000,5000,10000,25000,50000'],

@@ -91,7 +91,12 @@
         <div class="auto-container">
             <div class="footer-bottom_content_box text-center">
                 <div class="copyright-text">
-                    <p>&copy; {{ date('Y') }} <a href="{{ route('home') }}">{{ setting('site_name', 'Solid’Action') }}</a>. Tous droits réservés. Développé par <strong>Hosanna Technologie</strong>.
+                    <p>&copy; {{ date('Y') }} <a href="{{ route('home') }}">{{ setting('site_name', 'Solid’Action') }}</a>. Tous droits réservés. Développé par
+                        @if ($whatsapp = setting('credits_whatsapp'))
+                            <a href="{{ str_starts_with($whatsapp, 'http') ? $whatsapp : 'https://wa.me/'.preg_replace('/\D+/', '', $whatsapp) }}" target="_blank" rel="noopener"><strong>Hosanna Technologie</strong></a>.
+                        @else
+                            <strong>Hosanna Technologie</strong>.
+                        @endif
                         @auth
                             <a href="{{ route('admin.dashboard') }}">Administration</a>
                         @else

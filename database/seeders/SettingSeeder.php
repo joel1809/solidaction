@@ -53,6 +53,7 @@ class SettingSeeder extends Seeder
             ['footer_text', 'Depuis 2013, Solid’Action mobilise donateurs et bénévoles autour de projets durables en Côte d\'Ivoire : eau potable, écoles, santé et réponse aux urgences.', 'content', 'textarea'],
             ['intro_video', 'https://www.youtube.com/watch?v=MLpWrANjFbI', 'content'],
             ['stat_beneficiaries', '13700', 'content'],
+            ['credits_whatsapp', null, 'content'],
 
             // Dons
             ['donation_amounts', '2000,5000,10000,25000,50000', 'donation'],
