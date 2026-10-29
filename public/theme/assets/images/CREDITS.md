@@ -9,7 +9,6 @@ Elles sont recadrées pour le site.
 | `slides/slide-v1-1.jpg` | [Two young African boys smiling and sitting on a porch outdoors](https://www.pexels.com/photo/children-in-front-of-a-house-20653714/) | Louisette BEHOU |
 | `slides/slide-v1-2.jpg` | [Group of children gathering water from a well in Kitgum, Uganda](https://www.pexels.com/photo/photo-of-children-drinking-water-28101466/) | illustrate Digital Ug |
 | `slides/slide-v1-3.jpg` | [A group of African schoolchildren engaged in learning at an outdoor class setting](https://www.pexels.com/photo/photo-of-children-sitting-behind-their-desks-25457343/) | Justin muhinda |
-| `breadcrumb/breadcrumb-1.jpg` | [Contemporary cityscape of Abidjan featuring high-rise buildings by the waterfront under overcast skies](https://www.pexels.com/photo/residential-buildings-by-water-in-city-18435332/) | Jean Marc Bonnel |
 | `breadcrumb/breadcrumb-2.jpg` | [Group of People Standing with Their Hands in a Huddle](https://www.pexels.com/photo/group-of-people-standing-with-their-hands-in-a-huddle-8556402/) | Edmond Dantès |
 | `breadcrumb/breadcrumb-4.jpg` | [African women engaged in community work in a rural village setting in Korhogo, Côte d'Ivoire](https://www.pexels.com/photo/women-working-in-village-17072424/) | Alfred Desiré Nebout |
 | `breadcrumb/breadcrumb-6.jpg` | [Aerial view of a busy bridge over a lake in Abidjan with motor vehicles in motion](https://www.pexels.com/photo/aerial-view-of-gray-concrete-bridge-7381788/) | Silvere Meya |
